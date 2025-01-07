@@ -6,11 +6,12 @@ public class PickupController : MonoBehaviour
 
     [SerializeField]
     private PickupType type;
+    private GameManager gameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,10 @@ public class PickupController : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        GameObject.FindWithTag("Door").GetComponent<DoorController>().decreasePickupsLeft();
-        Destroy(gameObject);
+        gameManager.openSelectionUI(type);
+    }
+
+    public PickupType getPickupType() {
+        return type;
     }
 }

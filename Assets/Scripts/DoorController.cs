@@ -1,14 +1,15 @@
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
     [SerializeField]private int pickupsLeft;
     public Material openDoorMaterial;
+    private GameManager gameManager;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class DoorController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameManager.loadNextScene();
+        
     }
 }
