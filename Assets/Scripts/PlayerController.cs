@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
         //If player is already (or close enough to) the new position, accept new input
-        if(Vector3.Distance(transform.position, movePoint.position) <= .05f) {
+        if(Vector3.Distance(transform.position, movePoint.position) <= 0.05f) {
 
             //Gets player horizontal inputs and creates a new position for the movePoint
             if(Math.Abs(Input.GetAxisRaw("Horizontal")) == 1f) {
