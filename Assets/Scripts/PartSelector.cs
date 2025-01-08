@@ -12,6 +12,8 @@ public class PartSelector : MonoBehaviour
     private Image partSelectorDisplay;
     [SerializeField]
     private Image missionCardDisplay;
+    [SerializeField]
+    private Image monsterCompleteDisplay; 
     private int currentImageCount;
     private GameManager gameManager;
 
@@ -55,7 +57,8 @@ public class PartSelector : MonoBehaviour
 
     private void updateImageDisplays(int i) {
         partSelectorDisplay.sprite = bodyPartImages[i];
-        missionCardDisplay.sprite = bodyPartImages[i]; 
+        missionCardDisplay.sprite = bodyPartImages[i];
+        monsterCompleteDisplay.sprite = bodyPartImages[i];
     }
 
     public void advanceToNextMission() {

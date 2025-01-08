@@ -35,7 +35,7 @@ public class DoorController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        gameManager.loadNextScene();
+        gameManager.displayMonsterCompleteUI();
         
     }
 }

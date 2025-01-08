@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Enums;
-using System;
-using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     private GameObject torsoMissionUI;
     [SerializeField]
     private GameObject legsMissionUI;
+    [SerializeField]
+    private GameObject monsterCompleteUI;
+
     [SerializeField]
     private GameObject[] pickups; 
 
@@ -111,5 +114,14 @@ public class GameManager : MonoBehaviour
 
     public void closeApplication() {
         Application.Quit();
+    }
+
+    public void displayMonsterCompleteUI() {
+        legsMissionUI.SetActive(false);
+        monsterCompleteUI.SetActive(true);
+    }
+
+    public void saveMonsterImage() {
+
     }
 }
