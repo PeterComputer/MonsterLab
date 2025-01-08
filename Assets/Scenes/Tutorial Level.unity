@@ -16596,7 +16596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4ab8798e4e1f94449221c364d127223, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9708a5e87ecf1804ba747f02009961cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -21814,6 +21814,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1704890069}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: sceneCamera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: headMissionUI
       value: 
       objectReference: {fileID: 709282791}
@@ -21849,6 +21853,10 @@ PrefabInstance:
       propertyPath: pickups.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: monsterImageSavedUI
+      value: 
+      objectReference: {fileID: 2087883092}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: 'pickups.Array.data[0]'
       value: 

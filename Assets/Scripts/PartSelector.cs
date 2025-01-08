@@ -29,7 +29,18 @@ public class PartSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) {
+            advanceToNextMission();
+            this.transform.parent.gameObject.SetActive(false);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+            changeToPreviousPart();
+        }
+
+        else if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
+            changeToNextPart();
+        }
     }
 
     public void changeToPreviousPart() {
