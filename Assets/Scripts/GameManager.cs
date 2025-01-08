@@ -3,11 +3,15 @@ using UnityEngine.SceneManagement;
 using Enums;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using System.Collections;
+using System.Numerics;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject pauseMenu;
+
+    [Header("Pickup Screens")]
     [SerializeField]
     private GameObject headSelectionUI;
     [SerializeField]
@@ -15,13 +19,27 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject legsSelectionUI;
     [SerializeField]
+
+    [Header("Mission UIs")]
     private GameObject headMissionUI;
     [SerializeField]
     private GameObject torsoMissionUI;
     [SerializeField]
     private GameObject legsMissionUI;
+
+    [Header("Monster Complete Screen")]
     [SerializeField]
     private GameObject monsterCompleteUI;
+
+    [Header("Monster Screenshot Requirements")]
+    [SerializeField]
+    private Camera sceneCamera;
+    [SerializeField]
+    private RectTransform screenshotArea;
+
+
+
+    [Header("Interactibles")]
 
     [SerializeField]
     private GameObject[] pickups; 
@@ -122,6 +140,40 @@ public class GameManager : MonoBehaviour
     }
 
     public void saveMonsterImage() {
+        saveMonsterCoroutine();
+    }
 
+    private IEnumerator saveMonsterCoroutine() {
+        yield return new WaitForEndOfFrame();
+
+        //Step 1: Define the screenshot area
+        UnityEngine.Vector3[] screenshotCorners = new UnityEngine.Vector3[4];
+        screenshotArea.GetWorldCorners(screenshotCorners);
+
+        //Step 2: Convert world coordinates into camera coordinates
+        UnityEngine.Vector2 bottomLeft = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[0]);
+        UnityEngine.Vector2 topLeft = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[1]);
+        UnityEngine.Vector2 topRight = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[2]);
+
+        //Step 3: Define height and width
+        float height = topLeft.y - bottomLeft.y;
+        float width = topRight.x - topLeft.x;
+
+        //Step 4: Create a texture and rectangle area with the new measurements
+        Texture2D tex = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
+        Rect rex = new Rect(bottomLeft.x,bottomLeft.y,width,height);
+        
+        //Step 5: Save all the pixels in the rectangle area into the texture
+        tex.ReadPixels(rex, 0, 0);
+        tex.Apply();
+
+        //Step 6: Encode the texture's contents into a byte array in the png format
+        byte[] bytes = tex.EncodeToPNG();
+
+        //Step 7: Texture no longer needed, can be destroyed
+        Destroy(tex);
+
+        //Step 8: Save bytes at the provided destination
+        //File.WriteAllBytes(Application.dataPath + fileName, bytes);
     }
 }
