@@ -3460,6 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83fad67cb30bd841804450929c482cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupType: 0
   bodyPartImages:
   - {fileID: 21300000, guid: 6c76508cd3292474eb8ecac406693d54, type: 3}
   - {fileID: 21300000, guid: d01e2900fe1044648b2412136025abb1, type: 3}
@@ -11923,6 +11924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83fad67cb30bd841804450929c482cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupType: 0
   bodyPartImages:
   - {fileID: 21300000, guid: a28729cb58cb3e44c83dc7fd9efc518d, type: 3}
   - {fileID: 21300000, guid: fb855b254a6956642a4ac22c2f1675b2, type: 3}
@@ -16811,6 +16813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83fad67cb30bd841804450929c482cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupType: 0
   bodyPartImages:
   - {fileID: 21300000, guid: 33d879df04feb8b47993e6f9402bf14b, type: 3}
   - {fileID: 21300000, guid: 420073a05e6d30443a0d51ddc200060e, type: 3}

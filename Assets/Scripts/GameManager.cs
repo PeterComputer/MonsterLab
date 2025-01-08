@@ -108,4 +108,8 @@ public class GameManager : MonoBehaviour
             }
         }        
     }
+
+    public void closeApplication() {
+        Application.Quit();
+    }
 }
