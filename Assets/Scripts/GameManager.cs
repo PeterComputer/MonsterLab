@@ -1,11 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Enums;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using System.Collections;
-using System.Numerics;
-using UnityEngine.SocialPlatforms.GameCenter;
 using System.IO;
 
 public class GameManager : MonoBehaviour
