@@ -37,9 +37,21 @@ public class GameManager : MonoBehaviour
 
     [Header("Monster Screenshot Requirements")]
     [SerializeField]
-    private Camera sceneCamera;
-    [SerializeField]
     private RectTransform screenshotArea;
+    /*
+    [SerializeField]
+    private int bottomLeftOffsetX;
+    [SerializeField]
+    private int bottomLeftOffsetY;
+    [SerializeField]
+    private int topLeftOffsetX;
+    [SerializeField]
+    private int topLeftOffsetY;
+    [SerializeField]
+    private int topRightOffsetX;
+    [SerializeField]
+    private int topRightOffsetY;
+    */     
 
     [Header("Interactibles")]
 
@@ -48,6 +60,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private RuntimePlatform gamePlatform;
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -156,38 +171,29 @@ public class GameManager : MonoBehaviour
         UnityEngine.Vector3[] screenshotCorners = new UnityEngine.Vector3[4];
         screenshotArea.GetWorldCorners(screenshotCorners);
 
-        /*
-        //Step 2: Convert world coordinates into camera coordinates
-        UnityEngine.Vector2 bottomLeft = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[0]);
-        UnityEngine.Vector2 topLeft = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[1]);
-        UnityEngine.Vector2 topRight = RectTransformUtility.WorldToScreenPoint(sceneCamera, screenshotCorners[2]);
-        */
-
+        //Step 2: Define height and width
         UnityEngine.Vector2 bottomLeft = screenshotCorners[0];
         UnityEngine.Vector2 topLeft = screenshotCorners[1];
         UnityEngine.Vector2 topRight = screenshotCorners[2];
+        
+        float height = topLeft.y - bottomLeft.y;
+        float width = topRight.x - bottomLeft.x;
 
-        //Step 3: Define height and width
-        float height = Mathf.Abs(topLeft.y - bottomLeft.y);
-        float width = Mathf.Abs(topRight.x - topLeft.x);
-
-        Debug.Log($"bottomLeft: {bottomLeft}, topLeft: {topLeft}, topRight: {topRight}, width: {width}, height: {height}");
-
-        //Step 4: Create a texture and rectangle area with the new measurements
+        //Step 3: Create a texture and rectangle area with the new measurements
         Texture2D tex = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
         Rect rex = new Rect(bottomLeft.x,bottomLeft.y,width,height);
         
-        //Step 5: Save all the pixels in the rectangle area into the texture
+        //Step 4: Save all the pixels in the rectangle area into the texture
         tex.ReadPixels(rex, 0, 0);
         tex.Apply();
 
-        //Step 6: Encode the texture's contents into a byte array in the png format
+        //Step 5: Encode the texture's contents into a byte array in the png format
         byte[] bytes = tex.EncodeToPNG();
 
-        //Step 7: Texture no longer needed, can be destroyed to avoid memory leaks
+        //Step 6: Texture no longer needed, can be destroyed to avoid memory leaks
         Destroy(tex);
 
-        //Step 8: Save bytes at the provided destination
+        //Step 7: Save bytes at the provided destination
         if(gamePlatform == RuntimePlatform.Android) {
             NativeGallery.SaveImageToGallery(bytes, "MonsterLab", "MyMonster" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png", ( success, path ) => Debug.Log( "Media save result: " + success + " " + path ));
         }
@@ -199,6 +205,7 @@ public class GameManager : MonoBehaviour
             File.WriteAllBytes(filePath, bytes);
         }
         
+        //Step 8: Pop up message indicating the operation's success
         monsterImageSavedUI.SetActive(true);
         
     }
