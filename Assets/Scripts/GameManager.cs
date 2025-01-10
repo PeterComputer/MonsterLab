@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Android Support")]
 
-    [SerializeField]    
+    [SerializeField]
     private RuntimePlatform gamePlatform;
     
     [SerializeField]
