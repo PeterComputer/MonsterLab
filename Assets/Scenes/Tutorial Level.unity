@@ -13847,7 +13847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1078651136
 Transform:
   m_ObjectHideFlags: 0
@@ -22381,6 +22381,10 @@ PrefabInstance:
       propertyPath: legsSelectionUI
       value: 
       objectReference: {fileID: 1531853148}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: pauseGameAction
+      value: 
+      objectReference: {fileID: 2127608410082779304, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: torsoSelectionUI
       value: 

@@ -3,9 +3,16 @@ using UnityEngine.SceneManagement;
 using Enums;
 using System.Collections;
 using System.IO;
+using UnityEngine.InputSystem;
+using Unity.VisualScripting;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Pause Screen")]
+    [SerializeField]
+    private InputActionReference pauseGameAction;
+
     [SerializeField]
     private GameObject pauseMenu;
 
@@ -49,9 +56,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject androidUI;
 
-
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -65,10 +69,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
-            pauseMenu.SetActive(!pauseMenu.activeSelf);
-        }
+
     }
+
+    private void OnEnable() {
+        pauseGameAction.action.performed += pauseUnpauseGame;
+    }
+
+    private void pauseUnpauseGame(InputAction.CallbackContext obj) {
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+    }    
 
     public void loadMainMenuScene() {
         SceneManager.LoadScene("Main Menu");
