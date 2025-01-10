@@ -34,28 +34,20 @@ public class GameManager : MonoBehaviour
     [Header("Monster Screenshot Requirements")]
     [SerializeField]
     private RectTransform screenshotArea;
-    /*
-    [SerializeField]
-    private int bottomLeftOffsetX;
-    [SerializeField]
-    private int bottomLeftOffsetY;
-    [SerializeField]
-    private int topLeftOffsetX;
-    [SerializeField]
-    private int topLeftOffsetY;
-    [SerializeField]
-    private int topRightOffsetX;
-    [SerializeField]
-    private int topRightOffsetY;
-    */     
 
     [Header("Interactibles")]
 
     [SerializeField]
     private GameObject[] pickups;
 
-    [SerializeField]
+
+    [Header("Android Support")]
+
+    [SerializeField]    
     private RuntimePlatform gamePlatform;
+    
+    [SerializeField]
+    private GameObject androidUI;
 
 
 
@@ -64,6 +56,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gamePlatform = Application.platform;
+
+        if(gamePlatform == RuntimePlatform.Android) {
+            androidUI.SetActive(true);
+        }
     }
 
     // Update is called once per frame
