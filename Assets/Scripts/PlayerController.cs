@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public Transform movePoint;
     public LayerMask stopsPlayerMovement;
-
     private InputAction moveInput;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
         if(Vector3.Distance(transform.position, movePoint.position) <= 0.05f) {
 
             //Read player input
-            moveInput = GetComponent<PlayerInput>().actions["move"];
             Vector2 movePlayer = moveInput.ReadValue<Vector2>();
 
             //Proccess Horizontal Movement

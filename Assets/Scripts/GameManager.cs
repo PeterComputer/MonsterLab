@@ -49,12 +49,16 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Android Support")]
-
-    [SerializeField]
-    private RuntimePlatform gamePlatform;
     
     [SerializeField]
     private GameObject androidUI;
+
+
+    //MISC
+    private RuntimePlatform gamePlatform;
+
+    [SerializeField]
+    private PlayerInput playerInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,7 +77,14 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnEnable() {
-        pauseGameAction.action.performed += pauseUnpauseGame;
+        if(pauseGameAction != null) {
+            pauseGameAction.action.performed += pauseUnpauseGame;
+        }  
+    }
+    private void OnDisable() {
+        if(pauseGameAction != null) {
+            pauseGameAction.action.performed -= pauseUnpauseGame;
+        }  
     }
 
     private void pauseUnpauseGame(InputAction.CallbackContext obj) {
@@ -160,6 +171,7 @@ public class GameManager : MonoBehaviour
     public void displayMonsterCompleteUI() {
         legsMissionUI.SetActive(false);
         monsterCompleteUI.SetActive(true);
+        switchPlayerInputMap();
     }
 
     public void saveMonsterImage() {
@@ -210,5 +222,17 @@ public class GameManager : MonoBehaviour
         //Step 8: Pop up message indicating the operation's success
         monsterImageSavedUI.SetActive(true);
         
+    }
+
+    public void switchPlayerInputMap()
+    {
+        if(playerInput.currentActionMap.name == "Player") {
+            playerInput.SwitchCurrentActionMap("UI");
+        }
+        else {
+            playerInput.SwitchCurrentActionMap("Player");
+        }
+
+        Debug.Log("Switch action map to: " + playerInput.currentActionMap.name);
     }
 }

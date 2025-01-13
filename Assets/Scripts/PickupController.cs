@@ -22,6 +22,7 @@ public class PickupController : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
+        gameManager.switchPlayerInputMap();
         gameManager.openSelectionUI(type);
     }
 
