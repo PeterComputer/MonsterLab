@@ -9,21 +9,60 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-    public Transform movePoint;
+    //public Transform movePoint;
     public LayerMask stopsPlayerMovement;
-    private InputAction moveInput;
+    public PlayerInputActions playerInputActions;
+    [SerializeField]
+    private float collisionRadius;
+    private Rigidbody _rb;
+    private InputAction _move;
+    private Vector2 _moveVector;
+
+    void OnEnable() {
+        
+        _move = playerInputActions.Player.Move;
+        _move.Enable();
+    }
+
+    void OnDisable() {
+        _move.Disable();
+    }
+
+    void Awake() {
+        playerInputActions = new PlayerInputActions();
+        _rb = GetComponent<Rigidbody>();
+    }
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveInput = GetComponent<PlayerInput>().actions["move"];
-        movePoint.parent = null;
+        //moveInput = GetComponent<PlayerInput>().actions["move"];
+        //movePoint.parent = null;
     }
 
-    // Update is called once per frame
+    // FixedUpdate is called once every 0.02 seconds
+    void FixedUpdate() {
+        _rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
+    }
+
+    // FixedUpdate is called once every 0.02 seconds
     void Update()
     {
+        //Read player input
+        _moveVector = _move.ReadValue<Vector2>();
+        //if(Physics.OverlapSphere(this.transform.position + new Vector3(moveVector.x, 0f, moveVector.y), collisionRadius, stopsPlayerMovement).Length == 0) {
+            //this.transform.Translate(new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime);
+            //this.transform.position += new Vector3(moveVector.x * moveSpeed * Time.deltaTime, 0f, moveVector.y * moveSpeed * Time.deltaTime);
+        //}
 
+        
+        
+    
+
+        /*
         //Makes player move from current position to a new one at a speed determined by moveSpeed
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
@@ -34,10 +73,10 @@ public class PlayerController : MonoBehaviour
             Vector2 movePlayer = moveInput.ReadValue<Vector2>();
 
             //Proccess Horizontal Movement
-            if(Math.Abs(movePlayer.x) > 0.3f) {
+            if(Math.Abs(movePlayer.x) > joystickDeadzoneValue) {
                 
                 if(movePlayer.x < 0) movePlayer.x = -1f;
-                else movePlayer.x = 1f;
+                else if(movePlayer.y > 0) movePlayer.y = 1f;
 
                 //Checks whether the player would be moving into an obstacle
                 if(Physics.OverlapSphere(movePoint.position + new Vector3(movePlayer.x, 0f, 0f), 0.5f, stopsPlayerMovement).Length == 0) {
@@ -46,11 +85,11 @@ public class PlayerController : MonoBehaviour
             }
 
             //Process Vertical Movement, accounting for deadzone
-            if(Math.Abs(movePlayer.y) > 0.3f) {
+            if(Math.Abs(movePlayer.y) > joystickDeadzoneValue) {
 
 
                 if(movePlayer.y < 0) movePlayer.y = -1f;
-                else movePlayer.y = 1f;                
+                else if(movePlayer.y > 0) movePlayer.y = 1f;              
                 
                 //Checks whether the player would be moving into an obstacle
                 if(Physics.OverlapSphere(movePoint.position + new Vector3(0f, 0f, movePlayer.y), 0.5f, stopsPlayerMovement).Length == 0) {
@@ -77,8 +116,9 @@ public class PlayerController : MonoBehaviour
                        movePoint.position += new Vector3(0f, 0f , Input.GetAxisRaw("Vertical"));
                 }
             }
-            */
+            
         }
+        */
     }
 }
 

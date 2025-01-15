@@ -1,0 +1,23 @@
+# ninja log v5
+0	1278	7585562130071094	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7f257b0200af7769
+42	209	7585562119425370	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	fbbbabaaa0146914
+5	1116	7585562128461589	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9087441d993ff6af
+1279	1401	7585562131357101	C:/Users/X530/Documents/GitHub/MonsterLab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/53413r4k/obj/arm64-v8a/libgame.so	5e565abfc2bd9fe6
+36	1064	7585562127929583	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a19ef4994364f6c0
+211	376	7585562121082747	C:/Users/X530/Documents/GitHub/MonsterLab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/53413r4k/obj/arm64-v8a/libswappywrapper.so	81233d4ad5bc70af
+30	1069	7585562127992708	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d356cc91d7226f0c
+9	1037	7585562127663019	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	a492a2a41458ca6c
+14	1039	7585562127612444	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	770d83e3ed246a46
+19	1054	7585562127820053	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	f736ec43ccaef5cd
+25	1178	7585562129056595	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	89ac7db07e35ac69
+49	154	7585605137448757	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	fbbbabaaa0146914
+154	525	7585605141115456	C:/Users/X530/Documents/GitHub/MonsterLab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/53413r4k/obj/arm64-v8a/libswappywrapper.so	81233d4ad5bc70af
+16	592	7585605141754354	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	f736ec43ccaef5cd
+22	606	7585605141917199	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	a492a2a41458ca6c
+30	655	7585605142386156	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9087441d993ff6af
+45	663	7585605142502365	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a19ef4994364f6c0
+34	663	7585605142481917	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	770d83e3ed246a46
+41	680	7585605142662035	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d356cc91d7226f0c
+37	730	7585605143168922	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	89ac7db07e35ac69
+10	780	7585605143643749	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7f257b0200af7769
+780	872	7585605144618532	C:/Users/X530/Documents/GitHub/MonsterLab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/53413r4k/obj/arm64-v8a/libgame.so	5e565abfc2bd9fe6

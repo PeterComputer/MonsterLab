@@ -88,8 +88,13 @@ public class GameManager : MonoBehaviour
     }
 
     private void pauseUnpauseGame(InputAction.CallbackContext obj) {
+        switchPauseState();
+    }
+
+    public void switchPauseState() {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
-    }    
+        switchPlayerInputMap();        
+    }
 
     public void loadMainMenuScene() {
         SceneManager.LoadScene("Main Menu");
@@ -101,7 +106,7 @@ public class GameManager : MonoBehaviour
 
     public void loadNextScene() {
         //if not at the final scene
-        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCount) {
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else {
