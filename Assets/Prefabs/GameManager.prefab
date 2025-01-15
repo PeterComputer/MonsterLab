@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6732866467520581746}
   - component: {fileID: 7515566247293336335}
+  - component: {fileID: 844066591731429339}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -44,3 +45,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdbd1e17badff449a4d2306c9a97215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseGameAction: {fileID: 6928832292183605412, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  pauseMenu: {fileID: 0}
+  headSelectionUI: {fileID: 0}
+  torsoSelectionUI: {fileID: 0}
+  legsSelectionUI: {fileID: 0}
+  headMissionUI: {fileID: 0}
+  torsoMissionUI: {fileID: 0}
+  legsMissionUI: {fileID: 0}
+  monsterCompleteUI: {fileID: 0}
+  monsterImageSavedUI: {fileID: 0}
+  screenshotArea: {fileID: 0}
+  pickups: []
+  androidUI: {fileID: 0}
+  playerInput: {fileID: 0}
+--- !u!114 &844066591731429339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173900544561536911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PauseUnpause
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

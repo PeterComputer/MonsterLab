@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 5f;
     //public Transform movePoint;
-    public LayerMask stopsPlayerMovement;
+    //public LayerMask stopsPlayerMovement;
     public PlayerInputActions playerInputActions;
-    [SerializeField]
-    private float collisionRadius;
+
+    private PlayerInput _playerInput;
+    
+    //private float collisionRadius;
     private Rigidbody _rb;
     private InputAction _move;
     private Vector2 _moveVector;
@@ -30,7 +32,10 @@ public class PlayerController : MonoBehaviour
 
     void Awake() {
         playerInputActions = new PlayerInputActions();
+        _playerInput = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody>();
+
+
     }
 
 
@@ -45,7 +50,12 @@ public class PlayerController : MonoBehaviour
 
     // FixedUpdate is called once every 0.02 seconds
     void FixedUpdate() {
-        _rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
+        if (_playerInput.currentActionMap.name == "Player") {
+            _rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
+        }
+        else {
+            _rb.linearVelocity = new Vector3(0f, 0f, 0f);
+        }
     }
 
     // FixedUpdate is called once every 0.02 seconds
