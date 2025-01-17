@@ -187,6 +187,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         //Step 1: Define the screenshot area
+
         UnityEngine.Vector3[] screenshotCorners = new UnityEngine.Vector3[4];
         screenshotArea.GetWorldCorners(screenshotCorners);
 
@@ -194,9 +195,16 @@ public class GameManager : MonoBehaviour
         UnityEngine.Vector2 bottomLeft = screenshotCorners[0];
         UnityEngine.Vector2 topLeft = screenshotCorners[1];
         UnityEngine.Vector2 topRight = screenshotCorners[2];
+
+        Debug.Log("bottomLeft: " + bottomLeft);
+        Debug.Log("topLeft: " + topLeft);
+        Debug.Log("topRight: " + topRight);
         
         float height = topLeft.y - bottomLeft.y;
         float width = topRight.x - bottomLeft.x;
+
+        Debug.Log("height: " + height);
+        Debug.Log("width: " + width);
 
         //Step 3: Create a texture and rectangle area with the new measurements
         Texture2D tex = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
@@ -217,7 +225,7 @@ public class GameManager : MonoBehaviour
             NativeGallery.SaveImageToGallery(bytes, "MonsterLab", "MyMonster" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png", ( success, path ) => Debug.Log( "Media save result: " + success + " " + path ));
         }
         else {
-            string folderPath = Path.Combine(Application.persistentDataPath, "MonsterLabPics");
+            string folderPath = Path.Combine(Application.dataPath + "/MonsterLabPics/");
             Directory.CreateDirectory(folderPath);
 
             var filePath = Path.Combine(folderPath, "MyMonster" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png");
