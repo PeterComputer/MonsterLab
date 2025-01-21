@@ -39,8 +39,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 2158421355
+    locked: 0
+  - name: Pickup Ground
+    uniqueID: 321921771
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pickups
+    uniqueID: 1029157047
     locked: 0
   m_RenderingLayers:
   - Default

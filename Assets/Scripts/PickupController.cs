@@ -22,8 +22,14 @@ public class PickupController : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        gameManager.switchPlayerInputMap();
-        gameManager.openSelectionUI(type);
+        if (type != PickupType.other) {
+            gameManager.switchPlayerInputMap();
+            gameManager.openSelectionUI(type);
+        }
+
+        else {
+            Destroy(this.gameObject);
+        }
     }
 
     public PickupType getPickupType() {

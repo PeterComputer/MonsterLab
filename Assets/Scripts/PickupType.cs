@@ -7,5 +7,7 @@ namespace Enums
         head,
         torso,
         legs,
+
+        other,
     }
 }

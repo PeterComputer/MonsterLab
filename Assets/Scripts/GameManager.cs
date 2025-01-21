@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
         
         destroyTypeOfPickup(currentType);
         
-        GameObject.FindWithTag("Door").GetComponent<DoorController>().decreasePickupsLeft();
+        GameObject.FindWithTag("Door").GetComponent<FlatDoorController>().decreasePickupsLeft();
     }
 
 
