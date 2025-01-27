@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractibleArea : MonoBehaviour
@@ -7,7 +6,7 @@ public class InteractibleArea : MonoBehaviour
     public GameObject connectedObject;
 
     private void OnTriggerEnter() {
-        Debug.Log("Triggered!");
+        Debug.Log("triggered");
         connectedObject.SetActive(!connectedObject.activeSelf);
     }
 
