@@ -7,6 +7,9 @@ public class KeypadInteractibleArea : MonoBehaviour
     public GameObject keypadLight;
 
     public Animator keypadLightAnimator;
+
+    [SerializeField]    
+    private bool isAnimating;
     
     private void OnTriggerEnter() {
         //gameObject.GetComponent<BoxCollider> ().enabled = false;
@@ -35,8 +38,9 @@ public class KeypadInteractibleArea : MonoBehaviour
     }
 
     public void setFlashingLight(bool isFlashing) {
-        Debug.Log(isFlashing);
-        if(isFlashing) {
+        isAnimating = isFlashing;
+
+        if(isAnimating) {
             keypadLightAnimator.SetTrigger("TrFlash");
         }
         else {

@@ -59,7 +59,7 @@ public class KeypadController : MonoBehaviour
                 answersIncorrect++;
             }
             else {
-                areaPressed.setFlashingLight(true);
+                interactibleAreas[nextKeypadNumber].setFlashingLight(true);
             }
         }
     }

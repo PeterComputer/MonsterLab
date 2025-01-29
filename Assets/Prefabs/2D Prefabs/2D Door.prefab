@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bb3462bbc9cbddf419d53041af5406ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0799bbe27e8f0894d9b5941c0239395e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupsLeft: 3
-  openDoorSprite: {fileID: 21300000, guid: cbc55c71b2a72b2488c79278f97cdaaa, type: 3}
+  openDoorSprite: {fileID: 21300000, guid: 2f562aee2a0f6b34e8139219776fe0cf, type: 3}
 --- !u!65 &6213327338977163303
 BoxCollider:
   m_ObjectHideFlags: 0
