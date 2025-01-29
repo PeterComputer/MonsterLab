@@ -52,7 +52,7 @@ public class KeypadController : MonoBehaviour
 
         // If answer is incorrect, reset
         else {
-            resetKeypad();
+            //resetKeypad();
 
             //
             if(answersIncorrect < MAX_INCORRECT_ANSWERS) {

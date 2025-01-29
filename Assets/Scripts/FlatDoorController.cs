@@ -10,6 +10,10 @@ public class FlatDoorController : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+
+        if(pickupsLeft == 0) {
+            openDoor();
+        }
     }
 
     // Update is called once per frame
@@ -35,7 +39,12 @@ public class FlatDoorController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        gameManager.displayMonsterCompleteUI();
+        if(gameManager.isTutorial) {
+            gameManager.displayMonsterCompleteUI();
+        }
+        else {
+            gameManager.loadNextScene();
+        }
         
     }
 }

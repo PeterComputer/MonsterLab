@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: f83920d9a430b6f4895d4706c0d4bc79
   - enabled: 1
+    path: Assets/Scenes/Tutorial V2.unity
+    guid: fb35e2a22a7b16e43ac92b011f54ea04
+  - enabled: 1
+    path: Assets/Scenes/Light Testing.unity
+    guid: f8addf286045005478065ea7019d5061
+  - enabled: 1
     path: Assets/Scenes/Keypad Testing.unity
     guid: ed8b19529216ddc42a939d11adae08a0
   m_configObjects:

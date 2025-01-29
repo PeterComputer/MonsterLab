@@ -28,6 +28,7 @@ public class PickupController : MonoBehaviour
         }
 
         else {
+            GameObject.FindWithTag("Door").GetComponent<FlatDoorController>().decreasePickupsLeft();
             Destroy(this.gameObject);
         }
     }

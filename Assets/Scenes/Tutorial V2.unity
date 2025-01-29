@@ -2015,6 +2015,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1398046789}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1647278564}

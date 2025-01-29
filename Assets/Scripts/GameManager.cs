@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] pickups;
+    public bool isTutorial;
 
 
     [Header("Android Support")]
