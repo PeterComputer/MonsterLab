@@ -3,11 +3,14 @@ using UnityEngine;
 public class InteractibleArea : MonoBehaviour
 {
 
-    public GameObject connectedObject;
+    public GameObject[] connectedObjects;
 
     private void OnTriggerEnter() {
-        Debug.Log("triggered");
-        connectedObject.SetActive(!connectedObject.activeSelf);
+        foreach(GameObject currentObject in connectedObjects) {
+            if(currentObject != null)
+            currentObject.SetActive(!currentObject.activeSelf);
+        }
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

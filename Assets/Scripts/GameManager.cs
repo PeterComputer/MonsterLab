@@ -188,7 +188,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         //Step 1: Define the screenshot area
-
         UnityEngine.Vector3[] screenshotCorners = new UnityEngine.Vector3[4];
         screenshotArea.GetWorldCorners(screenshotCorners);
 
