@@ -122,4 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObject: {fileID: 0}
+  connectedObjects: []
+  pressedSprite: {fileID: 21300000, guid: 6b831d1ca7294394f94562568994a94e, type: 3}
+  pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}

@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 85a9174559bafd041af2839ea3e8a249, type: 3}
+  - {fileID: 2100000, guid: 6a9b94d07f82ba242ab1b74faab74d6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupsLeft: 3
   openDoorSprite: {fileID: 21300000, guid: 2f562aee2a0f6b34e8139219776fe0cf, type: 3}
+  openDoorAudioClip: {fileID: 8300000, guid: 05d4d3c7d6fb5034d8aa3276edd7e005, type: 3}
 --- !u!65 &6213327338977163303
 BoxCollider:
   m_ObjectHideFlags: 0

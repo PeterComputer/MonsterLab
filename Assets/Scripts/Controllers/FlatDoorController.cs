@@ -4,8 +4,10 @@ public class FlatDoorController : MonoBehaviour
 {
     [SerializeField]private int pickupsLeft;
     public Sprite openDoorSprite;
-    private GameManager gameManager;
+    public AudioClip openDoorAudioClip;
     
+    private GameManager gameManager;
+        
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +38,7 @@ public class FlatDoorController : MonoBehaviour
         gameObject.layer = 0;
         gameObject.GetComponent<BoxCollider>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = openDoorSprite;
+        SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
     }
 
     private void OnTriggerEnter(Collider other) {

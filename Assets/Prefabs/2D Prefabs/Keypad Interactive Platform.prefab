@@ -127,7 +127,8 @@ MonoBehaviour:
   keypadController: {fileID: 0}
   keypadLight: {fileID: 4753306666829080745}
   keypadLightAnimator: {fileID: 6257880216481970018}
-  isAnimating: 0
+  pressedSprite: {fileID: 21300000, guid: 6b831d1ca7294394f94562568994a94e, type: 3}
+  pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
 --- !u!1 &4753306666829080745
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +424,10 @@ PrefabInstance:
     - target: {fileID: 5621528008899218537, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: editorData._bezierPath.perAnchorNormalsAngle.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941800236442536289, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

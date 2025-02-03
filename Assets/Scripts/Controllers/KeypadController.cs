@@ -6,7 +6,7 @@ public class KeypadController : MonoBehaviour
     public const int MAX_INCORRECT_ANSWERS = 2;
 
     public KeypadInteractibleArea[] interactibleAreas = new KeypadInteractibleArea[4];
-    public GameObject door;
+    public FlatDoorController door;
     [SerializeField]
     private int nextKeypadNumber;
     [SerializeField]
@@ -73,7 +73,7 @@ public class KeypadController : MonoBehaviour
     private void solveKeypad() {
 
         disableAllAreas();
-        door.SetActive(false);
+        door.decreasePickupsLeft();
         isKeypadSolved = true;
     }
 
