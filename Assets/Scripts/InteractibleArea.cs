@@ -1,14 +1,21 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractibleArea : MonoBehaviour
 {
 
     public GameObject[] connectedObjects;
+
+    [SerializeField] private UnityEvent _onTriggerEnter;
     public Sprite pressedSprite;
     public AudioClip pressedAudioClip;
     private SpriteRenderer spriteRenderer;
     private Sprite defaultSprite;
     private void OnTriggerEnter() {
+
+        _onTriggerEnter.Invoke();
+
         foreach(GameObject currentObject in connectedObjects) {
             if(currentObject != null)
             currentObject.SetActive(!currentObject.activeSelf);
