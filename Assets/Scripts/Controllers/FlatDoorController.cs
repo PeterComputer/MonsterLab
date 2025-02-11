@@ -1,19 +1,30 @@
+using System.Threading;
 using UnityEngine;
 
 public class FlatDoorController : MonoBehaviour
 {
+    [SerializeField] bool startsOpen;    
     [SerializeField]private int pickupsLeft;
     public Sprite openDoorSprite;
+    private Sprite closedSprite;
     public AudioClip openDoorAudioClip;
     
     private GameManager gameManager;
-        
+    
+    private BoxCollider boxCollider;
+    private SpriteRenderer spriteRenderer;
+
+    void Awake() {
+        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        boxCollider = gameObject.GetComponent<BoxCollider>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        closedSprite = spriteRenderer.sprite;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
-
-        if(pickupsLeft == 0) {
+        if(startsOpen) {
             openDoor();
         }
     }
@@ -25,20 +36,44 @@ public class FlatDoorController : MonoBehaviour
 
     public void decreasePickupsLeft() {
 
-        if (pickupsLeft > 0) {
-            pickupsLeft--;
-        }
+        switch(pickupsLeft) {
+            case -1:
+                break;
+            case 0:
+                pickupsLeft--;
+                openDoor();
+                break;
+            case 1:
+                pickupsLeft = -1;
+                openDoor();
+                break;
 
-        if(pickupsLeft == 0) {
-            openDoor();
+            case >1:
+                pickupsLeft--;
+                break;
         }
     }
 
     private void openDoor() {
-        gameObject.layer = 0;
-        gameObject.GetComponent<BoxCollider>().isTrigger = true;
-        gameObject.GetComponent<SpriteRenderer>().sprite = openDoorSprite;
+        boxCollider.isTrigger = true;
+        spriteRenderer.sprite = openDoorSprite;
         SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
+
+    }
+
+    private void closeDoor() {
+        pickupsLeft = 0;
+        boxCollider.isTrigger = false;
+        spriteRenderer.sprite = closedSprite;
+    }
+
+    public void switchDoorState() {
+        if (pickupsLeft == -1) {
+            closeDoor();
+        }
+        else {
+            decreasePickupsLeft();
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
