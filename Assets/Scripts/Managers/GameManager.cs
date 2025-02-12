@@ -55,11 +55,12 @@ public class GameManager : MonoBehaviour
     private GameObject androidUI;
 
 
-    //MISC
-    private RuntimePlatform gamePlatform;
-
+    [Header("Misc")]    
+    //[SerializeField]
+    //private string nextScene;
     [SerializeField]
     private PlayerInput playerInput;
+    private RuntimePlatform gamePlatform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -106,6 +107,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void loadNextScene() {
+
         //if not at the final scene
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -113,6 +115,15 @@ public class GameManager : MonoBehaviour
         else {
             reloadCurrentScene();
         }
+
+       /*  if (Application.CanStreamedLevelBeLoaded(nextScene)) {
+            Debug.Log("got here");
+            SceneManager.LoadScene(nextScene);
+        }
+        else {
+            reloadCurrentScene();
+        } */
+
     }
 
     public void openSelectionUI(PickupType type) {
