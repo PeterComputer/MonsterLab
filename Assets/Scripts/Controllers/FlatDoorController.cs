@@ -4,7 +4,7 @@ using UnityEngine;
 public class FlatDoorController : MonoBehaviour
 {
     [SerializeField] bool startsOpen;    
-    [SerializeField]private int pickupsLeft;
+    [SerializeField] private int pickupsLeft;
     public Sprite openDoorSprite;
     private Sprite closedSprite;
     public AudioClip openDoorAudioClip;
@@ -13,6 +13,10 @@ public class FlatDoorController : MonoBehaviour
     
     private BoxCollider boxCollider;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private RotatingPlatformController rightDoorFrame;
+    [SerializeField] private RotatingPlatformController leftDoorFrame;
+    [SerializeField] private GameObject doorBackdrop;
+
 
     void Awake() {
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
@@ -58,13 +62,16 @@ public class FlatDoorController : MonoBehaviour
         boxCollider.isTrigger = true;
         spriteRenderer.sprite = openDoorSprite;
         SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
-
+        setDoorFramesActive(true);
+        doorBackdrop.SetActive(true);
     }
 
     private void closeDoor() {
         pickupsLeft = 0;
         boxCollider.isTrigger = false;
         spriteRenderer.sprite = closedSprite;
+        setDoorFramesActive(false);
+        doorBackdrop.SetActive(false);
     }
 
     public void switchDoorState() {
@@ -84,5 +91,23 @@ public class FlatDoorController : MonoBehaviour
             gameManager.loadNextScene();
         }
         
+    }
+
+    private void setDoorFramesActive(bool active) {
+
+        float angle;
+        
+        if(active) {
+            angle = 150f;
+        }
+        else {
+            angle = 0f;
+        }
+
+        rightDoorFrame.rotateToXDegrees(-angle, active);
+        leftDoorFrame.rotateToXDegrees(angle, active);        
+
+        rightDoorFrame.gameObject.SetActive(active);
+        leftDoorFrame.gameObject.SetActive(active);
     }
 }

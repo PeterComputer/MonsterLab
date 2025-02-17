@@ -1,3 +1,4 @@
+using PathCreation.Examples;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,9 +10,12 @@ public class InteractibleArea : MonoBehaviour
 
     [SerializeField] private UnityEvent _onTriggerEnter;
     public Sprite pressedSprite;
+    public Material pressedWireMaterial;
     public AudioClip pressedAudioClip;
     private SpriteRenderer spriteRenderer;
     private Sprite defaultSprite;
+    private Material defaultWireMaterial;
+    private RoadMeshCreator wire;
     private void OnTriggerEnter() {
 
         _onTriggerEnter.Invoke();
@@ -22,17 +26,23 @@ public class InteractibleArea : MonoBehaviour
         }
 
         spriteRenderer.sprite = pressedSprite;
+        wire.roadMaterial = pressedWireMaterial;
+        wire.TriggerUpdate();
         SoundFXManager.instance.PlaySoundFXClip(pressedAudioClip, transform, 1f);
         
     }
 
     private void OnTriggerExit() {
         spriteRenderer.sprite = defaultSprite;
+        wire.roadMaterial = defaultWireMaterial;
+        wire.TriggerUpdate();
     }
 
     void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
+        wire = GetComponentInChildren<RoadMeshCreator>();
+        defaultWireMaterial = wire.roadMaterial;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

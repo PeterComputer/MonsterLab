@@ -34,4 +34,12 @@ public class RotatingPlatformController : MonoBehaviour
         }
         
     }
+
+    public void rotateToXDegrees(float angle, bool doAnimation) {
+        targetAngle.y = angle;
+
+        if(!doAnimation) {
+            currentAngle = new Vector3(0f, angle, 0f);
+        }
+    }
 }
