@@ -101,9 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2667f48d9dc1b70469e892bc03776cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startsOpen: 0
   pickupsLeft: 3
   openDoorSprite: {fileID: 21300000, guid: 2f562aee2a0f6b34e8139219776fe0cf, type: 3}
-  openDoorAudioClip: {fileID: 8300000, guid: 05d4d3c7d6fb5034d8aa3276edd7e005, type: 3}
+  openDoorAudioClip: {fileID: 8300000, guid: 2b9fac2e56bf884408602b42565b0db3, type: 3}
 --- !u!65 &6213327338977163303
 BoxCollider:
   m_ObjectHideFlags: 0
