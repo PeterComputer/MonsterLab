@@ -93,8 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c8d3d56c33e43e341bd431675fc2f273, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 31a42e4c99b454242b1cb6fccf714ece, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: c2e088c904587ae4b85f131f51132241, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 039d77f95b513524cb7ce631caf1c911, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1360,6 +1360,10 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1647278564}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: settingsMenu
+      value: 
+      objectReference: {fileID: 1714336171}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: headMissionUI
       value: 
@@ -3991,6 +3995,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+--- !u!1 &1714336171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1879876992380242246, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+  m_PrefabInstance: {fileID: 1714336170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1717190289 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}

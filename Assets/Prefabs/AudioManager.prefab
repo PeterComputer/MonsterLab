@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5400149402097384597}
+  m_Father: {fileID: 3432213301542988463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8211537327674978929
 MonoBehaviour:
@@ -75,7 +75,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5400149402097384597}
+  m_Father: {fileID: 3432213301542988463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &157515281077224824
 AudioSource:
@@ -204,8 +204,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3432213301542988463}
-  - {fileID: 7953209972916177631}
-  - {fileID: 5629020526158225475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8571794350804113464
@@ -220,7 +218,7 @@ GameObject:
   - component: {fileID: 8678909991470422345}
   m_Layer: 0
   m_Name: SoundMixerManager
-  m_TagString: Untagged
+  m_TagString: SoundMixerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +235,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7953209972916177631}
+  - {fileID: 5629020526158225475}
   m_Father: {fileID: 5400149402097384597}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8678909991470422345

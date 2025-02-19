@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject settingsMenu;
 
     [Header("Pickup Screens")]
     [SerializeField]
@@ -94,8 +96,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void switchPauseState() {
-        pauseMenu.SetActive(!pauseMenu.activeSelf);
-        switchPlayerInputMap();        
+
+        if(settingsMenu.activeSelf) {
+            settingsMenu.SetActive(false);
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+        }
+
+        else {
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            switchPlayerInputMap();         
+        }
     }
 
     public void loadMainMenuScene() {
