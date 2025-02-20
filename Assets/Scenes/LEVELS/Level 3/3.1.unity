@@ -2203,8 +2203,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 10
-  m_SpotAngle: 82.56129
-  m_InnerSpotAngle: 56.41996
+  m_SpotAngle: 131.69855
+  m_InnerSpotAngle: 105.55721
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
