@@ -34,8 +34,6 @@ public class PlayerController : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         _playerInput = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody>();
-
-
     }
 
 
