@@ -8,6 +8,7 @@ TagManager:
   - KeypadController
   - SoundMixerManager
   - SettingsMenu
+  - AndroidUI
   layers:
   - Default
   - TransparentFX

@@ -130,6 +130,7 @@ MonoBehaviour:
   pressedSprite: {fileID: 21300000, guid: 668b78733bd66b7438246de8c0ed8c56, type: 3}
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
+  wireStaysOn: 0
 --- !u!1001 &2515417454932272816
 PrefabInstance:
   m_ObjectHideFlags: 0

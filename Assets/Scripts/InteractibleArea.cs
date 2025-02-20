@@ -13,6 +13,8 @@ public class InteractibleArea : MonoBehaviour
     public Material pressedWireMaterial;
     public AudioClip pressedAudioClip;
     private SpriteRenderer spriteRenderer;
+
+    public bool wireStaysOn;
     private Sprite defaultSprite;
     private Material defaultWireMaterial;
     private RoadMeshCreator wire;
@@ -34,8 +36,10 @@ public class InteractibleArea : MonoBehaviour
 
     private void OnTriggerExit() {
         spriteRenderer.sprite = defaultSprite;
-        wire.roadMaterial = defaultWireMaterial;
-        wire.TriggerUpdate();
+        if(!wireStaysOn) {
+            wire.roadMaterial = defaultWireMaterial;
+            wire.TriggerUpdate();
+        }
     }
 
     void Awake() {

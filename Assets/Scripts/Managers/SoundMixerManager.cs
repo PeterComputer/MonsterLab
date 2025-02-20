@@ -40,5 +40,5 @@ public class SoundMixerManager : MonoBehaviour
     }
     public float GetSavedMusicVolume() {
         return savedMusicVolume;
-    }     
+    }
 }
