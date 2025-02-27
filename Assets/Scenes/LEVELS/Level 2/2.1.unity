@@ -3375,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5850944941018044292, guid: f0c3ded0dd6bbbe4d859c3e1ece613e8, type: 3}
       propertyPath: _onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: switchDoorState
+      value: decreasePickupsLeft
       objectReference: {fileID: 0}
     - target: {fileID: 5850944941018044292, guid: f0c3ded0dd6bbbe4d859c3e1ece613e8, type: 3}
       propertyPath: _onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private InputAction _move;
     private Vector2 _moveVector;
 
+    //public bool usingRBVelocity;
+
     void OnEnable() {
         
         _move = playerInputActions.Player.Move;
@@ -48,12 +50,24 @@ public class PlayerController : MonoBehaviour
 
     // FixedUpdate is called once every 0.02 seconds
     void FixedUpdate() {
-        if (_playerInput.currentActionMap.name == "Player") {
-            _rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
+
+        transform.position += new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime;
+
+        /* if (_playerInput.currentActionMap.name == "Player") {
+
+            if(usingRBVelocity) {
+                _rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
+            }
+            else {
+                //transform.position += new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime;
+            }
+            //transform.position += new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime;
+            //_rb.linearVelocity = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed;
         }
         else {
             _rb.linearVelocity = new Vector3(0f, 0f, 0f);
-        }
+            //transform.position = new Vector3(0f, 0f, 0f);
+        } */
     }
 
     // FixedUpdate is called once every 0.02 seconds
@@ -61,6 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         //Read player input
         _moveVector = _move.ReadValue<Vector2>();
+        
         //if(Physics.OverlapSphere(this.transform.position + new Vector3(moveVector.x, 0f, moveVector.y), collisionRadius, stopsPlayerMovement).Length == 0) {
             //this.transform.Translate(new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime);
             //this.transform.position += new Vector3(moveVector.x * moveSpeed * Time.deltaTime, 0f, moveVector.y * moveSpeed * Time.deltaTime);

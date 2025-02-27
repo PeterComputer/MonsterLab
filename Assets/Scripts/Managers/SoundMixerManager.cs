@@ -9,7 +9,6 @@ public class SoundMixerManager : MonoBehaviour
     private float savedSoundFXVolume;
     private float savedMusicVolume;
 
-
     void Awake() {
         savedMasterVolume = PlayerPrefs.GetFloat("masterVolume");
         savedSoundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
