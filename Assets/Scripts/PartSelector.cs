@@ -113,7 +113,6 @@ public class PartSelector : MonoBehaviour
     }
 
     public void advanceToNextMission() {
-        gameManager.switchPlayerInputMap();
         gameManager.advanceToNextMission(pickupType);
     }
 }

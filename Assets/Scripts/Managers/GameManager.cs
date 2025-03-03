@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] pickups;
-    public bool isTutorial;
+    
 
 
     [Header("Android Support")]
@@ -58,11 +58,11 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Misc")]    
-    //[SerializeField]
-    //private string nextScene;
     [SerializeField]
     private PlayerInput playerInput;
     private RuntimePlatform gamePlatform;
+    public bool isTutorial;
+    public bool isMenuScene;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -92,7 +92,9 @@ public class GameManager : MonoBehaviour
     }
 
     private void pauseUnpauseGame(InputAction.CallbackContext obj) {
-        switchPauseState();
+        if(!isMenuScene) {
+            switchPauseState();
+        }
     }
 
     public void switchPauseState() {
@@ -106,6 +108,11 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(!pauseMenu.activeSelf);
             switchPlayerInputMap();         
         }
+    }
+
+    public void switchFromSettingsMenuToGameplay() {
+        settingsMenu.SetActive(false);
+        switchPlayerInputMap();
     }
 
     public void loadMainMenuScene() {
@@ -170,7 +177,7 @@ public class GameManager : MonoBehaviour
         }
         
         destroyTypeOfPickup(currentType);
-        
+        switchPlayerInputMap();        
         GameObject.FindWithTag("Door").GetComponent<FlatDoorController>().decreasePickupsLeft();
     }
 

@@ -686,6 +686,10 @@ PrefabInstance:
       propertyPath: nextScene
       value: Tutorial_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: isMenuScene
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

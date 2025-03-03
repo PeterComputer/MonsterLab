@@ -9,6 +9,9 @@ TagManager:
   - SoundMixerManager
   - SettingsMenu
   - AndroidUI
+  - HeadDisplay
+  - TorsoDisplay
+  - LegsDisplay
   layers:
   - Default
   - TransparentFX
