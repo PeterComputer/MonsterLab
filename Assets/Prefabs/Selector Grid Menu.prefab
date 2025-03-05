@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5945614996110394090}
   - component: {fileID: 3321220764727451762}
   - component: {fileID: 1475073198668570933}
+  - component: {fileID: 7288956968475900464}
   m_Layer: 5
   m_Name: Legs Display
   m_TagString: LegsDisplay
@@ -75,6 +76,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7288956968475900464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530296830929484209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 2
 --- !u!1 &627126771710285746
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +906,7 @@ GameObject:
   - component: {fileID: 2453976127619133893}
   - component: {fileID: 6572335688456698364}
   - component: {fileID: 8609017000943423658}
+  - component: {fileID: 3720050442972491823}
   m_Layer: 5
   m_Name: Head Display
   m_TagString: HeadDisplay
@@ -956,6 +971,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3720050442972491823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816515615641784040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 0
 --- !u!1 &3970552545485981927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,16 +1213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 0
-  partButtons:
-  - {fileID: 7690552439263043241}
-  - {fileID: 4373160316253876265}
-  - {fileID: 5230685653583262375}
-  - {fileID: 2027583746034239646}
-  - {fileID: 5745963404325010110}
-  - {fileID: 7426074961286795651}
-  - {fileID: 8747491874317585424}
-  - {fileID: 5606261747209761643}
-  - {fileID: 7488445770412566610}
 --- !u!1 &7004433669089757617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1843,7 @@ GameObject:
   - component: {fileID: 5269248356993164728}
   - component: {fileID: 4335497821012163457}
   - component: {fileID: 8181710508695036791}
+  - component: {fileID: 8417699475161386608}
   m_Layer: 5
   m_Name: Torso Display
   m_TagString: TorsoDisplay
@@ -1889,6 +1908,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8417699475161386608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667308631657429803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 1
 --- !u!1 &9109238707530344487
 GameObject:
   m_ObjectHideFlags: 0

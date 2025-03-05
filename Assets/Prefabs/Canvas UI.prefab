@@ -604,6 +604,7 @@ GameObject:
   - component: {fileID: 6462535588581364781}
   - component: {fileID: 3675387918198694588}
   - component: {fileID: 1061616590252389484}
+  - component: {fileID: 6579172852126787730}
   m_Layer: 5
   m_Name: Head Display
   m_TagString: Untagged
@@ -668,6 +669,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6579172852126787730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792694739927534208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 0
 --- !u!1 &819478767714984264
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +768,7 @@ GameObject:
   - component: {fileID: 1056181700945606511}
   - component: {fileID: 3641577131385567007}
   - component: {fileID: 2771377317209663826}
+  - component: {fileID: 8923629814442430553}
   m_Layer: 5
   m_Name: Legs Display
   m_TagString: Untagged
@@ -818,6 +833,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8923629814442430553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851425241485080370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 2
 --- !u!1 &875583127020254584
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,6 +4533,7 @@ GameObject:
   - component: {fileID: 3817979820436940364}
   - component: {fileID: 902632637341071486}
   - component: {fileID: 4236042892439716098}
+  - component: {fileID: 2008408901732018717}
   m_Layer: 5
   m_Name: Torso Display
   m_TagString: Untagged
@@ -4569,6 +4598,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2008408901732018717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239947905514908867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9243f115b39d767489991893bc3b9b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupType: 1
 --- !u!1 &4257481710227661184
 GameObject:
   m_ObjectHideFlags: 0

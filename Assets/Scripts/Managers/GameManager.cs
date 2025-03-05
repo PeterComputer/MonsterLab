@@ -6,6 +6,7 @@ using System.IO;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,9 +26,15 @@ public class GameManager : MonoBehaviour
     private GameObject torsoSelectionUI;
     [SerializeField]
     private GameObject legsSelectionUI;
-    [SerializeField]
+    [field: SerializeField]
+    public Sprite currentHead {get; set;}
+    [field: SerializeField]
+    public Sprite currentTorso {get; set;}
+    [field: SerializeField]
+    public Sprite currentLegs {get; set;}
 
     [Header("Mission UIs")]
+    [SerializeField]
     private GameObject headMissionUI;
     [SerializeField]
     private GameObject torsoMissionUI;

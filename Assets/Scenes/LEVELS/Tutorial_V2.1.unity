@@ -1146,6 +1146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 844066591731429339, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5173900544561536911, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1200,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 1398046789}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: isTutorial
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: playerInput
@@ -6727,6 +6731,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 582670211}
+    - target: {fileID: 7667191099163224878, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -236
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667191099163224878, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -296
+      objectReference: {fileID: 0}
     - target: {fileID: 7827916847693615561, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

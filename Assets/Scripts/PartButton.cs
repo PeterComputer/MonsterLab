@@ -8,10 +8,13 @@ public class PartButton : MonoBehaviour
     private GameObject[] displays;
     [SerializeField]
     private PickupType pickupType;
+    private GameManager gameManager;
+
 
     void Awake()
     {
      buttonImage = GetComponent<Image>();
+     gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
 
      switch (pickupType) {
         case PickupType.head:
@@ -41,6 +44,18 @@ public class PartButton : MonoBehaviour
     public void updateDisplayImages() {
         foreach (GameObject display in displays) {
             display.GetComponent<Image>().sprite = buttonImage.sprite;
+        }
+
+        switch (pickupType) {
+            case PickupType.head:
+                gameManager.currentHead = buttonImage.sprite;
+                break;
+            case PickupType.torso:
+                gameManager.currentTorso = buttonImage.sprite;
+                break;
+            case PickupType.legs:
+                gameManager.currentLegs = buttonImage.sprite;
+                break;
         }
     }
 }
