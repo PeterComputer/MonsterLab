@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7881319715807037164}
   - component: {fileID: 8065539880438483445}
+  - component: {fileID: 6757579264636901699}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8447593097100457734}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.001, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
@@ -81,9 +82,26 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 51.582916, y: 50}
+  m_Size: {x: 16.489807, y: 9.030373}
   m_AdaptiveModeThreshold: 0.2
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6757579264636901699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447593097100457734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82215a0c9c0fee848940c6b4079338ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToReplace: {r: 0.1481003, g: 0.5283019, b: 0.10715558, a: 0}
+  replacementColor: {r: 0.41509432, g: 0.35143328, b: 0.2995728, a: 0}
+  replacementRange: 0.3
+  replacementFuzziness: 0.03
+  isColorReplacementActive: 0
