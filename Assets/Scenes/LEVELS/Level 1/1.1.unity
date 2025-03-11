@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9a8a093343d3b4d81a8a87926289d61e, type: 2}
   m_HaloStrength: 0.5
@@ -881,10 +881,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5535600065016180190, guid: 0a2dfea53a9638a42a902b5016d8b7cc, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7085008244694958632, guid: 0a2dfea53a9638a42a902b5016d8b7cc, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -1436,20 +1432,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 1637977817}
     m_Modifications:
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.78999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3894
+      value: -2.2538
       objectReference: {fileID: 0}
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1457,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.1982
+      value: -4.0724
       objectReference: {fileID: 0}
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1489,11 +1473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Size.x
-      value: 31.224419
+      value: 16.489807
       objectReference: {fileID: 0}
     - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Size.y
-      value: 16.940617
+      value: 9.030373
       objectReference: {fileID: 0}
     - target: {fileID: 8447593097100457734, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Name

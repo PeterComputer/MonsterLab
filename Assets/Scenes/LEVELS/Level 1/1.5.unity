@@ -24,9 +24,9 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9a8a093343d3b4d81a8a87926289d61e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1234,10 +1234,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1637977817}
     m_Modifications:
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 671927fa912c44b45bd89d36e9909a54, type: 3}
-    - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4f08db8f49519a4469c68b79e4882589, type: 2}
@@ -1521,10 +1517,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1637977817}
     m_Modifications:
-    - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8a9ddd22e437ccc4689aac1174fd4777, type: 3}
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -2954,9 +2946,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1637977817}
     m_Modifications:
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 969c05591b7e11d42922ebd9b1cea87e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
