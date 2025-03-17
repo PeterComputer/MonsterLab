@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4610782577111779961}
   - component: {fileID: 6900988047398343906}
   - component: {fileID: 5386110352194522640}
+  - component: {fileID: 852869061154928812}
   m_Layer: 0
   m_Name: 2D Fence
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167456054098182688}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -4.366249, y: 0.5, z: -5.61635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -34,7 +35,7 @@ Transform:
   - {fileID: 9136940582005800895}
   - {fileID: 1092828357188293273}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &6900988047398343906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111,6 +112,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 1, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &852869061154928812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167456054098182688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82215a0c9c0fee848940c6b4079338ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hueOffset: 0
+  saturationValue: 0
+  isColorReplacementActive: 0
 --- !u!1 &4142806920999291764
 GameObject:
   m_ObjectHideFlags: 0

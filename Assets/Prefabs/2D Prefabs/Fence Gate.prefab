@@ -99,12 +99,13 @@ GameObject:
   - component: {fileID: 4683524819979725694}
   - component: {fileID: 1983940439434145160}
   - component: {fileID: 8333286426886965201}
+  - component: {fileID: 582322268468252128}
   m_Layer: 0
   m_Name: Fence Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6135373347243112359
 Transform:
@@ -114,14 +115,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8469427486046453756}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -4.366249, y: 0.5, z: -5.61635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 660786095369118986}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &4683524819979725694
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,3 +215,18 @@ MonoBehaviour:
   moveAmount: 5
   moveSpeed: 5
   movesOnAxis: 0
+--- !u!114 &582322268468252128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469427486046453756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82215a0c9c0fee848940c6b4079338ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hueOffset: 0
+  saturationValue: 1
+  isColorReplacementActive: 1

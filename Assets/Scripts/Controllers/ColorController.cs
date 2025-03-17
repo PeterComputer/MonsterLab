@@ -3,11 +3,9 @@ using UnityEngine;
 public class ColorController : MonoBehaviour
 {
     MaterialPropertyBlock propertyBlock;
-    public Color colorToReplace;
-    public Color replacementColor;
-    public float replacementRange;
-    public float replacementFuzziness;
 
+    public float hueOffset;
+    public float saturationValue;
     public bool isColorReplacementActive;
 
     void OnValidate()
@@ -21,19 +19,21 @@ public class ColorController : MonoBehaviour
 
         if (isColorReplacementActive) {
 
-            propertyBlock.SetColor("_Color_To_Replace", colorToReplace);
-            propertyBlock.SetColor("_Replacement_Color", replacementColor);
-            propertyBlock.SetFloat("_Replacement_Range", replacementRange);
-            propertyBlock.SetFloat("_Replacement_Fuzziness", replacementFuzziness);
+            propertyBlock.SetFloat("_HueOffset", hueOffset);
+            propertyBlock.SetFloat("_SaturationValue", saturationValue);
         }   
             
         else {
-            propertyBlock.SetFloat("_Replacement_Range", 0f);
-            propertyBlock.SetFloat("_Replacement_Fuzziness", 0f);    
+            propertyBlock.SetFloat("_HueOffset", 0f);
+            propertyBlock.SetFloat("_SaturationValue", 1f);    
         }
 
         renderer.SetPropertyBlock(propertyBlock);
 
+    }
+
+    void Awake() {
+        OnValidate();
     }
         
 
