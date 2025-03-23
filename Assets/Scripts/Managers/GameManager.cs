@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     public Sprite currentTorso {get; set;}
     [field: SerializeField]
     public Sprite currentLegs {get; set;}
+    private Sprite currentPlayerHead {get; set;}
+    private Sprite currentPlayerTorso {get; set;}
+    private Sprite currentPlayerLegs {get; set;}
 
     [Header("Mission UIs")]
     [SerializeField]
@@ -64,12 +67,21 @@ public class GameManager : MonoBehaviour
     private GameObject androidUI;
 
 
-    [Header("Misc")]    
+    [Header("Misc")]
+    private PlayerController player;
     [SerializeField]
     private PlayerInput playerInput;
     private RuntimePlatform gamePlatform;
     public bool isTutorial;
     public bool isMenuScene;
+    public string playerPartsFilePath;
+
+    void Awake()
+    {
+        if(!isMenuScene) {
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -79,6 +91,18 @@ public class GameManager : MonoBehaviour
         if(gamePlatform == RuntimePlatform.Android) {
             androidUI.SetActive(true);
         }
+
+        //Load sprites from memory
+        currentPlayerHead = Resources.Load<Sprite>("PlayerParts/" + PlayerPrefs.GetString("playerHead"));
+        currentPlayerTorso = Resources.Load<Sprite>("PlayerParts/" + PlayerPrefs.GetString("playerTorso"));
+        currentPlayerLegs = Resources.Load<Sprite>("PlayerParts/" + PlayerPrefs.GetString("playerLegs"));
+
+        if(!isTutorial && !isMenuScene && currentPlayerHead != null && currentPlayerTorso != null && currentPlayerLegs != null) {
+            player.updatePlayerSprite(PickupType.head, currentPlayerHead);
+            player.updatePlayerSprite(PickupType.torso, currentPlayerTorso);
+            player.updatePlayerSprite(PickupType.legs, currentPlayerLegs);
+        }
+
     }
 
     // Update is called once per frame
@@ -162,6 +186,29 @@ public class GameManager : MonoBehaviour
             legsSelectionUI.SetActive(true);
             break;                        
         }
+    }
+
+    public void updatePlayerSprite(PickupType pickupType, Sprite partSpriteUI, Sprite partSpritePlayer) {
+        switch (pickupType) {
+            case PickupType.head:
+                currentHead = partSpriteUI;
+                currentPlayerHead = partSpritePlayer;
+                PlayerPrefs.SetString("playerHead", partSpritePlayer.name);
+                break;
+            case PickupType.torso:
+                currentTorso = partSpriteUI;
+                currentPlayerTorso = partSpritePlayer;
+                PlayerPrefs.SetString("playerTorso", partSpritePlayer.name);
+                break;
+            case PickupType.legs:
+                currentLegs = partSpriteUI;
+                currentPlayerLegs = partSpritePlayer;
+                PlayerPrefs.SetString("playerLegs", partSpritePlayer.name);                
+                break;
+        }
+
+        player.updatePlayerSprite(pickupType, partSpritePlayer);
+
     }
 
     public void advanceToNextMission(PickupType currentType) {

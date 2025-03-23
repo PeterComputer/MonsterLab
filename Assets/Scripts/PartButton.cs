@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class PartButton : MonoBehaviour
 {
     private Image buttonImage;
+    [SerializeField]
+    private Sprite playerSprite;
     private GameObject[] displays;
     [SerializeField]
     private PickupType pickupType;
@@ -46,16 +48,6 @@ public class PartButton : MonoBehaviour
             display.GetComponent<Image>().sprite = buttonImage.sprite;
         }
 
-        switch (pickupType) {
-            case PickupType.head:
-                gameManager.currentHead = buttonImage.sprite;
-                break;
-            case PickupType.torso:
-                gameManager.currentTorso = buttonImage.sprite;
-                break;
-            case PickupType.legs:
-                gameManager.currentLegs = buttonImage.sprite;
-                break;
-        }
+        gameManager.updatePlayerSprite(pickupType, buttonImage.sprite, playerSprite);
     }
 }
