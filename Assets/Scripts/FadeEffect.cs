@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class FadeEffect : MonoBehaviour
     void Awake()
     {
         image = GetComponent<Image>();
+        image.color = new Color(imageColor.r, imageColor.g, imageColor.b, 1f);
         imageColor = image.color;
         fadingOut = true;
     }
@@ -26,8 +28,7 @@ public class FadeEffect : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
+    {   
         if(!isStopped) {
             //Fading out
             if(fadingOut) {
