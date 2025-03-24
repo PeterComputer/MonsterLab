@@ -12,6 +12,7 @@ TagManager:
   - HeadDisplay
   - TorsoDisplay
   - LegsDisplay
+  - FadeEffect
   layers:
   - Default
   - TransparentFX

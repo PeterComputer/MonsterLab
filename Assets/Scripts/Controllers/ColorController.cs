@@ -28,7 +28,7 @@ public class ColorController : MonoBehaviour
             propertyBlock.SetFloat("_SaturationValue", 1f);    
         }
 
-        renderer.SetPropertyBlock(propertyBlock);
+        renderer.SetPropertyBlock(propertyBlock, 0);
 
     }
 

@@ -84,11 +84,11 @@ public class FlatDoorController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(gameManager.isTutorial) {
+        if(gameManager.showScreenshotScreen) {
             gameManager.displayMonsterCompleteUI();
         }
         else {
-            gameManager.loadNextScene();
+            gameManager.displayEndOfLevelUI();
         }
         
     }

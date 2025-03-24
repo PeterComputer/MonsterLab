@@ -73,13 +73,18 @@ public class GameManager : MonoBehaviour
     private PlayerInput playerInput;
     private RuntimePlatform gamePlatform;
     public bool isTutorial;
+    public bool showScreenshotScreen;
     public bool isMenuScene;
     public string playerPartsFilePath;
+
+    [SerializeField]
+    private GameObject fadeScreenEffect;
 
     void Awake()
     {
         if(!isMenuScene) {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
         }
     }
 
@@ -259,6 +264,11 @@ public class GameManager : MonoBehaviour
     public void displayMonsterCompleteUI() {
         legsMissionUI.SetActive(false);
         monsterCompleteUI.SetActive(true);
+        switchPlayerInputMap();
+    }
+
+    public void displayEndOfLevelUI() {
+        fadeScreenEffect.SetActive(true);
         switchPlayerInputMap();
     }
 
