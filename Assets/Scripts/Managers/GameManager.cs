@@ -179,6 +179,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void loadSceneAt(int sceneID) {
+        SceneManager.LoadScene(sceneID);
+    }
+
     public void openSelectionUI(PickupType type) {
         switch (type) {
             case PickupType.head:
@@ -211,6 +215,8 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetString("playerLegs", partSpritePlayer.name);                
                 break;
         }
+
+        PlayerPrefs.Save();
 
         player.updatePlayerSprite(pickupType, partSpritePlayer);
 

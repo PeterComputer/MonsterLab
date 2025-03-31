@@ -22,14 +22,17 @@ public class SoundMixerManager : MonoBehaviour
     public void SetMasterVolume(float level) {
         audioMixer.SetFloat("masterVolume", Mathf.Log10(level) * 20f);
         PlayerPrefs.SetFloat("masterVolume", level);
+        PlayerPrefs.Save();
     }
     public void SetSoundFXVolume(float level) {
         audioMixer.SetFloat("soundFXVolume", Mathf.Log10(level) * 20f);
         PlayerPrefs.SetFloat("soundFXVolume", level);
+        PlayerPrefs.Save();
     }
     public void SetMusicVolume(float level) {
         audioMixer.SetFloat("musicVolume", Mathf.Log10(level) * 20f);
         PlayerPrefs.SetFloat("musicVolume", level);
+        PlayerPrefs.Save();
     }
     public float GetSavedMasterVolume() {
         return savedMasterVolume;

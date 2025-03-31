@@ -6,6 +6,7 @@ public class ColorController : MonoBehaviour
 
     public float hueOffset;
     public float saturationValue;
+    public float tilingMultiplier;
     public bool isColorReplacementActive;
 
     void OnValidate()
@@ -21,11 +22,13 @@ public class ColorController : MonoBehaviour
 
             propertyBlock.SetFloat("_HueOffset", hueOffset);
             propertyBlock.SetFloat("_SaturationValue", saturationValue);
+            propertyBlock.SetFloat("_TilingMultiplier", tilingMultiplier);
         }   
             
         else {
             propertyBlock.SetFloat("_HueOffset", 0f);
-            propertyBlock.SetFloat("_SaturationValue", 1f);    
+            propertyBlock.SetFloat("_SaturationValue", 1f);
+            propertyBlock.SetFloat("_TilingMultiplier", 1f);
         }
 
         renderer.SetPropertyBlock(propertyBlock, 0);
