@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 using System;
 using UnityEngine.UI;
+using System.Data.Common;
 
 public class GameManager : MonoBehaviour
 {
@@ -86,6 +87,8 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
         }
+
+        androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -93,7 +96,7 @@ public class GameManager : MonoBehaviour
     {
         gamePlatform = Application.platform;
 
-        if(gamePlatform == RuntimePlatform.Android) {
+        if(gamePlatform == RuntimePlatform.Android && androidUI != null) {
             androidUI.SetActive(true);
         }
 
@@ -106,6 +109,7 @@ public class GameManager : MonoBehaviour
             player.updatePlayerSprite(PickupType.head, currentPlayerHead);
             player.updatePlayerSprite(PickupType.torso, currentPlayerTorso);
             player.updatePlayerSprite(PickupType.legs, currentPlayerLegs);
+            Debug.Log("Loaded character sprites.");
         }
 
     }
