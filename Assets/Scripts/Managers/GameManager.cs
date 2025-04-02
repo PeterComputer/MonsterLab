@@ -78,6 +78,8 @@ public class GameManager : MonoBehaviour
     public bool isMenuScene;
     public string playerPartsFilePath;
 
+    private FlatDoorController door;
+
     [SerializeField]
     private GameObject fadeScreenEffect;
 
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
         }
 
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
+        door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -247,7 +250,7 @@ public class GameManager : MonoBehaviour
         
         destroyTypeOfPickup(currentType);
         switchPlayerInputMap();        
-        GameObject.FindWithTag("Door").GetComponent<FlatDoorController>().decreasePickupsLeft();
+        door.decreasePickupsLeft();
     }
 
 
