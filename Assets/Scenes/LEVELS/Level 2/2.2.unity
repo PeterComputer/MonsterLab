@@ -4860,6 +4860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7199547954622267832, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7394447925299340929, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5780,6 +5784,10 @@ PrefabInstance:
     - target: {fileID: 5769990721074554893, guid: 5400c6509b859aa49b09f27b28a82129, type: 3}
       propertyPath: m_Name
       value: 2D Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769990721074554893, guid: 5400c6509b859aa49b09f27b28a82129, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7058686983886061690, guid: 5400c6509b859aa49b09f27b28a82129, type: 3}
       propertyPath: m_LocalPosition.x

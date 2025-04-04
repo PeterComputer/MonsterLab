@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -262,6 +266,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -323,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_SortingOrder
       value: -1
@@ -389,6 +401,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -579,6 +595,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -641,6 +661,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -706,7 +730,7 @@ MonoBehaviour:
   m_text: "Teste teste\n\nEsTa FoNt N\xE3O tEm LoWeR cAsE?!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7424e9e809d8efb4b8bbfee30ff73682, type: 2}
-  m_sharedMaterial: {fileID: -2574490446601111500, guid: 7424e9e809d8efb4b8bbfee30ff73682, type: 2}
+  m_sharedMaterial: {fileID: 4360133536128903379, guid: 7424e9e809d8efb4b8bbfee30ff73682, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -846,6 +870,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -920,6 +948,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -994,6 +1026,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1051,6 +1087,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1183,6 +1223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1240,6 +1284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1297,6 +1345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1366,6 +1418,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1435,6 +1491,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1530,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1591,6 +1655,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_SortingOrder
       value: -1
@@ -1657,6 +1725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Ground V2
       objectReference: {fileID: 0}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc6ceb2d5fabf30469c585a6edd6c4e5, type: 3}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -2039,6 +2111,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2301,6 +2377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2501,6 +2581,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2570,6 +2654,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2644,6 +2732,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2854,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2923,6 +3019,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2990,6 +3090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3064,6 +3168,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3873,6 +3981,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
@@ -3938,6 +4050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4012,6 +4128,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4074,6 +4194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4131,6 +4255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4188,6 +4316,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4255,6 +4387,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
@@ -4315,6 +4451,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4741,6 +4881,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
