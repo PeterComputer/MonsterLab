@@ -88,10 +88,10 @@ public class GameManager : MonoBehaviour
         if(!isMenuScene) {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
+            door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
         }
 
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
-        door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
