@@ -62,9 +62,15 @@ public class PlayerController : MonoBehaviour
     // FixedUpdate is called once every 0.02 seconds
     void Update()
     {
-        //Read player input
-        _moveVector = _move.ReadValue<Vector2>();
 
+        if(_playerInput.currentActionMap.name == "Player") {
+            //Read player input
+            _moveVector = _move.ReadValue<Vector2>();
+        }
+        else {
+            _moveVector = new Vector2(0f, 0f);
+        }
+        
         //Player animations
         if (_moveVector.x != 0f || _moveVector.y != 0f) {
             _animator.SetBool("Moving", true);
