@@ -1,6 +1,7 @@
 using PathCreation.Examples;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.Events;
 
 public class InteractibleArea : MonoBehaviour
@@ -45,7 +46,7 @@ public class InteractibleArea : MonoBehaviour
     void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
-        wire = GetComponentInChildren<RoadMeshCreator>();
+        wire = transform.parent.GetComponentInChildren<RoadMeshCreator>();
         defaultWireMaterial = wire.roadMaterial;
     }
 

@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
     private GameObject[] pickups;
     
 
-
     [Header("Android Support")]
     
     [SerializeField]
@@ -77,11 +76,11 @@ public class GameManager : MonoBehaviour
     public bool showScreenshotScreen;
     public bool isMenuScene;
     public string playerPartsFilePath;
-
     private FlatDoorController door;
-
     [SerializeField]
     private GameObject fadeScreenEffect;
+    [SerializeField]
+    public static bool wasPreviousSceneMenu;
 
     void Awake()
     {
@@ -114,7 +113,7 @@ public class GameManager : MonoBehaviour
             player.updatePlayerSprite(PickupType.legs, currentPlayerLegs);
             Debug.Log("Loaded character sprites.");
         }
-
+        Debug.Log("Previous Scene: " + doFadeInOnLoad.previousSceneName);
     }
 
     // Update is called once per frame
@@ -159,7 +158,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void loadMainMenuScene() {
+        updateWasPreviousSceneMenu();
         SceneManager.LoadScene("Main Menu");
+    }
+
+    public void loadLevelSelectMenuScene() {
+        updateWasPreviousSceneMenu();
+        SceneManager.LoadScene("Level Select Menu");
     }
 
     public void reloadCurrentScene() {
@@ -169,6 +174,7 @@ public class GameManager : MonoBehaviour
     public void loadNextScene() {
 
         //if not at the final scene
+        updateWasPreviousSceneMenu();
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -187,7 +193,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void loadSceneAt(int sceneID) {
+        updateWasPreviousSceneMenu();
         SceneManager.LoadScene(sceneID);
+    }
+
+    private void updateWasPreviousSceneMenu() {
+        doFadeInOnLoad.previousSceneName = SceneManager.GetActiveScene().name;
     }
 
     public void openSelectionUI(PickupType type) {

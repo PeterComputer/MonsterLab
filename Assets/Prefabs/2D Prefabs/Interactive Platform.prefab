@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a9b94d07f82ba242ab1b74faab74d6a, type: 2}
+  - {fileID: 2100000, guid: 395e21d5f45b68d4cb18e8a6b94755e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b5df4735192845740bd11076dc9cdc99, type: 2}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9699998
+      value: -7.116249
       objectReference: {fileID: 0}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.998713
+      value: -3.3346407
       objectReference: {fileID: 0}
     - target: {fileID: 5621528008899218537, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: editorData.tabIndex
