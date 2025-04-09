@@ -2924,7 +2924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7970839528687399936, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_DynamicOriginRange
-      value: 703.1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8063683521971896848, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_AnchorMax.x
