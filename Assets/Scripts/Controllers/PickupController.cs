@@ -1,5 +1,6 @@
 using UnityEngine;
 using Enums;
+using UnityEngine.UI;
 
 public class PickupController : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PickupController : MonoBehaviour
     [SerializeField]
     private PickupType type;
     private GameManager gameManager;
+    [SerializeField]
+    private Image imageToDisable;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +28,11 @@ public class PickupController : MonoBehaviour
         if (type != PickupType.other) {
             gameManager.switchPlayerInputMap();
             gameManager.openSelectionUI(type);
+            
+            if(imageToDisable != null) {
+                imageToDisable.enabled = false;
+            }
+            
         }
 
         else {

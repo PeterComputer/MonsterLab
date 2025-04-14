@@ -653,6 +653,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4820726986222036119, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
   m_PrefabInstance: {fileID: 8866810608417375071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &247786118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2448377644461987344, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+  m_PrefabInstance: {fileID: 8866810608417375071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247786116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &270117849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5366764361591675900, guid: 6c8aa52628f768045995d9f1e66046e4, type: 3}
@@ -666,6 +677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1574535953}
     m_Modifications:
+    - target: {fileID: 4740924491920539762, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
+      propertyPath: imageToDisable
+      value: 
+      objectReference: {fileID: 247786118}
     - target: {fileID: 5443083208508400255, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
       propertyPath: m_Name
       value: Head Pickup 1
@@ -762,6 +777,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1275063902174116864, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
   m_PrefabInstance: {fileID: 8866810608417375071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &343266107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7999579291326537645, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+  m_PrefabInstance: {fileID: 8866810608417375071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343266105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364500999 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5769990721074554893, guid: 5400c6509b859aa49b09f27b28a82129, type: 3}
@@ -841,6 +867,10 @@ PrefabInstance:
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4740924491920539762, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
+      propertyPath: imageToDisable
+      value: 
+      objectReference: {fileID: 2120269704}
     - target: {fileID: 5443083208508400255, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
       propertyPath: m_Name
       value: Torso Pickup 1
@@ -1379,6 +1409,10 @@ PrefabInstance:
       propertyPath: type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4740924491920539762, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
+      propertyPath: imageToDisable
+      value: 
+      objectReference: {fileID: 343266107}
     - target: {fileID: 5443083208508400255, guid: 9cf0cb135d5be394395fd8973b7a55ed, type: 3}
       propertyPath: m_Name
       value: Legs Pickup 1
@@ -10335,6 +10369,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3974396617410409858, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
   m_PrefabInstance: {fileID: 8866810608417375071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2120269704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5529078237299367588, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
+  m_PrefabInstance: {fileID: 8866810608417375071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120269702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138186614
 GameObject:
   m_ObjectHideFlags: 0
