@@ -42,10 +42,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _HueOffset: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SaturationValue: 1
+    - _TilingMultiplier: 1
     m_Colors:
     - _Color: {r: 0, g: 0.1341176, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

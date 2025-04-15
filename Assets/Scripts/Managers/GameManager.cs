@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
     private GameObject fadeScreenEffect;
     [SerializeField]
     public static bool wasPreviousSceneMenu;
+    private string sceneName;
 
     void Awake()
     {
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
             fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
             door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
         }
-
+        sceneName = SceneManager.GetActiveScene().name;
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
     }
 
@@ -176,6 +177,12 @@ public class GameManager : MonoBehaviour
         //if not at the final scene
         updateWasPreviousSceneMenu();
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
+            
+            //Save level as completed
+            PlayerPrefs.SetInt(sceneName, 1);
+            PlayerPrefs.Save();
+
+            //Load next scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else {
