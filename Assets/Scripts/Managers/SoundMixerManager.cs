@@ -5,18 +5,33 @@ using UnityEngine.UI;
 public class SoundMixerManager : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
-    private float savedMasterVolume;
-    private float savedSoundFXVolume;
-    private float savedMusicVolume;
+    [SerializeField] private float savedMasterVolume;
+    [SerializeField] private float savedSoundFXVolume;
+    [SerializeField] private float savedMusicVolume;
 
     void Awake() {
         savedMasterVolume = PlayerPrefs.GetFloat("masterVolume");
+
+        //Sets the volume to 100% during very first execution
+        //Explanation: savedMasterVolume will only be 0f if it doesn't yet exist in PlayerPrefs
+        if(savedMasterVolume == 0f) {
+            savedMasterVolume = 1f;
+            savedSoundFXVolume = 1f;
+            savedMusicVolume = 1f;
+        }
+        else {
         savedSoundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
         savedMusicVolume = PlayerPrefs.GetFloat("musicVolume");
+        }
 
         SetMasterVolume(savedMasterVolume);
         SetSoundFXVolume(savedSoundFXVolume);
         SetMusicVolume(savedMusicVolume);
+
+        Debug.Log("Saved Master Volume: " + savedMasterVolume);
+        Debug.Log("Saved FX Volume: " + savedSoundFXVolume);
+        Debug.Log("Saved Music Volume: " + savedMusicVolume);
+
     }
 
     public void SetMasterVolume(float level) {

@@ -49,6 +49,12 @@ public class OnScreenControlSelected : MonoBehaviour
     }
 
     private void setActiveStick() {
+
+        if(onScreenSticks.Length == 0) {
+            return;
+        }
+
+
         if(!isRightHanded) {
             if(!isDirectional) {
                 onScreenSticks[0].SetActive(true);

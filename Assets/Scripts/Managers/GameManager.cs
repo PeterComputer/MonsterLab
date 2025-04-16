@@ -114,9 +114,9 @@ public class GameManager : MonoBehaviour
             player.updatePlayerSprite(PickupType.head, currentPlayerHead);
             player.updatePlayerSprite(PickupType.torso, currentPlayerTorso);
             player.updatePlayerSprite(PickupType.legs, currentPlayerLegs);
-            Debug.Log("Loaded character sprites.");
+            //Debug.Log("Loaded character sprites.");
         }
-        Debug.Log("Previous Scene: " + doFadeInOnLoad.previousSceneName);
+        //Debug.Log("Previous Scene: " + doFadeInOnLoad.previousSceneName);
     }
 
     // Update is called once per frame
@@ -382,9 +382,23 @@ public class GameManager : MonoBehaviour
     }
 
     public void resetPlayerProgress() {
+        
+        //Delete completion marks
         foreach(string scene in sceneList) {
             PlayerPrefs.SetInt(scene, 0);
         }
+
+        //Delete player-created character
+        PlayerPrefs.DeleteKey("playerHead");
+        PlayerPrefs.DeleteKey("playerTorso");
+        PlayerPrefs.DeleteKey("playerLegs");
+
         PlayerPrefs.Save();
+        reloadCurrentScene();
+    }
+
+    public void hardResetGame() {
+        PlayerPrefs.DeleteAll();
+        reloadCurrentScene();
     }
 }

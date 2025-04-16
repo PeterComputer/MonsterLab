@@ -21,7 +21,6 @@ public class loadLevel : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log(levelID + ": " + PlayerPrefs.GetInt(levelID));
         //If player has already completed that level
         if(Convert.ToBoolean(PlayerPrefs.GetInt(levelID))) {
             completionSprite.enabled = true;

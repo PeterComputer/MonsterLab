@@ -9,7 +9,16 @@ public class getToggleStatusOnEnable : MonoBehaviour
     
     void Awake() {
         toggle = GetComponent<Toggle>();
-        onScreenControls = GameObject.FindGameObjectWithTag("AndroidUI").GetComponent<OnScreenControlSelected>();
+
+        GameObject androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
+
+        if(androidUI != null) {
+            onScreenControls = GameObject.FindGameObjectWithTag("AndroidUI").GetComponent<OnScreenControlSelected>();
+        }
+        else {
+            onScreenControls = GameObject.FindGameObjectWithTag("GameController").GetComponent<OnScreenControlSelected>();
+        }
+        
     }
 
     private void OnEnable() {
