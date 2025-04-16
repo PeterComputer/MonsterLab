@@ -23,7 +23,10 @@ public class SoundMixerManager : MonoBehaviour
         savedSoundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
         savedMusicVolume = PlayerPrefs.GetFloat("musicVolume");
         }
+    }
 
+    void Start()
+    {
         SetMasterVolume(savedMasterVolume);
         SetSoundFXVolume(savedSoundFXVolume);
         SetMusicVolume(savedMusicVolume);
@@ -31,7 +34,6 @@ public class SoundMixerManager : MonoBehaviour
         Debug.Log("Saved Master Volume: " + savedMasterVolume);
         Debug.Log("Saved FX Volume: " + savedSoundFXVolume);
         Debug.Log("Saved Music Volume: " + savedMusicVolume);
-
     }
 
     public void SetMasterVolume(float level) {
