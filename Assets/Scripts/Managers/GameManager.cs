@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public static bool wasPreviousSceneMenu;
     private string sceneName;
+    [SerializeField]
+    private string[] sceneList;
 
     void Awake()
     {
@@ -165,6 +167,8 @@ public class GameManager : MonoBehaviour
 
     public void loadLevelSelectMenuScene() {
         updateWasPreviousSceneMenu();
+        PlayerPrefs.SetInt(sceneName, 1);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Level Select Menu");
     }
 
@@ -202,6 +206,11 @@ public class GameManager : MonoBehaviour
     public void loadSceneAt(int sceneID) {
         updateWasPreviousSceneMenu();
         SceneManager.LoadScene(sceneID);
+    }
+
+    public void loadSceneByName(string sceneName) {
+        updateWasPreviousSceneMenu();
+        SceneManager.LoadScene(sceneName);
     }
 
     private void updateWasPreviousSceneMenu() {
@@ -370,5 +379,12 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Switch action map to: " + playerInput.currentActionMap.name);
+    }
+
+    public void resetPlayerProgress() {
+        foreach(string scene in sceneList) {
+            PlayerPrefs.SetInt(scene, 0);
+        }
+        PlayerPrefs.Save();
     }
 }
