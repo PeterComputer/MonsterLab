@@ -140,6 +140,14 @@ public class GameManager : MonoBehaviour
         if(!isMenuScene) {
             switchPauseState();
         }
+        else if (settingsMenu != null) {
+            if(settingsMenu.activeSelf) {
+                settingsMenu.SetActive(false);
+            }
+            else {
+                settingsMenu.SetActive(true);
+            }
+        }
     }
 
     public void switchPauseState() {
