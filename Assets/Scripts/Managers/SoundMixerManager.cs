@@ -30,10 +30,12 @@ public class SoundMixerManager : MonoBehaviour
         SetMasterVolume(savedMasterVolume);
         SetSoundFXVolume(savedSoundFXVolume);
         SetMusicVolume(savedMusicVolume);
-
+        
+        /* 
         Debug.Log("Saved Master Volume: " + savedMasterVolume);
         Debug.Log("Saved FX Volume: " + savedSoundFXVolume);
         Debug.Log("Saved Music Volume: " + savedMusicVolume);
+         */
     }
 
     public void SetMasterVolume(float level) {
