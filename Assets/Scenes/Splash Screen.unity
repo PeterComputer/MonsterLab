@@ -615,6 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splashImages: []
   fadeDuration: 1
+  splashCounter: 0
 --- !u!1 &1173122572
 GameObject:
   m_ObjectHideFlags: 0

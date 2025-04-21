@@ -7240,7 +7240,7 @@ PrefabInstance:
       objectReference: {fileID: 582670211}
     - target: {fileID: 3119686214266679692, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadMainMenuScene
+      value: loadLevelSelectMenuScene
       objectReference: {fileID: 0}
     - target: {fileID: 4669667166596810742, guid: 9c34f5b4ea417d041bc8c1d47fd01f7c, type: 3}
       propertyPath: m_AnchorMax.y
