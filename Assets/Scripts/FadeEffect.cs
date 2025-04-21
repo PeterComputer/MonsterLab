@@ -8,6 +8,8 @@ public class FadeEffect : MonoBehaviour
     private Image image;
     private Color imageColor;
     private bool fadingOut;
+    [SerializeField]
+    private bool isFinalLevel;
     private bool isStopped;
     public float fadeSpeed;
     //[SerializeField]
@@ -50,7 +52,12 @@ public class FadeEffect : MonoBehaviour
                 if(image.color.a >= 1) {
                     isStopped = true;
                     //endOfLevelMenu.SetActive(true);
-                    gameManager.loadLevelSelectMenuScene();
+                    if(isFinalLevel) {
+                        gameManager.loadEndingMenuScene();
+                    }
+                    else {
+                        gameManager.loadLevelSelectMenuScene();
+                    }
                 }
             }
         }

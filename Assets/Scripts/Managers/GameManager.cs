@@ -180,6 +180,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Level Select Menu");
     }
 
+    public void loadEndingMenuScene() {
+        updateWasPreviousSceneMenu();
+        PlayerPrefs.SetInt(sceneName, 1);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Ending Menu");
+    }
+
     public void reloadCurrentScene() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
