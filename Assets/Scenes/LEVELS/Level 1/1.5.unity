@@ -531,9 +531,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: aed0834369f35e04a81a1b64e12fd6ca, type: 2}
+      objectReference: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
     - target: {fileID: 2996481025871667190, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.471
@@ -1384,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cc7249f7f936d14793ef9f4ae6b583d, type: 3}
     - target: {fileID: 3578122323216017579, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: roadMaterial
       value: 
@@ -5382,13 +5386,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5286604355257933698, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc9a373244c023e40bea0224fb28cb11, type: 3}
     - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5397,10 +5405,6 @@ PrefabInstance:
     - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5463805233313403035, guid: a73d91d2d233d5149beb996cde5e11c9, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5465,9 +5469,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: 81cfaf8c8be79874187d4d2434d1b5ef, type: 2}
+      objectReference: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
     - target: {fileID: 3578122323216017579, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: roadMaterial
       value: 
@@ -9111,10 +9115,6 @@ PrefabInstance:
     - target: {fileID: 5247699486747251377, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247699486747251377, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5247699486747251377, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
       propertyPath: m_LocalRotation.y

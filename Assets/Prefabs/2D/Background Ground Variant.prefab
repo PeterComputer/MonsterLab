@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_LocalRotation.y
@@ -73,6 +73,10 @@ PrefabInstance:
       value: 105.1894
       objectReference: {fileID: 0}
     - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc9a373244c023e40bea0224fb28cb11, type: 3}
+    - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -96,6 +100,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -50196711
       objectReference: {fileID: 0}
+    - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 395e21d5f45b68d4cb18e8a6b94755e9, type: 2}
     - target: {fileID: 8447593097100457734, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Name
       value: Background Ground Variant

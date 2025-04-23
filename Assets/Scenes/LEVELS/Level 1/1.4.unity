@@ -144,10 +144,6 @@ PrefabInstance:
       value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5247699486747251377, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247699486747251377, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
@@ -2240,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Fence Gate Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1cc7249f7f936d14793ef9f4ae6b583d, type: 3}
     - target: {fileID: 3578122323216017579, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: roadMaterial
       value: 
@@ -3401,9 +3401,9 @@ PrefabInstance:
       value: Green Fence Gate Frame
       objectReference: {fileID: 0}
     - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: aed0834369f35e04a81a1b64e12fd6ca, type: 2}
+      objectReference: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
     - target: {fileID: 2996481025871667190, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.424
@@ -3850,9 +3850,9 @@ PrefabInstance:
       value: Pink Fence Gate Frame
       objectReference: {fileID: 0}
     - target: {fileID: 2355951751015180941, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: 81cfaf8c8be79874187d4d2434d1b5ef, type: 2}
+      objectReference: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
     - target: {fileID: 3578122323216017579, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: roadMaterial
       value: 
