@@ -29,8 +29,19 @@ public class FPSCounter : MonoBehaviour
             float fps = (int)(frames / time);
             time = 0.0f;
             frames = 0;
+            
+            // Change text color according to fps amount
+            if (fps < 20) {
+                txt.color = Color.red;
+            }
+            else if (fps < 25) {
+                txt.color = Color.yellow;
+            }
+            else {
+                txt.color = Color.white;
+            }
 
-            txt.text = fps.ToString();
+            txt.text = "FPS: " + fps.ToString();
         }
     }
 }

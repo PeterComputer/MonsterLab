@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using System;
 using UnityEngine.UI;
 using System.Data.Common;
+using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
@@ -84,13 +85,16 @@ public class GameManager : MonoBehaviour
     private string sceneName;
     [SerializeField]
     private string[] sceneList;
+    private GameObject fpsCounter;
 
     void Awake()
     {
+        //if it is a level scene, find these
         if(!isMenuScene) {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
             door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
+            fpsCounter = GameObject.FindGameObjectWithTag("FPSCounter");
         }
         sceneName = SceneManager.GetActiveScene().name;
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
@@ -110,12 +114,19 @@ public class GameManager : MonoBehaviour
         currentPlayerTorso = Resources.Load<Sprite>("PlayerParts/" + PlayerPrefs.GetString("playerTorso"));
         currentPlayerLegs = Resources.Load<Sprite>("PlayerParts/" + PlayerPrefs.GetString("playerLegs"));
 
+        //if not on the tutorial scene and if the player has fully created their monster
         if(!isTutorial && !isMenuScene && currentPlayerHead != null && currentPlayerTorso != null && currentPlayerLegs != null) {
             player.updatePlayerSprite(PickupType.head, currentPlayerHead);
             player.updatePlayerSprite(PickupType.torso, currentPlayerTorso);
             player.updatePlayerSprite(PickupType.legs, currentPlayerLegs);
             //Debug.Log("Loaded character sprites.");
         }
+
+        //if not in debug mode, disable fps counter
+        if(!Convert.ToBoolean(PlayerPrefs.GetInt("debugMode")) && fpsCounter != null) {
+            fpsCounter.SetActive(false);
+        }
+        
         //Debug.Log("Previous Scene: " + doFadeInOnLoad.previousSceneName);
     }
 
@@ -420,5 +431,10 @@ public class GameManager : MonoBehaviour
     public void hardResetGame() {
         PlayerPrefs.DeleteAll();
         reloadCurrentScene();
+    }
+
+    public void setDebugMode(bool value) {
+        PlayerPrefs.SetInt("debugMode", Convert.ToInt32(value));
+        PlayerPrefs.Save();
     }
 }

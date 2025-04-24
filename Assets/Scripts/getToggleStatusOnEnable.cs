@@ -12,9 +12,12 @@ public class getToggleStatusOnEnable : MonoBehaviour
 
         GameObject androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
 
+        //If on a level scene, AndroidUI will have the <OnScreenControlSelected> script
         if(androidUI != null) {
             onScreenControls = GameObject.FindGameObjectWithTag("AndroidUI").GetComponent<OnScreenControlSelected>();
         }
+
+        //If on the main menu scene, GameController will have the <OnScreenControlSelected> script
         else {
             onScreenControls = GameObject.FindGameObjectWithTag("GameController").GetComponent<OnScreenControlSelected>();
         }

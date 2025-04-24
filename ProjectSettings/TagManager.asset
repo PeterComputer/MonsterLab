@@ -14,6 +14,7 @@ TagManager:
   - LegsDisplay
   - FadeEffect
   - LevelButton
+  - FPSCounter
   layers:
   - Default
   - TransparentFX
