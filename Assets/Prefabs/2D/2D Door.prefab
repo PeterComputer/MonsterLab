@@ -319,8 +319,8 @@ Transform:
   m_GameObject: {fileID: 3900464662428538316}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.42, z: 0.034}
-  m_LocalScale: {x: 0.55, y: 0.387037, z: 0.55}
+  m_LocalPosition: {x: 0.00000011921, y: -0.5, z: 0.0083556}
+  m_LocalScale: {x: 1.0628843, y: 0.7479556, z: 1.0628843}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2022355478166510961}
@@ -369,7 +369,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: e314b23e6ba03bd47b9546f5b54a390b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5196bbff9cfed4b49b021546337606e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -532,7 +532,6 @@ MonoBehaviour:
   startsOpen: 0
   pickupsLeft: 0
   openDoorSprite: {fileID: 21300000, guid: 94a719d519dc55546b35c8ee5d770342, type: 3}
-  openDoorfxSprite: {fileID: 21300000, guid: 843d6d5f5c404734492ac023569daee6, type: 3}
   openDoorAudioClip: {fileID: 8300000, guid: 2b9fac2e56bf884408602b42565b0db3, type: 3}
   rightDoorFrame: {fileID: 3691570435611979639}
   leftDoorFrame: {fileID: 3846880411251616309}
