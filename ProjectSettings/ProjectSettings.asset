@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: MonsterLabRebuilt
+  productName: Monster Lab
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -456,7 +456,7 @@ PlayerSettings:
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 18efc447315eab745b3e220207512c86, type: 3}
+      - {fileID: 2800000, guid: e314b23e6ba03bd47b9546f5b54a390b, type: 3}
       - {fileID: 2800000, guid: 9b47f844575dc804292f8be80eae4324, type: 3}
       m_Width: 432
       m_Height: 432
