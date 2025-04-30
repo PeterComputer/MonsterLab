@@ -8,6 +8,7 @@ public class FlatDoorController : MonoBehaviour
     public Sprite openDoorSprite;
     private Sprite closedSprite;
     public AudioClip openDoorAudioClip;
+    public GameObject fx;
     
     private GameManager gameManager;
     
@@ -64,6 +65,7 @@ public class FlatDoorController : MonoBehaviour
         SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
         setDoorFramesActive(true);
         doorBackdrop.SetActive(true);
+        fx.SetActive(true);
     }
 
     private void closeDoor() {
