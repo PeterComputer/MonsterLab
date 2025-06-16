@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour
     //public LayerMask stopsPlayerMovement;
     public PlayerInputActions playerInputActions;
 
+    [Header("Camera Relative Movement")]
+    public bool movingRelativeToCamera;
+    private Vector3 cameraForwardVector;
+    private Vector3 cameraRightVector;
+
+
     private PlayerInput _playerInput;
     
     //private float collisionRadius;
@@ -21,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private InputAction _move;
     private Vector2 _moveVector;
     private Animator _animator;
+
+    [Header("Player Sprites")]
     [SerializeField]
     private SpriteRenderer headRenderer;
     [SerializeField]
@@ -40,11 +48,26 @@ public class PlayerController : MonoBehaviour
         _move.Disable();
     }
 
-    void Awake() {
+    void Awake()
+    {
         playerInputActions = new PlayerInputActions();
         _playerInput = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
+
+        if (movingRelativeToCamera)
+        {
+            //Calculate forward and left/right based on camera position
+
+            cameraForwardVector = Camera.main.transform.forward;
+            cameraRightVector = Camera.main.transform.right;
+
+            cameraForwardVector.y = 0;
+            cameraRightVector.y = 0;
+
+            cameraForwardVector = cameraForwardVector.normalized;
+            cameraRightVector = cameraRightVector.normalized;
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,7 +78,8 @@ public class PlayerController : MonoBehaviour
     // FixedUpdate is called once every 0.02 seconds
     void FixedUpdate() {
 
-        transform.position += new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.fixedDeltaTime;
+        _rb.MovePosition(_rb.position + movement);
 
     }
 
@@ -63,11 +87,30 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if(_playerInput.currentActionMap.name == "Player") {
-            //Read player input
-            _moveVector = _move.ReadValue<Vector2>();
+        //if player is currently in control of the character, make it move
+        if (_playerInput.currentActionMap.name == "Player")
+        {
+
+            if (movingRelativeToCamera)
+            {
+                Vector2 input = _move.ReadValue<Vector2>();
+
+                // Multiply player input by the forward and left/right camera vectors
+                Vector3 move = cameraRightVector * input.x + cameraForwardVector * input.y;
+
+                _moveVector = new Vector2(move.x, move.z);
+            }
+
+            else
+            {
+                //Read player input
+                _moveVector = _move.ReadValue<Vector2>();
+            }
         }
-        else {
+
+        //if player is NOT currently in control of the character, make it stop
+        else
+        {
             _moveVector = new Vector2(0f, 0f);
         }
         

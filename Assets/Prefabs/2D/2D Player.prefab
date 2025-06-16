@@ -310,6 +310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  movingRelativeToCamera: 1
+  cameraForwardVector: {x: 0, y: 0, z: 0}
+  cameraRightVector: {x: 0, y: 0, z: 0}
   headRenderer: {fileID: 7019310307896341545}
   torsoRenderer: {fileID: 6462482630481946895}
   legsRenderer: {fileID: 4086342395898593586}
