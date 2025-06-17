@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace Enums
 {
     public enum ColorEnum
@@ -11,6 +10,6 @@ namespace Enums
         Pink,
         //None
     
-} 
+    } 
 }
 

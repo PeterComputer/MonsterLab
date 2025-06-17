@@ -85,6 +85,7 @@ public class RotatingPlatformCustomizer : MonoBehaviour
 
     private void setChildrenFenceGates()
     {
+        fenceGateSpriteRenderers.Clear();
         List<SpriteRenderer> tempArray = gameObject.GetComponentsInChildren<SpriteRenderer>().ToList();
 
         foreach (SpriteRenderer temp in tempArray)

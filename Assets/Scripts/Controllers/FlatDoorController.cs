@@ -1,25 +1,26 @@
 using System.Threading;
 using UnityEngine;
 
-public class FlatDoorController : MonoBehaviour
+public class FlatDoorController : Obstacle
 {
-    [SerializeField] bool startsOpen;    
+    [SerializeField] bool startsOpen;
     [SerializeField] private int pickupsLeft;
     public Sprite openDoorSprite;
     private Sprite closedSprite;
     public AudioClip openDoorAudioClip;
     public GameObject fx;
-    
+
     private GameManager gameManager;
-    
+
     private BoxCollider boxCollider;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private RotatingPlatformController rightDoorFrame;
-    [SerializeField] private RotatingPlatformController leftDoorFrame;
+    [SerializeField] private DoorRotationController rightDoorFrame;
+    [SerializeField] private DoorRotationController leftDoorFrame;
     [SerializeField] private GameObject doorBackdrop;
 
 
-    void Awake() {
+    void Awake()
+    {
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
         boxCollider = gameObject.GetComponent<BoxCollider>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -29,7 +30,8 @@ public class FlatDoorController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(startsOpen) {
+        if (startsOpen)
+        {
             openDoor();
         }
     }
@@ -39,9 +41,11 @@ public class FlatDoorController : MonoBehaviour
     {
     }
 
-    public void decreasePickupsLeft() {
+    public void decreasePickupsLeft()
+    {
 
-        switch(pickupsLeft) {
+        switch (pickupsLeft)
+        {
             case -1:
                 break;
             case 0:
@@ -53,13 +57,14 @@ public class FlatDoorController : MonoBehaviour
                 openDoor();
                 break;
 
-            case >1:
+            case > 1:
                 pickupsLeft--;
                 break;
         }
     }
 
-    private void openDoor() {
+    private void openDoor()
+    {
         boxCollider.isTrigger = true;
         spriteRenderer.sprite = openDoorSprite;
         SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
@@ -68,7 +73,8 @@ public class FlatDoorController : MonoBehaviour
         fx.SetActive(true);
     }
 
-    private void closeDoor() {
+    private void closeDoor()
+    {
         pickupsLeft = 0;
         boxCollider.isTrigger = false;
         spriteRenderer.sprite = closedSprite;
@@ -76,40 +82,55 @@ public class FlatDoorController : MonoBehaviour
         doorBackdrop.SetActive(false);
     }
 
-    public void switchDoorState() {
-        if (pickupsLeft == -1) {
+    public void switchDoorState()
+    {
+        if (pickupsLeft == -1)
+        {
             closeDoor();
         }
-        else {
+        else
+        {
             decreasePickupsLeft();
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if(gameManager.showScreenshotScreen) {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (gameManager.showScreenshotScreen)
+        {
             gameManager.displayMonsterCompleteUI();
         }
-        else {
+        else
+        {
             gameManager.displayEndOfLevelUI();
         }
-        
+
     }
 
-    private void setDoorFramesActive(bool active) {
+    private void setDoorFramesActive(bool active)
+    {
 
         float angle;
-        
-        if(active) {
+
+        if (active)
+        {
             angle = 150f;
         }
-        else {
+        else
+        {
             angle = 0f;
         }
 
         rightDoorFrame.rotateToXDegrees(-angle, active);
-        leftDoorFrame.rotateToXDegrees(angle, active);        
+        leftDoorFrame.rotateToXDegrees(angle, active);
 
         rightDoorFrame.gameObject.SetActive(active);
         leftDoorFrame.gameObject.SetActive(active);
     }
+    
+
+    public override void interactWith()
+    {
+        decreasePickupsLeft();
+    }    
 }

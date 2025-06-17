@@ -6,8 +6,7 @@ public class PlatformCustomizer : MonoBehaviour
 {
 
     [HideInInspector] public ColorEnum platformColor;
-    [HideInInspector] public ObstacleCustomizer interactsWith;
-
+    [HideInInspector] public Obstacle interactsWith;
     [SerializeField] private InteractibleArea interactibleArea;
 
 
@@ -56,6 +55,16 @@ public class PlatformCustomizer : MonoBehaviour
                 break;
         }
     }
+
+    public void setObstacle(Obstacle obstacle)
+    {
+        interactsWith = obstacle;
+    }
+
+    public void doInteraction()
+    {
+        interactsWith.interactWith();
+    }
 }
 
 
@@ -69,12 +78,14 @@ public class PlatformEditor : Editor
 
         EditorGUI.BeginChangeCheck();
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Platform Color", customizer.platformColor);
+        Obstacle newObstacle = (Obstacle)EditorGUILayout.ObjectField("Interacts With", customizer.interactsWith, typeof(Obstacle), true);
 
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(customizer, "Changed Platform Color");
 
             customizer.changePlatformColor(newColor);
+            customizer.setObstacle(newObstacle);
 
             // Visually update color selected in the dropdown menu
             customizer.platformColor = newColor;

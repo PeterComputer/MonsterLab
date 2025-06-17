@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 4683524819979725694}
   - component: {fileID: 1983940439434145160}
   - component: {fileID: 8333286426886965201}
-  - component: {fileID: 582322268468252128}
   m_Layer: 0
   m_Name: Fence Gate
   m_TagString: Untagged
@@ -215,19 +214,3 @@ MonoBehaviour:
   moveAmount: 5
   moveSpeed: 5
   movesOnAxis: 0
---- !u!114 &582322268468252128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8469427486046453756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82215a0c9c0fee848940c6b4079338ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hueOffset: 0
-  saturationValue: 1
-  tilingMultiplier: 0
-  isColorReplacementActive: 1

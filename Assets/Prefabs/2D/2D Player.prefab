@@ -289,14 +289,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5769990721074554893}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 7.53, y: 1.4, z: -3.48}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 334216356025606113}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!114 &3209057101618477461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,8 +311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   movingRelativeToCamera: 1
-  cameraForwardVector: {x: 0, y: 0, z: 0}
-  cameraRightVector: {x: 0, y: 0, z: 0}
   headRenderer: {fileID: 7019310307896341545}
   torsoRenderer: {fileID: 6462482630481946895}
   legsRenderer: {fileID: 4086342395898593586}

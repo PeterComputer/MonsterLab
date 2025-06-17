@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovingGateController : MonoBehaviour
+public class MovingGateController : Obstacle
 {
     public Vector3 targetPosition;
     [SerializeField] public float moveAmount = 5f;
@@ -22,26 +22,33 @@ public class MovingGateController : MonoBehaviour
             Mathf.Lerp(currentPosition.y, targetPosition.y, Time.deltaTime * moveSpeed),
             Mathf.Lerp(currentPosition.z, targetPosition.z, Time.deltaTime * moveSpeed));
 
-            transform.position = currentPosition;
+        transform.position = currentPosition;
     }
 
-    public void movePosition() {
+    public void movePosition()
+    {
 
-        switch (movesOnAxis) {
+        switch (movesOnAxis)
+        {
             //move on x axis
             case 0:
-            targetPosition.x += moveAmount;
-            break;
+                targetPosition.x += moveAmount;
+                break;
             //move on y axis
             case 1:
-            targetPosition.y += moveAmount;
-            break;
+                targetPosition.y += moveAmount;
+                break;
             //move on z axis
             case 2:
-            targetPosition.z += moveAmount;
-            break;
+                targetPosition.z += moveAmount;
+                break;
         }
 
         moveAmount = -moveAmount;
+    }
+
+    public override void interactWith()
+    {
+        movePosition();
     }
 }

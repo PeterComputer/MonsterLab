@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
     - target: {fileID: 5079998057404674477, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.336666
@@ -399,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_Name
-      value: Fence Gate
+      value: Green Fence Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -475,7 +479,7 @@ PrefabInstance:
     - target: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: roadMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
+      objectReference: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
     - target: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: undersideMaterial
       value: 
@@ -483,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 5161188386914698335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
+      objectReference: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
     - target: {fileID: 5161188386914698335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -494,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b5df4735192845740bd11076dc9cdc99, type: 2}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.462532
+      value: 0.21253157
       objectReference: {fileID: 0}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -502,7 +506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.3404055
+      value: -2.3267555
       objectReference: {fileID: 0}
     - target: {fileID: 5288502610024293071, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_LocalRotation.w

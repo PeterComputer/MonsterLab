@@ -41,6 +41,7 @@ public class FenceGateCustomizer : MonoBehaviour
                 wire.roadMaterial = yellowWireMaterial;
                 wire.TriggerUpdate();
                 gameObject.name = "Yellow Fence Gate Frame";
+                gameObject.GetComponentInChildren<MovingGateController>().gameObject.name = "Yellow Fence Gate";
                 break;
 
             case ColorEnum.Blue:
@@ -48,6 +49,7 @@ public class FenceGateCustomizer : MonoBehaviour
                 wire.roadMaterial = blueWireMaterial;
                 wire.TriggerUpdate();
                 gameObject.name = "Blue Fence Gate Frame";
+                gameObject.GetComponentInChildren<MovingGateController>().gameObject.name = "Blue Fence Gate";
                 break;
 
             case ColorEnum.Green:
@@ -55,6 +57,7 @@ public class FenceGateCustomizer : MonoBehaviour
                 wire.roadMaterial = greenWireMaterial;
                 wire.TriggerUpdate();
                 gameObject.name = "Green Fence Gate Frame";
+                gameObject.GetComponentInChildren<MovingGateController>().gameObject.name = "Green Fence Gate";
                 break;
 
 
@@ -63,6 +66,7 @@ public class FenceGateCustomizer : MonoBehaviour
                 wire.roadMaterial = pinkWireMaterial;
                 wire.TriggerUpdate();
                 gameObject.name = "Pink Fence Gate Frame";
+                gameObject.GetComponentInChildren<MovingGateController>().gameObject.name = "Pink Fence Gate";
                 break;
 
 /*             case ColorEnum.None:

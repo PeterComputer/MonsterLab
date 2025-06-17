@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388218268773410874}
   - component: {fileID: 7711893006642314162}
+  - component: {fileID: 985957610984514472}
   m_Layer: 0
   m_Name: Rotating Platform
   m_TagString: Untagged
@@ -49,6 +50,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAngle: {x: 0, y: 0, z: 0}
   rotationSpeed: 5
+--- !u!114 &985957610984514472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204094546204359854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e7cccdc05428e49a76147f24181436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotatingPlatformColor: 3
+  platformSpriteRenderer: {fileID: 985308610202047319}
+  fenceGateSpriteRenderers:
+  - {fileID: 4559673511155550413}
+  - {fileID: 2428700317774076335}
+  - {fileID: 4559673511155550413}
+  - {fileID: 2428700317774076335}
+  - {fileID: 4559673511155550413}
+  - {fileID: 2428700317774076335}
+  - {fileID: 4559673511155550413}
+  - {fileID: 2428700317774076335}
+  - {fileID: 4559673511155550413}
+  - {fileID: 2428700317774076335}
+  yellowPlatformSprite: {fileID: 21300000, guid: dba84c5c6167fa4478f2dae546683ac8, type: 3}
+  yellowFenceSprite: {fileID: 21300000, guid: 98381c36f56b5b24cbe19304c7329cac, type: 3}
+  greenPlatformSprite: {fileID: 21300000, guid: 68bc54028c31fc14b915b06f26126851, type: 3}
+  greenFenceSprite: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
+  bluePlatformSprite: {fileID: 21300000, guid: 2973c9ac5222d4945964993359418ff8, type: 3}
+  blueFenceSprite: {fileID: 21300000, guid: 1cc7249f7f936d14793ef9f4ae6b583d, type: 3}
+  pinkPlatformSprite: {fileID: 21300000, guid: 3167e909b1dcf7d429ad0ae36734c837, type: 3}
+  pinkFenceSprite: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
 --- !u!1001 &7010770982496416465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,13 +141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_Name
-      value: Fence Gate (1)
+      value: Rotating Fence 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8333286426886965201, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+--- !u!212 &2428700317774076335 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+  m_PrefabInstance: {fileID: 7010770982496416465}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3778091952734700918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6135373347243112359, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
@@ -207,11 +247,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6757579264636901699, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
+--- !u!212 &985308610202047319 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
+  m_PrefabInstance: {fileID: 7080231718261775010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1090464547258784846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7881319715807037164, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
@@ -275,9 +321,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_Name
-      value: Fence Gate
+      value: Rotating Fence 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8333286426886965201, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -285,5 +332,10 @@ PrefabInstance:
 --- !u!4 &3070670347371123732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6135373347243112359, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+  m_PrefabInstance: {fileID: 9203123310789043123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4559673511155550413 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
   m_PrefabInstance: {fileID: 9203123310789043123}
   m_PrefabAsset: {fileID: 0}

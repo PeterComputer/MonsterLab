@@ -33,7 +33,13 @@ public class InteractibleArea : MonoBehaviour
         spriteRenderer.sprite = pressedSprite;
         wire.roadMaterial = pressedWireMaterial;
         wire.TriggerUpdate();
-        SoundFXManager.instance.PlaySoundFXClip(pressedAudioClip, transform, 1f);
+
+        //pressedAudioClip can be null if multiple platforms are stacked on top of another (in order to reduce repeated noise)
+        if (pressedAudioClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(pressedAudioClip, transform, 1f);
+        }
+        
 
     }
 
