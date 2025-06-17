@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: de3eb6bb31ea4bb4c8edbe4c411f69fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fenceGateSpriteRenderer: {instanceID: 0}
+  - wire: {instanceID: 0}
+  - yellowFenceGateSprite: {fileID: 21300000, guid: 98381c36f56b5b24cbe19304c7329cac, type: 3}
+  - yellowWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
+  - greenFenceGateSprite: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
+  - greenWireMaterial: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
+  - blueFenceGateSprite: {fileID: 21300000, guid: 1cc7249f7f936d14793ef9f4ae6b583d, type: 3}
+  - blueWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
+  - pinkFenceGateSprite: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
+  - pinkWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
+  - defaultFenceGateSprite: {fileID: 21300000, guid: 092ad70fe8b2f044780c318032261969, type: 3}
+  - defaultWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
