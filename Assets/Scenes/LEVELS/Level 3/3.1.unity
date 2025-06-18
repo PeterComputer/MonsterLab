@@ -388,13 +388,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3328785755393619602, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b258b1593ed859b46a60ccec014b490b, type: 3}
+    - target: {fileID: 3328785755393619602, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
+      propertyPath: defaultWireMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
+    - target: {fileID: 3328785755393619602, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: pressedWireMaterial
       value: 
       objectReference: {fileID: 2100000, guid: d0ed3a16d2c61cd4c9e6d230da69e739, type: 2}
     - target: {fileID: 4211551984772920510, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1006994207}
+      objectReference: {fileID: 966836406}
     - target: {fileID: 4406529607048783771, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: interactsWith
       value: 
@@ -3355,7 +3363,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4610782577111779961, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
   m_PrefabInstance: {fileID: 1971177391}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1006994207
+--- !u!43 &966836406
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
