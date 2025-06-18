@@ -16,8 +16,8 @@ public class InteractibleArea : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     public bool wireStaysOn;
-    private Sprite defaultSprite;
-    private Material defaultWireMaterial;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Material defaultWireMaterial;
     [SerializeField] private RoadMeshCreator wire;
     private void OnTriggerEnter()
     {
@@ -58,7 +58,12 @@ public class InteractibleArea : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
         wire = transform.parent.GetComponentInChildren<RoadMeshCreator>();
-        defaultWireMaterial = wire.roadMaterial;
+
+        if (wire.roadMaterial != defaultWireMaterial)
+        {
+            wire.roadMaterial = defaultWireMaterial;            
+        }
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -78,6 +83,18 @@ public class InteractibleArea : MonoBehaviour
         spriteRenderer.sprite = newPlatformSprite;
         wire.roadMaterial = newWireMat;
         wire.TriggerUpdate();
-        //Note: this also updates the default sprite and materials because those are updated in the Awake()
+
+        defaultSprite = newPlatformSprite;
+        defaultWireMaterial = newWireMat;
+
+        #if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
+                UnityEditor.SceneView.RepaintAll(); // Force editor to redraw with the new material
+                UnityEditor.EditorUtility.SetDirty(this);
+                UnityEditor.EditorUtility.SetDirty(wire); // Save wire material change
+            }
+        #endif
+
     }
 }

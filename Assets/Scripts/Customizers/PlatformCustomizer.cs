@@ -7,7 +7,7 @@ public class PlatformCustomizer : MonoBehaviour
 
     [HideInInspector] public ColorEnum platformColor;
     [HideInInspector] public Obstacle interactsWith;
-    [SerializeField] private InteractibleArea interactibleArea;
+    [HideInInspector] public InteractibleArea interactibleArea;
 
 
     // Colored Platform Materials, only touch if they need changing
@@ -54,6 +54,12 @@ public class PlatformCustomizer : MonoBehaviour
                 gameObject.name = "Pink Interactive Platform";
                 break;
         }
+
+        // Needs to be here in order to save changes made in editor
+        #if UNITY_EDITOR
+            EditorUtility.SetDirty(interactibleArea);
+        #endif
+
     }
 
     public void setObstacle(Obstacle obstacle)
