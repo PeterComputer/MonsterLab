@@ -1,7 +1,10 @@
 using UnityEngine;
-using UnityEditor;
 using Enums;
 using PathCreation.Examples;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class FenceGateCustomizer : MonoBehaviour
 {
@@ -69,17 +72,17 @@ public class FenceGateCustomizer : MonoBehaviour
                 gameObject.GetComponentInChildren<MovingGateController>().gameObject.name = "Pink Fence Gate";
                 break;
 
-/*             case ColorEnum.None:
-                fenceGateSpriteRenderer.sprite = defaultFenceGateSprite;
-                wire.roadMaterial = defaultWireMaterial;
-                wire.TriggerUpdate();
-                gameObject.name = "Fence Gate Frame";
-                break; */
+                /*             case ColorEnum.None:
+                                fenceGateSpriteRenderer.sprite = defaultFenceGateSprite;
+                                wire.roadMaterial = defaultWireMaterial;
+                                wire.TriggerUpdate();
+                                gameObject.name = "Fence Gate Frame";
+                                break; */
         }
     }
 }
 
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(FenceGateCustomizer))]
 public class FenceGateEditor : Editor
 {
@@ -104,3 +107,4 @@ public class FenceGateEditor : Editor
         }
     }
 }
+#endif

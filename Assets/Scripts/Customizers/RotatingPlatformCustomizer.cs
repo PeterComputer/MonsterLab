@@ -1,8 +1,11 @@
 using UnityEngine;
-using UnityEditor;
 using Enums;
 using System.Collections.Generic;
 using System.Linq;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class RotatingPlatformCustomizer : MonoBehaviour
 {
@@ -99,6 +102,7 @@ public class RotatingPlatformCustomizer : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(RotatingPlatformCustomizer))]
 public class RotatingPlatformEditor : Editor
 {
@@ -123,3 +127,4 @@ public class RotatingPlatformEditor : Editor
         }
     }
 }
+#endif
