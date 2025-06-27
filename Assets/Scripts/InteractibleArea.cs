@@ -6,11 +6,11 @@ public class InteractibleArea : MonoBehaviour
 {
     [SerializeField][HideInInspector] private UnityEvent _onTriggerEnter;
     [HideInInspector] public Sprite pressedSprite;
-    public Material pressedWireMaterial;
-    public AudioClip pressedAudioClip;
+    [HideInInspector] public Material pressedWireMaterial;
+    [HideInInspector] public AudioClip pressedAudioClip;
     [SerializeField][HideInInspector] private SpriteRenderer spriteRenderer;
 
-    public bool wireStaysOn;
+    [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
     [SerializeField][HideInInspector] private RoadMeshCreator wire;
