@@ -1,14 +1,8 @@
 using UnityEngine;
 using Enums;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Net.NetworkInformation;
-
-
-
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -225,9 +219,6 @@ public class PlatformEditor : Editor
         // Platform Color
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Platform Color", customizer.platformColor);
 
-        // Interacted Object (DEPRECATED)
-        // Obstacle newObstacle = (Obstacle)EditorGUILayout.ObjectField("Interacts With", customizer.interactsWith, typeof(Obstacle), true);
-
         // Interacted Obstacle List
         SerializedObject so = new SerializedObject(customizer);
         SerializedProperty obstacleList = so.FindProperty("interactsWithList");
@@ -242,10 +233,6 @@ public class PlatformEditor : Editor
             Undo.RecordObject(customizer, "Changed Platform Settings");
 
             customizer.changePlatformColor(newColor);
-            //customizer.setObstacle(newObstacle);
-
-            // Visually update color selected in the dropdown menu
-            customizer.platformColor = newColor;
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }

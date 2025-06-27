@@ -5,9 +5,6 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-
-
-
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -198,9 +195,6 @@ public class FenceGateEditor : Editor
             Undo.RecordObject(customizer, "Changed Fence Gate Color");
 
             customizer.changeFenceGateColor(newColor);
-
-            // Visually update color selected in the dropdown menu
-            customizer.fenceGateColor = newColor;
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }

@@ -3,9 +3,6 @@ using Enums;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Unity.VisualScripting;
-
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -15,9 +12,12 @@ using UnityEditor;
 public class RotatingPlatformCustomizer : MonoBehaviour
 {
     [HideInInspector] public ColorEnum rotatingPlatformColor;
+    [HideInInspector] public float rotationAmount;
+    [HideInInspector] public float rotationSpeed;
     [HideInInspector][SerializeField] private int colorIndex = -1;
     [SerializeField] private SpriteRenderer platformSpriteRenderer;
     [SerializeField] private List<SpriteRenderer> fenceGateSpriteRenderers;
+    [SerializeField] private RotatingPlatformController rotatingPlatformController;
 
     // Colored Platform Materials, only touch if they need changing
 
@@ -181,7 +181,18 @@ public class RotatingPlatformCustomizer : MonoBehaviour
             }
         }
     }
-    
+
+    // Here for updating purposes, so it can update rotating platforms in old scenes.
+    private void Awake()
+    {
+        if (rotatingPlatformController == null)
+        {
+            rotatingPlatformController = GetComponent<RotatingPlatformController>();
+        }
+
+        EditorUtility.SetDirty(rotatingPlatformController);
+    }
+
     public void OnEnable()
     {
         // Support for undoing actions. Not the most efficient, since its running on ALL undo events, not just the ones related to this object
@@ -195,9 +206,27 @@ public class RotatingPlatformCustomizer : MonoBehaviour
     {
         if (platformSpriteRenderer != null && fenceGateSpriteRenderers != null)
         {
-            changeRotatingPlatformColor(rotatingPlatformColor);           
+            changeRotatingPlatformColor(rotatingPlatformColor);
         }
-    }    
+    }
+
+    /*
+    *   Get / Set Functions
+    */
+    public void setRotationAmount(float amount)
+    {
+        rotationAmount = amount;
+        
+        rotatingPlatformController.setRotationAmount(rotationAmount);
+        EditorUtility.SetDirty(rotatingPlatformController);
+
+    }
+    public void setRotationSpeed(float newSpeed)
+    {
+        rotationSpeed = newSpeed;
+        rotatingPlatformController.setRotationSpeed(rotationSpeed);
+        EditorUtility.SetDirty(rotatingPlatformController);
+    }        
 #endif
 }
 
@@ -217,15 +246,16 @@ public class RotatingPlatformEditor : Editor
 
         EditorGUI.BeginChangeCheck();
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Platform Color", customizer.rotatingPlatformColor);
+        float newRotationAmount = EditorGUILayout.FloatField("Rotation Amount", customizer.rotationAmount);
+        float newRotationSpeed = EditorGUILayout.FloatField("Rotation Speed", customizer.rotationSpeed);
 
         if (EditorGUI.EndChangeCheck())
         {
-            Undo.RecordObject(customizer, "Changed Platform Color");
+            Undo.RecordObject(customizer, "Changed Rotating Platform Parameters");
 
             customizer.changeRotatingPlatformColor(newColor);
-
-            // Visually update color selected in the dropdown menu
-            customizer.rotatingPlatformColor = newColor;
+            customizer.setRotationAmount(newRotationAmount);
+            customizer.setRotationSpeed(newRotationSpeed);
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }
