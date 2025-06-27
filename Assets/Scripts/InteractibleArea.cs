@@ -1,7 +1,5 @@
 using PathCreation.Examples;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.Events;
 
 public class InteractibleArea : MonoBehaviour
@@ -22,8 +20,13 @@ public class InteractibleArea : MonoBehaviour
         _onTriggerEnter.Invoke();
 
         spriteRenderer.sprite = pressedSprite;
-        wire.roadMaterial = pressedWireMaterial;
-        wire.TriggerUpdate();
+
+        if (wire != null)
+        {
+            wire.roadMaterial = pressedWireMaterial;
+            wire.TriggerUpdate();            
+        }
+
 
         //pressedAudioClip can be null if multiple platforms are stacked on top of another (in order to reduce repeated noise)
         if (pressedAudioClip != null)
@@ -37,7 +40,7 @@ public class InteractibleArea : MonoBehaviour
     private void OnTriggerExit()
     {
         spriteRenderer.sprite = defaultSprite;
-        if (!wireStaysOn)
+        if (wire != null && !wireStaysOn)
         {
             wire.roadMaterial = defaultWireMaterial;
             wire.TriggerUpdate();
@@ -50,42 +53,41 @@ public class InteractibleArea : MonoBehaviour
         defaultSprite = spriteRenderer.sprite;
         wire = transform.parent.GetComponentInChildren<RoadMeshCreator>();
 
-        if (wire.roadMaterial != defaultWireMaterial)
+        if (wire != null && wire.roadMaterial != defaultWireMaterial)
         {
             wire.roadMaterial = defaultWireMaterial;            
         }
 
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void setWireStaysOn(bool newWireStaysOn)
     {
-
+        wireStaysOn = newWireStaysOn;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void changePlatformColor(Sprite newPlatformSprite, Material newWireMat)
+    public void changePlatformColor(Sprite newPlatformSprite, Material newWireMat, Material newPressedWireMaterial)
     {
         spriteRenderer.sprite = newPlatformSprite;
-        wire.roadMaterial = newWireMat;
-        wire.TriggerUpdate();
+
+        if (wire != null)
+        {
+            wire.roadMaterial = newWireMat;
+            wire.TriggerUpdate();
+        }
 
         defaultSprite = newPlatformSprite;
         defaultWireMaterial = newWireMat;
+        pressedWireMaterial = newPressedWireMaterial;
 
-        #if UNITY_EDITOR
-            if (!Application.isPlaying)
-            {
-                UnityEditor.SceneView.RepaintAll(); // Force editor to redraw with the new material
-                UnityEditor.EditorUtility.SetDirty(this);
-                UnityEditor.EditorUtility.SetDirty(wire); // Save wire material change
-            }
-        #endif
+
+#if UNITY_EDITOR
+        if (!Application.isPlaying)
+        {
+            UnityEditor.SceneView.RepaintAll(); // Force editor to redraw with the new material
+            UnityEditor.EditorUtility.SetDirty(this);
+            if (wire != null) UnityEditor.EditorUtility.SetDirty(wire); // Save wire material change
+        }
+#endif
 
     }
 }

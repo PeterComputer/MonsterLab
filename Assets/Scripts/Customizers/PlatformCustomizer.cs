@@ -13,6 +13,8 @@ public class PlatformCustomizer : MonoBehaviour
 {
 
     [HideInInspector] public ColorEnum platformColor;
+    [HideInInspector] public bool isWireEmissive;
+    [HideInInspector] public bool wireStaysOn;
     [HideInInspector][SerializeField] private int colorIndex = -1;
     [HideInInspector] public Obstacle interactsWith;
     [HideInInspector] public InteractibleArea interactibleArea;
@@ -20,27 +22,31 @@ public class PlatformCustomizer : MonoBehaviour
 
     // Colored Platform Materials, only touch if they need changing
 
+    // Default Pressed Wire Material
+    public Material redWireMaterial;
+
     // Yellow Platform
     public Sprite yellowPlatformSprite;
     public Material yellowWireMaterial;
+    public Material yellowEmissiveWireMaterial;
 
     // Green Platform
     public Sprite greenPlatformSprite;
     public Material greenWireMaterial;
+    public Material greenEmissiveWireMaterial;
 
     // Blue Platform
     public Sprite bluePlatformSprite;
     public Material blueWireMaterial;
+    public Material blueEmissiveWireMaterial;
 
     // Pink Platform
     public Sprite pinkPlatformSprite;
     public Material pinkWireMaterial;
+    public Material pinkEmissiveWireMaterial;
 
     public void doInteraction()
     {
-        //interactsWith.interactWith();
-
-
         foreach (var obstacle in interactsWithList)
         {
             if (obstacle != null)
@@ -57,20 +63,36 @@ public class PlatformCustomizer : MonoBehaviour
         switch (newColor)
         {
             case ColorEnum.Yellow:
-                interactibleArea.changePlatformColor(yellowPlatformSprite, yellowWireMaterial);
+                if (isWireEmissive)
+                {
+                    interactibleArea.changePlatformColor(yellowPlatformSprite, yellowWireMaterial, yellowEmissiveWireMaterial);
+                }
+                else interactibleArea.changePlatformColor(yellowPlatformSprite, yellowWireMaterial, redWireMaterial);
                 break;
 
             case ColorEnum.Blue:
-                interactibleArea.changePlatformColor(bluePlatformSprite, blueWireMaterial);
+                if (isWireEmissive)
+                {
+                    interactibleArea.changePlatformColor(bluePlatformSprite, blueWireMaterial, blueEmissiveWireMaterial);
+                }
+                else interactibleArea.changePlatformColor(bluePlatformSprite, blueWireMaterial, redWireMaterial);
                 break;
 
             case ColorEnum.Green:
-                interactibleArea.changePlatformColor(greenPlatformSprite, greenWireMaterial);
+                if (isWireEmissive)
+                {
+                    interactibleArea.changePlatformColor(greenPlatformSprite, greenWireMaterial, greenEmissiveWireMaterial);
+                }
+                else interactibleArea.changePlatformColor(greenPlatformSprite, greenWireMaterial, redWireMaterial);
                 break;
 
 
             case ColorEnum.Pink:
-                interactibleArea.changePlatformColor(pinkPlatformSprite, pinkWireMaterial);
+                if (isWireEmissive)
+                {
+                    interactibleArea.changePlatformColor(pinkPlatformSprite, pinkWireMaterial, pinkEmissiveWireMaterial);
+                }
+                else interactibleArea.changePlatformColor(pinkPlatformSprite, pinkWireMaterial, redWireMaterial);
                 break;
         }
 
@@ -173,12 +195,12 @@ public class PlatformCustomizer : MonoBehaviour
             }
         }
     }
-    
+
     public void Awake()
     {
         // Needs to be here for updating reasons; updates object from the old "interactsWith" variable to the new "interactsWithList" variable
         setObstacle(null);
-    }    
+    }
 
     public void OnEnable()
     {
@@ -193,9 +215,23 @@ public class PlatformCustomizer : MonoBehaviour
     {
         if (interactibleArea != null)
         {
-            changePlatformColor(platformColor);            
+            changePlatformColor(platformColor);
         }
-    }  
+    }
+    
+    /*
+    *   Set Functions
+    */
+    public void setIsWireEmissive(bool newIsWireEmissive)
+    {
+        isWireEmissive = newIsWireEmissive;
+    }
+    public void setWireStaysOn(bool newWireStaysOn)
+    {
+        wireStaysOn = newWireStaysOn;
+        interactibleArea.setWireStaysOn(wireStaysOn);
+        EditorUtility.SetDirty(interactibleArea);
+    } 
 #endif
 }
 
@@ -225,13 +261,18 @@ public class PlatformEditor : Editor
 
         EditorGUILayout.PropertyField(obstacleList, new GUIContent("Interacts With Obstacles"), true);
 
-        so.ApplyModifiedProperties();        
+        so.ApplyModifiedProperties();
+
+        bool isWireEmissive = EditorGUILayout.Toggle("Emissive Wire", customizer.isWireEmissive);
+        bool wireStaysOn = EditorGUILayout.Toggle("Wire Stays On", customizer.wireStaysOn);
 
         // Record Changes
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(customizer, "Changed Platform Settings");
 
+            customizer.setIsWireEmissive(isWireEmissive);
+            customizer.setWireStaysOn(wireStaysOn);
             customizer.changePlatformColor(newColor);
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved

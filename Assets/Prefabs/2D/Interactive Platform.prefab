@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
   _onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -143,6 +142,8 @@ MonoBehaviour:
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 6014899126859380766}
   wireStaysOn: 0
+  defaultSprite: {fileID: 0}
+  defaultWireMaterial: {fileID: 0}
   wire: {fileID: 2194990078945860472}
 --- !u!1 &8244968237612922246
 GameObject:
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 3124301941900367311}
   - component: {fileID: 4406529607048783771}
   m_Layer: 0
-  m_Name: Interactive Platform
+  m_Name: Blue Interactive Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,16 +192,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformColor: 2
+  isWireEmissive: 0
+  wireStaysOn: 0
+  colorIndex: 0
   interactsWith: {fileID: 0}
   interactibleArea: {fileID: 3328785755393619602}
+  interactsWithList: []
+  redWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   yellowPlatformSprite: {fileID: 21300000, guid: b258b1593ed859b46a60ccec014b490b, type: 3}
   yellowWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
+  yellowEmissiveWireMaterial: {fileID: 2100000, guid: d0ed3a16d2c61cd4c9e6d230da69e739, type: 2}
   greenPlatformSprite: {fileID: 21300000, guid: 7d640988a4eeca345b5f95d610785643, type: 3}
   greenWireMaterial: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
+  greenEmissiveWireMaterial: {fileID: 2100000, guid: 1c9059ff4c1107f468e3d75d1ad8e7da, type: 2}
   bluePlatformSprite: {fileID: 21300000, guid: 3013dff23052c4d48bbf3c635c9847d4, type: 3}
   blueWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
+  blueEmissiveWireMaterial: {fileID: 2100000, guid: b7878d64445264e46a72988e56c71b4f, type: 2}
   pinkPlatformSprite: {fileID: 21300000, guid: 863dc303c4f64a04c802f5819851dc89, type: 3}
   pinkWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
+  pinkEmissiveWireMaterial: {fileID: 2100000, guid: 5dd81a2cb7a34f547974a9ab18e4b345, type: 2}
 --- !u!1001 &6495398743814864351
 PrefabInstance:
   m_ObjectHideFlags: 0
