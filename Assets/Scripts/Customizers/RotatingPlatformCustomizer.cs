@@ -96,8 +96,9 @@ public class RotatingPlatformCustomizer : MonoBehaviour
         List<SpriteRenderer> tempArray = gameObject.GetComponentsInChildren<SpriteRenderer>().ToList();
 
         foreach (SpriteRenderer temp in tempArray)
-        {
-            if (!temp.gameObject.Equals(platformSpriteRenderer.gameObject))
+        {   
+            // Only adds the found SpriteRenderer to the list if it belongs to a fence object
+            if (temp.gameObject.tag == "Fence")
             {
                 fenceGateSpriteRenderers.Add(temp);
             }
@@ -211,7 +212,7 @@ public class RotatingPlatformCustomizer : MonoBehaviour
     }
 
     /*
-    *   Get / Set Functions
+    *   Set Functions
     */
     public void setRotationAmount(float amount)
     {

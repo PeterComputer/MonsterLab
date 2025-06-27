@@ -6,29 +6,20 @@ using UnityEngine.Events;
 
 public class InteractibleArea : MonoBehaviour
 {
-
-    public GameObject[] connectedObjects;
-
-    [SerializeField] private UnityEvent _onTriggerEnter;
-    public Sprite pressedSprite;
+    [SerializeField][HideInInspector] private UnityEvent _onTriggerEnter;
+    [HideInInspector] public Sprite pressedSprite;
     public Material pressedWireMaterial;
     public AudioClip pressedAudioClip;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField][HideInInspector] private SpriteRenderer spriteRenderer;
 
     public bool wireStaysOn;
-    [SerializeField] private Sprite defaultSprite;
-    [SerializeField] private Material defaultWireMaterial;
-    [SerializeField] private RoadMeshCreator wire;
+    [SerializeField][HideInInspector] private Sprite defaultSprite;
+    [SerializeField][HideInInspector] private Material defaultWireMaterial;
+    [SerializeField][HideInInspector] private RoadMeshCreator wire;
     private void OnTriggerEnter()
     {
 
         _onTriggerEnter.Invoke();
-
-        foreach (GameObject currentObject in connectedObjects)
-        {
-            if (currentObject != null)
-                currentObject.SetActive(!currentObject.activeSelf);
-        }
 
         spriteRenderer.sprite = pressedSprite;
         wire.roadMaterial = pressedWireMaterial;

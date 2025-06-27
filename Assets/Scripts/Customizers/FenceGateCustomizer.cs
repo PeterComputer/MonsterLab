@@ -13,9 +13,13 @@ using UnityEditor;
 public class FenceGateCustomizer : MonoBehaviour
 {
     [HideInInspector] public ColorEnum fenceGateColor;
+    [HideInInspector] public float moveAmount;
+    [HideInInspector] public float moveSpeed;
     [SerializeField] private SpriteRenderer fenceGateSpriteRenderer;
     [HideInInspector][SerializeField] private int colorIndex = -1;
     [SerializeField] private RoadMeshCreator wire;
+    [SerializeField] private MovingGateController movingGateController;
+
 
     // Colored Fence Gate Materials, only touch if they need changing
 
@@ -159,6 +163,17 @@ public class FenceGateCustomizer : MonoBehaviour
         }
     }
 
+    // Here for updating purposes, so it can update moving fence gates in old scenes.
+    private void Awake()
+    {
+        if (movingGateController == null)
+        {
+            movingGateController = GetComponentInChildren<MovingGateController>();
+        }
+
+        EditorUtility.SetDirty(movingGateController);
+    }
+
     public void OnEnable()
     {
         // Support for undoing actions. Not the most efficient, since its running on ALL undo events, not just the ones related to this object
@@ -172,9 +187,26 @@ public class FenceGateCustomizer : MonoBehaviour
     {
         if (fenceGateSpriteRenderer != null)
         {
-            changeFenceGateColor(fenceGateColor);            
+            changeFenceGateColor(fenceGateColor);
         }
     }
+    
+    /*
+    *   Set Functions
+    */
+    public void setMoveAmount(float amount)
+    {
+        moveAmount = amount;
+        movingGateController.setMoveAmount(moveAmount);
+        EditorUtility.SetDirty(movingGateController);
+
+    }
+    public void setMoveSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+        movingGateController.setMoveSpeed(moveSpeed);
+        EditorUtility.SetDirty(movingGateController);
+    }     
 #endif
 }
 
@@ -189,12 +221,16 @@ public class FenceGateEditor : Editor
 
         EditorGUI.BeginChangeCheck();
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Fence Gate Color", customizer.fenceGateColor);
+        float newMoveAmount = EditorGUILayout.FloatField("Move Amount", customizer.moveAmount);
+        float newMoveSpeed = EditorGUILayout.FloatField("Move Speed", customizer.moveSpeed);
 
         if (EditorGUI.EndChangeCheck())
         {
             Undo.RecordObject(customizer, "Changed Fence Gate Color");
 
             customizer.changeFenceGateColor(newColor);
+            customizer.setMoveAmount(newMoveAmount);
+            customizer.setMoveSpeed(newMoveSpeed);
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }

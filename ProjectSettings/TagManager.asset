@@ -15,6 +15,7 @@ TagManager:
   - FadeEffect
   - LevelButton
   - FPSCounter
+  - Fence
   layers:
   - Default
   - TransparentFX

@@ -210,7 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b185a8cb06789e4987ab03d56563bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
-  moveAmount: 5
+  moveAmount: -5
   moveSpeed: 5
-  movesOnAxis: 0

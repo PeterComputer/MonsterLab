@@ -65,6 +65,10 @@ PrefabInstance:
       value: Rotating Fence 2
       objectReference: {fileID: 0}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -107,6 +111,10 @@ PrefabInstance:
     - target: {fileID: 985308610202047319, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_SortingLayer
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: colorIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: rotatingPlatformColor
@@ -230,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7204094546204359854, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_Name
-      value: Rotating Platform Variant
+      value: Blue Rotating Platform 2
       objectReference: {fileID: 0}
     - target: {fileID: 8270152409931943216, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_IsActive
