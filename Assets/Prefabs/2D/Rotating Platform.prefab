@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7711893006642314162}
   - component: {fileID: 985957610984514472}
   m_Layer: 0
-  m_Name: Rotating Platform
+  m_Name: Pink Rotating Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,16 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingPlatformColor: 3
+  colorIndex: 1
   platformSpriteRenderer: {fileID: 985308610202047319}
   fenceGateSpriteRenderers:
-  - {fileID: 4559673511155550413}
-  - {fileID: 2428700317774076335}
-  - {fileID: 4559673511155550413}
-  - {fileID: 2428700317774076335}
-  - {fileID: 4559673511155550413}
-  - {fileID: 2428700317774076335}
-  - {fileID: 4559673511155550413}
-  - {fileID: 2428700317774076335}
   - {fileID: 4559673511155550413}
   - {fileID: 2428700317774076335}
   yellowPlatformSprite: {fileID: 21300000, guid: dba84c5c6167fa4478f2dae546683ac8, type: 3}
@@ -91,6 +84,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1388218268773410874}
     m_Modifications:
+    - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -230,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 68bc54028c31fc14b915b06f26126851, type: 3}
+      objectReference: {fileID: 21300000, guid: 3167e909b1dcf7d429ad0ae36734c837, type: 3}
     - target: {fileID: 8065539880438483445, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -271,6 +268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1388218268773410874}
     m_Modifications:
+    - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
     - target: {fileID: 4683524819979725694, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

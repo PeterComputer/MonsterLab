@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Net.NetworkInformation;
+
 
 
 
@@ -82,10 +84,10 @@ public class PlatformCustomizer : MonoBehaviour
         platformColor = newColor;
 
         // Set platform name
+        colorIndex = -1;
         setName(newColor);
 
         // Needs to be here in order to save changes made in editor
-
         EditorUtility.SetDirty(interactibleArea);
     }
 
@@ -120,8 +122,6 @@ public class PlatformCustomizer : MonoBehaviour
             // Finds first null position in the list and inserts the new platform
             int firstNullSpace = coloredPlatforms.FindIndex(item => item == null);
 
-            Debug.Log("First Null Space: " + firstNullSpace);
-
             if (firstNullSpace == -1)
             {
                 firstNullSpace = coloredPlatforms.Count;
@@ -149,36 +149,61 @@ public class PlatformCustomizer : MonoBehaviour
         interactsWith = null;
     }
 
-
-
-    public void Awake()
+    private bool isThereObjectInSceneWithSameName()
     {
-        // Needs to be here for updating reasons; updates object from the old "interactsWith" variable to the new "interactsWithList" variable
-        setObstacle(null);
+        bool result = false;
 
-        // Only runs setName if the object's name doesn't have a number in it yet OR if it contains a "(integer)" in its string
-        if (!gameObject.name.Any(char.IsDigit) || Regex.IsMatch(gameObject.name, @"\(\d+\)"))
+        PlatformCustomizer[] allPlatforms = FindObjectsByType<PlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        foreach (PlatformCustomizer platform in allPlatforms)
         {
-            colorIndex = -1;
-            setName(platformColor);
+            if (platform.platformColor == platformColor && platform.gameObject.name.Equals(gameObject.name))
+            {
+                result = true;
+            }
         }
+        return result;
     }
-
 
     private void OnValidate()
     {
         if (!Application.isPlaying)
         {
-            if (!gameObject.name.Any(char.IsDigit) || Regex.IsMatch(gameObject.name, @"\(\d+\)"))
+            // Only runs setName if the object's name doesn't have a number in it yet (present here for updating reasons)
+            // OR if it contains a "(integer)" in its string (present here for updating reasons)
+            // OR there's already an object in the scene with that same name
+            if (!gameObject.name.Any(char.IsDigit) || Regex.IsMatch(gameObject.name, @"\(\d+\)") || isThereObjectInSceneWithSameName())
             {
                 colorIndex = -1;
                 setName(platformColor);
             }
         }
     }
+    
+    public void Awake()
+    {
+        // Needs to be here for updating reasons; updates object from the old "interactsWith" variable to the new "interactsWithList" variable
+        setObstacle(null);
+    }    
+
+    public void OnEnable()
+    {
+        // Support for undoing actions. Not the most efficient, since its running on ALL undo events, not just the ones related to this object
+        Undo.undoRedoPerformed += OnUndoRedo;
+    }
+    public void OnDestroy()
+    {
+        Undo.undoRedoPerformed -= OnUndoRedo;
+    }
+    private void OnUndoRedo()
+    {
+        if (interactibleArea != null)
+        {
+            changePlatformColor(platformColor);            
+        }
+    }  
 #endif
 }
-
 
 
 /******************************************************************************
