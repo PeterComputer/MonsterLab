@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class FlatDoorController : Obstacle
 {
-    [SerializeField] bool startsOpen;
-    [SerializeField] private int pickupsLeft;
-    public Sprite openDoorSprite;
-    private Sprite closedSprite;
-    public AudioClip openDoorAudioClip;
-    public GameObject fx;
+    [HideInInspector][SerializeField] bool startsOpen;
+    [HideInInspector][SerializeField] private int pickupsLeft;
+    [HideInInspector] public Sprite openDoorSprite;
+    [HideInInspector] private Sprite closedSprite;
+    [HideInInspector] public AudioClip openDoorAudioClip;
+    [HideInInspector] public GameObject fx;
 
     private GameManager gameManager;
 
     private BoxCollider boxCollider;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] private DoorRotationController rightDoorFrame;
-    [SerializeField] private DoorRotationController leftDoorFrame;
-    [SerializeField] private GameObject doorBackdrop;
+    [HideInInspector][SerializeField] private DoorRotationController rightDoorFrame;
+    [HideInInspector][SerializeField] private DoorRotationController leftDoorFrame;
+    [HideInInspector][SerializeField] private GameObject doorBackdrop;
 
 
     void Awake()
