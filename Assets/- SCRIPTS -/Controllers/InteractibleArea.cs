@@ -9,11 +9,12 @@ public class InteractibleArea : MonoBehaviour
     [HideInInspector] public Material pressedWireMaterial;
     [HideInInspector] public AudioClip pressedAudioClip;
     [SerializeField][HideInInspector] private SpriteRenderer spriteRenderer;
-
+    [HideInInspector] public bool hasWire;
     [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
     [SerializeField][HideInInspector] private RoadMeshCreator wire;
+    [SerializeField] private GameObject wirePrefab;
     private void OnTriggerEnter()
     {
 
@@ -24,7 +25,7 @@ public class InteractibleArea : MonoBehaviour
         if (wire != null)
         {
             wire.roadMaterial = pressedWireMaterial;
-            wire.TriggerUpdate();            
+            wire.TriggerUpdate();
         }
 
 
@@ -33,7 +34,7 @@ public class InteractibleArea : MonoBehaviour
         {
             SoundFXManager.instance.PlaySoundFXClip(pressedAudioClip, transform, 1f);
         }
-        
+
 
     }
 
@@ -58,6 +59,16 @@ public class InteractibleArea : MonoBehaviour
             wire.roadMaterial = defaultWireMaterial;            
         }
 
+    }
+
+    public void setHasWire(bool newHasWire)
+    {
+        hasWire = newHasWire;
+    }
+
+    public bool getHasWire()
+    {
+        return hasWire;
     }
 
     public void setWireStaysOn(bool newWireStaysOn)

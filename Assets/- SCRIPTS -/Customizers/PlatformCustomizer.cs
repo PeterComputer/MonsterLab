@@ -14,6 +14,7 @@ public class PlatformCustomizer : MonoBehaviour
 
     [HideInInspector] public ColorEnum platformColor;
     [HideInInspector] public bool isWireEmissive;
+    [HideInInspector] public bool hasWire;
     [HideInInspector] public bool wireStaysOn;
     [HideInInspector][SerializeField] private int colorIndex = -1;
     [HideInInspector] public Obstacle interactsWith;
@@ -218,10 +219,14 @@ public class PlatformCustomizer : MonoBehaviour
             changePlatformColor(platformColor);
         }
     }
-    
+
     /*
     *   Set Functions
     */
+    public void setHasWire(bool newHasWire)
+    {
+        hasWire = newHasWire;
+    }
     public void setIsWireEmissive(bool newIsWireEmissive)
     {
         isWireEmissive = newIsWireEmissive;
@@ -263,6 +268,7 @@ public class PlatformEditor : Editor
 
         so.ApplyModifiedProperties();
 
+        bool hasWire = EditorGUILayout.Toggle("Has Wire", customizer.wireStaysOn);
         bool isWireEmissive = EditorGUILayout.Toggle("Emissive Wire", customizer.isWireEmissive);
         bool wireStaysOn = EditorGUILayout.Toggle("Wire Stays On", customizer.wireStaysOn);
 
@@ -271,6 +277,7 @@ public class PlatformEditor : Editor
         {
             Undo.RecordObject(customizer, "Changed Platform Settings");
 
+            customizer.setHasWire(hasWire);
             customizer.setIsWireEmissive(isWireEmissive);
             customizer.setWireStaysOn(wireStaysOn);
             customizer.changePlatformColor(newColor);
