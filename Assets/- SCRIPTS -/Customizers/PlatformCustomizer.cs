@@ -26,6 +26,10 @@ public class PlatformCustomizer : MonoBehaviour
     // Default Pressed Wire Material
     public Material redWireMaterial;
 
+    // Default Pressed Platform Sprite
+    public Sprite redPlatformSprite;
+
+
     // Yellow Platform
     public Sprite yellowPlatformSprite;
     public Material yellowWireMaterial;
@@ -66,34 +70,34 @@ public class PlatformCustomizer : MonoBehaviour
             case ColorEnum.Yellow:
                 if (isWireEmissive)
                 {
-                    interactibleArea.changePlatformColor(yellowPlatformSprite, yellowWireMaterial, yellowEmissiveWireMaterial);
+                    interactibleArea.changePlatformColor(yellowPlatformSprite, redPlatformSprite, yellowWireMaterial, yellowEmissiveWireMaterial);
                 }
-                else interactibleArea.changePlatformColor(yellowPlatformSprite, yellowWireMaterial, redWireMaterial);
+                else interactibleArea.changePlatformColor(yellowPlatformSprite, redPlatformSprite, yellowWireMaterial, redWireMaterial);
                 break;
 
             case ColorEnum.Blue:
                 if (isWireEmissive)
                 {
-                    interactibleArea.changePlatformColor(bluePlatformSprite, blueWireMaterial, blueEmissiveWireMaterial);
+                    interactibleArea.changePlatformColor(bluePlatformSprite, redPlatformSprite, blueWireMaterial, blueEmissiveWireMaterial);
                 }
-                else interactibleArea.changePlatformColor(bluePlatformSprite, blueWireMaterial, redWireMaterial);
+                else interactibleArea.changePlatformColor(bluePlatformSprite, redPlatformSprite, blueWireMaterial, redWireMaterial);
                 break;
 
             case ColorEnum.Green:
                 if (isWireEmissive)
                 {
-                    interactibleArea.changePlatformColor(greenPlatformSprite, greenWireMaterial, greenEmissiveWireMaterial);
+                    interactibleArea.changePlatformColor(greenPlatformSprite, redPlatformSprite, greenWireMaterial, greenEmissiveWireMaterial);
                 }
-                else interactibleArea.changePlatformColor(greenPlatformSprite, greenWireMaterial, redWireMaterial);
+                else interactibleArea.changePlatformColor(greenPlatformSprite, redPlatformSprite, greenWireMaterial, redWireMaterial);
                 break;
 
 
             case ColorEnum.Pink:
                 if (isWireEmissive)
                 {
-                    interactibleArea.changePlatformColor(pinkPlatformSprite, pinkWireMaterial, pinkEmissiveWireMaterial);
+                    interactibleArea.changePlatformColor(pinkPlatformSprite, redPlatformSprite, pinkWireMaterial, pinkEmissiveWireMaterial);
                 }
-                else interactibleArea.changePlatformColor(pinkPlatformSprite, pinkWireMaterial, redWireMaterial);
+                else interactibleArea.changePlatformColor(pinkPlatformSprite, redPlatformSprite, pinkWireMaterial, redWireMaterial);
                 break;
         }
 
@@ -201,6 +205,7 @@ public class PlatformCustomizer : MonoBehaviour
     {
         // Needs to be here for updating reasons; updates object from the old "interactsWith" variable to the new "interactsWithList" variable
         setObstacle(null);
+        hasWire = interactibleArea.getHasWire();
     }
 
     public void OnEnable()
@@ -226,6 +231,7 @@ public class PlatformCustomizer : MonoBehaviour
     public void setHasWire(bool newHasWire)
     {
         hasWire = newHasWire;
+        interactibleArea.setHasWire(hasWire);
     }
     public void setIsWireEmissive(bool newIsWireEmissive)
     {
@@ -268,9 +274,23 @@ public class PlatformEditor : Editor
 
         so.ApplyModifiedProperties();
 
-        bool hasWire = EditorGUILayout.Toggle("Has Wire", customizer.wireStaysOn);
-        bool isWireEmissive = EditorGUILayout.Toggle("Emissive Wire", customizer.isWireEmissive);
-        bool wireStaysOn = EditorGUILayout.Toggle("Wire Stays On", customizer.wireStaysOn);
+        bool isWireEmissive;
+        bool wireStaysOn;
+
+        bool hasWire = EditorGUILayout.Toggle("Has Wire", customizer.hasWire);
+
+        // Display the "isWireEmissive" and "WireStaysOn" fields only if the platform has a wire
+        if (hasWire)
+        {
+            isWireEmissive = EditorGUILayout.Toggle("Emissive Wire", customizer.isWireEmissive);
+            wireStaysOn = EditorGUILayout.Toggle("Wire Stays On", customizer.wireStaysOn);
+        }
+        else
+        {
+            isWireEmissive = customizer.isWireEmissive;
+            wireStaysOn = customizer.wireStaysOn;
+        }
+
 
         // Record Changes
         if (EditorGUI.EndChangeCheck())
@@ -278,8 +298,13 @@ public class PlatformEditor : Editor
             Undo.RecordObject(customizer, "Changed Platform Settings");
 
             customizer.setHasWire(hasWire);
-            customizer.setIsWireEmissive(isWireEmissive);
-            customizer.setWireStaysOn(wireStaysOn);
+
+            if (hasWire)
+            {
+                customizer.setIsWireEmissive(isWireEmissive);
+                customizer.setWireStaysOn(wireStaysOn);               
+            }
+
             customizer.changePlatformColor(newColor);
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved

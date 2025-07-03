@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Enums
@@ -8,8 +9,6 @@ namespace Enums
         Green,
         Blue,
         Pink,
-        //None
-    
     } 
 }
 

@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: -2136545941
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3013dff23052c4d48bbf3c635c9847d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f6cdcd47e92b584c9fbc526bc34c9ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -137,16 +137,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pressedSprite: {fileID: 21300000, guid: ecd09a0855e6abe4a8f988834f86ddf6, type: 3}
+  pressedSprite: {fileID: 21300000, guid: b85f80a87ecbbb44ab175c4e0b5f71da, type: 3}
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 6014899126859380766}
-  hasWire: 0
   wireStaysOn: 0
-  defaultSprite: {fileID: 21300000, guid: 3013dff23052c4d48bbf3c635c9847d4, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 2f6cdcd47e92b584c9fbc526bc34c9ae, type: 3}
   defaultWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
-  wire: {fileID: 2194990078945860472}
-  wirePrefab: {fileID: 0}
+  wireObject: {fileID: 9147504081639213402}
+  wireScript: {fileID: 2194990078945860472}
+  wirePrefab: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
 --- !u!1 &8244968237612922246
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 3124301941900367311}
   - component: {fileID: 4406529607048783771}
   m_Layer: 0
-  m_Name: Blue Interactive Platform 1
+  m_Name: Blue Interactive Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,23 +195,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformColor: 2
   isWireEmissive: 0
-  hasWire: 0
+  hasWire: 1
   wireStaysOn: 0
-  colorIndex: 0
+  colorIndex: 1
   interactsWith: {fileID: 0}
   interactibleArea: {fileID: 3328785755393619602}
   interactsWithList: []
   redWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
-  yellowPlatformSprite: {fileID: 21300000, guid: b258b1593ed859b46a60ccec014b490b, type: 3}
+  redPlatformSprite: {fileID: 21300000, guid: b85f80a87ecbbb44ab175c4e0b5f71da, type: 3}
+  yellowPlatformSprite: {fileID: 21300000, guid: 879fda2875690c2498304c8e60b37897, type: 3}
   yellowWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
   yellowEmissiveWireMaterial: {fileID: 2100000, guid: d0ed3a16d2c61cd4c9e6d230da69e739, type: 2}
-  greenPlatformSprite: {fileID: 21300000, guid: 7d640988a4eeca345b5f95d610785643, type: 3}
+  greenPlatformSprite: {fileID: 21300000, guid: 0049253d9c89a464eab148f62e24520b, type: 3}
   greenWireMaterial: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
   greenEmissiveWireMaterial: {fileID: 2100000, guid: 1c9059ff4c1107f468e3d75d1ad8e7da, type: 2}
-  bluePlatformSprite: {fileID: 21300000, guid: 3013dff23052c4d48bbf3c635c9847d4, type: 3}
+  bluePlatformSprite: {fileID: 21300000, guid: 2f6cdcd47e92b584c9fbc526bc34c9ae, type: 3}
   blueWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
   blueEmissiveWireMaterial: {fileID: 2100000, guid: b7878d64445264e46a72988e56c71b4f, type: 2}
-  pinkPlatformSprite: {fileID: 21300000, guid: 863dc303c4f64a04c802f5819851dc89, type: 3}
+  pinkPlatformSprite: {fileID: 21300000, guid: 6b8779df6b31939479b8f735eb1a1456, type: 3}
   pinkWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
   pinkEmissiveWireMaterial: {fileID: 2100000, guid: 5dd81a2cb7a34f547974a9ab18e4b345, type: 2}
 --- !u!1001 &6495398743814864351
@@ -276,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: m_Name
-      value: Path Object
+      value: Wire
       objectReference: {fileID: 0}
     - target: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
       propertyPath: roadMaterial
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
   m_PrefabInstance: {fileID: 6495398743814864351}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 9147504081639213402}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b275c3b78f8717c4cbc60f74a3247f67, type: 3}
@@ -429,5 +430,10 @@ MonoBehaviour:
 --- !u!4 &6483086473888059310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+  m_PrefabInstance: {fileID: 6495398743814864351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9147504081639213402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
   m_PrefabInstance: {fileID: 6495398743814864351}
   m_PrefabAsset: {fileID: 0}
