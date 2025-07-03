@@ -141,10 +141,12 @@ MonoBehaviour:
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 6014899126859380766}
+  hasWire: 0
   wireStaysOn: 0
-  defaultSprite: {fileID: 0}
-  defaultWireMaterial: {fileID: 0}
+  defaultSprite: {fileID: 21300000, guid: 3013dff23052c4d48bbf3c635c9847d4, type: 3}
+  defaultWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
   wire: {fileID: 2194990078945860472}
+  wirePrefab: {fileID: 0}
 --- !u!1 &8244968237612922246
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformColor: 2
   isWireEmissive: 0
+  hasWire: 0
   wireStaysOn: 0
   colorIndex: 0
   interactsWith: {fileID: 0}
