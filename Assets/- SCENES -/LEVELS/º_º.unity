@@ -2129,7 +2129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5846
+      value: 2.8753
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2137,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2571
+      value: -1.2309
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2172,9 +2172,21 @@ PrefabInstance:
       value: Background Ground V2
       objectReference: {fileID: 0}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_Size.x
+      value: 41.766415
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_Size.y
+      value: 46.129833
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 718942502311eeb43b0a3126efde1709, type: 3}
+      objectReference: {fileID: 21300000, guid: 3bec07c9855ee4743b2ab1674718f26e, type: 3}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8036,7 +8048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
   _onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -8056,10 +8067,12 @@ MonoBehaviour:
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 0}
+  hasWire: 0
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
   wire: {fileID: 0}
+  wirePrefab: {fileID: 0}
 --- !u!114 &5850944941461132841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8072,7 +8085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
   _onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -8092,10 +8104,12 @@ MonoBehaviour:
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 0}
+  hasWire: 0
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
   wire: {fileID: 0}
+  wirePrefab: {fileID: 0}
 --- !u!114 &5850944941780266367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8108,7 +8122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
   _onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -8128,10 +8141,12 @@ MonoBehaviour:
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 0}
+  hasWire: 0
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
   wire: {fileID: 0}
+  wirePrefab: {fileID: 0}
 --- !u!114 &5850944942196570401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8144,7 +8159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1383835a6559e84584cdd533ab33f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedObjects: []
   _onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
@@ -8176,10 +8190,12 @@ MonoBehaviour:
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
   spriteRenderer: {fileID: 0}
+  hasWire: 0
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
   wire: {fileID: 0}
+  wirePrefab: {fileID: 0}
 --- !u!65 &9051007520334953356
 BoxCollider:
   m_ObjectHideFlags: 0
