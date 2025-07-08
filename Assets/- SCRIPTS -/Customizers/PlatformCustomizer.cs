@@ -134,8 +134,6 @@ public class PlatformCustomizer : MonoBehaviour
             {
                 if (platform.platformColor == newColor && platform.colorIndex != -1)
                 {
-
-
                     coloredPlatforms[platform.colorIndex] = platform;
                 }
             }
