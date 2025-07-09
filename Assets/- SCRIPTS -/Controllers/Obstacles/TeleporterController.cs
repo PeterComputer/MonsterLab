@@ -3,16 +3,16 @@ using UnityEngine;
 public class TeleporterController : Obstacle
 {
     // Teleporter Variables
-    [SerializeField] private TeleporterController pairedTeleporter;
-    [SerializeField] private Collider teleporterCollider;
+    [SerializeField][HideInInspector] private TeleporterController pairedTeleporter;
+    [SerializeField][HideInInspector] private Collider teleporterCollider;
     private bool canTeleport = true;
-    private bool isDoorOpen = true;
+    [SerializeField][HideInInspector] private bool isDoorOpen = true;
 
 
     // Teleporter Sprites
-    [SerializeField] private SpriteRenderer teleportPortal;
-    [SerializeField] private SpriteRenderer teleportDoor;
-    [SerializeField] private SpriteRenderer teleportFrame;
+    [SerializeField][HideInInspector] private SpriteRenderer teleportPortal;
+    [SerializeField][HideInInspector] private SpriteRenderer teleportDoor;
+    [SerializeField][HideInInspector] private SpriteRenderer teleportFrame;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,8 +35,12 @@ public class TeleporterController : Obstacle
 
     public void TeleportTo(Collider other)
     {
-        other.gameObject.transform.position = new Vector3(transform.position.x, other.gameObject.transform.position.y, transform.position.z);
-        canTeleport = false;
+        if (isDoorOpen)
+        {
+            other.gameObject.transform.position = new Vector3(transform.position.x, other.gameObject.transform.position.y, transform.position.z);
+            canTeleport = false;            
+        }
+
     }
 
     private void openTeleporterDoor()
@@ -47,22 +51,22 @@ public class TeleporterController : Obstacle
         }
     }
 
-    public void changeTeleporterColor(Color newDetailColor, Color newPortalColor)
+    public void changeTeleporterColor(Material newDetailColor, Material newPortalColor)
     {
-        teleportPortal.color = newPortalColor;
-        teleportDoor.color = newDetailColor;
-        teleportFrame.color = newDetailColor; 
+        teleportPortal.material = newPortalColor;
+        teleportDoor.material = newDetailColor;
+        teleportFrame.material = newDetailColor; 
     }
 
 
     // Get / Set Methods
 
-    private bool getIsDoorOpen()
+    public bool getIsDoorOpen()
     {
         return isDoorOpen;
     }
 
-    private void setIsDoorOpen(bool newIsDoorOpen)
+    public void setIsDoorOpen(bool newIsDoorOpen)
     {
         isDoorOpen = newIsDoorOpen;
 

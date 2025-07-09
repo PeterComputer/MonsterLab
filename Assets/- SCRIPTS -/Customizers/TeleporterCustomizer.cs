@@ -13,18 +13,19 @@ public class TeleporterCustomizer : MonoBehaviour
     public ColorEnum teleporterColor;
     [HideInInspector][SerializeField] private int colorIndex = -1;
     [HideInInspector] public TeleporterCustomizer pairedTeleporterCustomizer;
+    [HideInInspector] public bool isDoorOpen;
     public TeleporterController teleporterController;
 
     // Color variables, only touch if they need changing
 
-    public Color yellowColor;
-    public Color yellowPortalColor;
-    public Color blueColor;
-    public Color bluePortalColor;
-    public Color greenColor;
-    public Color greenPortalColor;
-    public Color pinkColor;
-    public Color pinkPortalColor;
+    public Material yellowColor;
+    public Material yellowPortalColor;
+    public Material blueColor;
+    public Material bluePortalColor;
+    public Material greenColor;
+    public Material greenPortalColor;
+    public Material pinkColor;
+    public Material pinkPortalColor;
 
 
 #if UNITY_EDITOR
@@ -178,6 +179,12 @@ public class TeleporterCustomizer : MonoBehaviour
     {
         return teleporterController;
     }
+
+    public void setIsDoorOpen(bool newIsDoorOpen)
+    {
+        isDoorOpen = newIsDoorOpen;
+        teleporterController.setIsDoorOpen(isDoorOpen);
+    }
 #endif
 }
 
@@ -198,6 +205,7 @@ public class TeleporterEditor : Editor
         EditorGUI.BeginChangeCheck();
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Teleporter Color", customizer.teleporterColor);
         TeleporterCustomizer pairedTeleporter = (TeleporterCustomizer)EditorGUILayout.ObjectField("Paired Teleporter", customizer.pairedTeleporterCustomizer, typeof(TeleporterCustomizer), true);
+        bool newIsDoorOpen = EditorGUILayout.Toggle("Starts Active", customizer.isDoorOpen);
 
         if (EditorGUI.EndChangeCheck())
         {
@@ -205,6 +213,7 @@ public class TeleporterEditor : Editor
 
             customizer.changeTeleporterColor(newColor);
             customizer.setPairedTeleporter(pairedTeleporter);
+            customizer.setIsDoorOpen(newIsDoorOpen);
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }
