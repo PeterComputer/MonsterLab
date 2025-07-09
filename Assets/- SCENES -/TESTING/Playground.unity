@@ -4047,9 +4047,8 @@ MonoBehaviour:
   - {fileID: 1706421816}
   - {fileID: 1320571092}
   door: {fileID: 1300090198}
-  nextKeypadNumber: 0
-  isKeypadSolved: 0
-  answersIncorrect: 0
+  correctPressClip: {fileID: 8300000, guid: be8f66d369ad99046afad917bd3a36ea, type: 3}
+  wrongPressClip: {fileID: 8300000, guid: f769af4f0dca4244494042528a0f7697, type: 3}
 --- !u!1 &1320571089
 GameObject:
   m_ObjectHideFlags: 0

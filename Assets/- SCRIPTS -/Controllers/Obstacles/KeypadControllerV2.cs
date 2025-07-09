@@ -7,18 +7,15 @@ public class KeypadControllerV2 : MonoBehaviour
     public KeypadAreaController[] keypadAreas = new KeypadAreaController[4];
     public Animator[] keypadIndicators = new Animator[4];
     public FlatDoorController door;
-    [SerializeField]
     private int nextKeypadNumber;
-    [SerializeField]
     private bool isKeypadSolved;
-    [SerializeField]
-    private int answersIncorrect;
+    [SerializeField] private AudioClip correctPressClip;
+    [SerializeField] private AudioClip wrongPressClip;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
         isKeypadSolved = false;
-        answersIncorrect = 0;
         nextKeypadNumber = 0;
         keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
     }
@@ -38,47 +35,37 @@ public class KeypadControllerV2 : MonoBehaviour
 
         // If answer is correct
         if (areaPressed == keypadAreas[nextKeypadNumber])
-        {   
+        {
             // Disable the current indicator
             keypadIndicators[nextKeypadNumber].SetTrigger("TrIdle");
+
+            // Play the "correct answer" sound effect, if it exists
+            if (correctPressClip != null)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(correctPressClip, transform, 1f);
+            }
 
             // If it was last correct answer needed, solve the keypad
             if (++nextKeypadNumber == keypadAreas.Length)
             {
                 solveKeypad();
+
             }
             else
             {
                 keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
-                answersIncorrect = 0;
             }
         }
-/* 
-        // If answer is incorrect, reset
-        else {
-            //resetKeypad();
 
-            //
-            if (answersIncorrect < MAX_INCORRECT_ANSWERS)
-            {
-                answersIncorrect++;
-            }
-            else
-            {
-                keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
-            }
-        } */
+        // Play the "wrong answer" sound effect, if it exists
+        else if (wrongPressClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(wrongPressClip, transform, 1f);
+        }
     }
 
-    private void resetKeypad()
+    private void solveKeypad()
     {
-        disableAllIndicators();
-        nextKeypadNumber = 0;
-        keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
-    }
-
-    private void solveKeypad() {
-
         disableAllIndicators();
         door.decreasePickupsLeft();
         isKeypadSolved = true;

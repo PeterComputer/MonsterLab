@@ -409,7 +409,7 @@ public class GameManager : MonoBehaviour
             playerInput.SwitchCurrentActionMap("Player");
         }
 
-        Debug.Log("Switch action map to: " + playerInput.currentActionMap.name);
+        //Debug.Log("Switch action map to: " + playerInput.currentActionMap.name);
     }
 
     public void resetPlayerProgress() {
