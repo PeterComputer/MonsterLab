@@ -244,8 +244,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2022355478166510961}
   - component: {fileID: 3386749451769949933}
-  - component: {fileID: 2682321169887084711}
   - component: {fileID: 6213327338977163303}
+  - component: {fileID: 2682321169887084711}
   m_Layer: 0
   m_Name: Exit Door
   m_TagString: Door
@@ -327,26 +327,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2682321169887084711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6682148778037574225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2667f48d9dc1b70469e892bc03776cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startsOpen: 0
-  pickupsLeft: 0
-  openDoorSprite: {fileID: 21300000, guid: 94a719d519dc55546b35c8ee5d770342, type: 3}
-  openDoorAudioClip: {fileID: 8300000, guid: 2b9fac2e56bf884408602b42565b0db3, type: 3}
-  fx: {fileID: 8934524826465039992}
-  rightDoorFrame: {fileID: 4718132928389358537}
-  leftDoorFrame: {fileID: 9180967391289839202}
-  doorBackdrop: {fileID: 3900464662428538316}
 --- !u!65 &6213327338977163303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -368,6 +348,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 2.2, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2682321169887084711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6682148778037574225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2667f48d9dc1b70469e892bc03776cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startsOpen: 0
+  pickupsLeft: 0
+  openDoorSprite: {fileID: 21300000, guid: 94a719d519dc55546b35c8ee5d770342, type: 3}
+  openDoorAudioClip: {fileID: 8300000, guid: 2b9fac2e56bf884408602b42565b0db3, type: 3}
+  fx: {fileID: 8934524826465039992}
+  rightDoorFrame: {fileID: 4718132928389358537}
+  leftDoorFrame: {fileID: 9180967391289839202}
+  doorBackdrop: {fileID: 3900464662428538316}
 --- !u!1 &7311400298143025525
 GameObject:
   m_ObjectHideFlags: 0
