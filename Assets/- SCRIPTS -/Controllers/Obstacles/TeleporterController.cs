@@ -7,6 +7,8 @@ public class TeleporterController : Obstacle
     [SerializeField][HideInInspector] private Collider teleporterCollider;
     private bool canTeleport = true;
     [SerializeField][HideInInspector] private bool isDoorOpen = true;
+    [SerializeField] private AudioClip teleportAudioClip;
+    [SerializeField] private AudioClip openDoorAudioClip;
 
 
     // Teleporter Sprites
@@ -38,9 +40,13 @@ public class TeleporterController : Obstacle
         if (isDoorOpen)
         {
             other.gameObject.transform.position = new Vector3(transform.position.x, other.gameObject.transform.position.y, transform.position.z);
-            canTeleport = false;            
-        }
+            canTeleport = false;
 
+            if (teleportAudioClip != null)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(teleportAudioClip, transform, 1f);
+            }
+        }
     }
 
     private void openTeleporterDoor()
@@ -48,6 +54,11 @@ public class TeleporterController : Obstacle
         if (!isDoorOpen)
         {
             setIsDoorOpen(true);
+
+            if (openDoorAudioClip != null)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(openDoorAudioClip, transform, 1f);
+            }
         }
     }
 

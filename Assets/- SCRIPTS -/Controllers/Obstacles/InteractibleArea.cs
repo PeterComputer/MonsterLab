@@ -8,16 +8,16 @@ using UnityEngine.Events;
 public class InteractibleArea : MonoBehaviour
 {
     [SerializeField][HideInInspector] private UnityEvent _onTriggerEnter;
-    public Sprite pressedSprite;
-    public Material pressedWireMaterial;
+    [HideInInspector] public Sprite pressedSprite;
+    [HideInInspector] public Material pressedWireMaterial;
     public AudioClip pressedAudioClip;
     [SerializeField][HideInInspector] private SpriteRenderer spriteRenderer;
     [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
-    [SerializeField] private GameObject wireObject;
-    [SerializeField] private RoadMeshCreator wireScript;
-    [SerializeField] private GameObject wirePrefab;
+    [SerializeField][HideInInspector] private GameObject wireObject;
+    [SerializeField][HideInInspector] private RoadMeshCreator wireScript;
+    [SerializeField][HideInInspector] private GameObject wirePrefab;
     private void OnTriggerEnter()
     {
 
