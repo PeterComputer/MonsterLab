@@ -114,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: colorIndex
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: rotatingPlatformColor
@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7204094546204359854, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_Name
-      value: Blue Rotating Platform 1
+      value: Blue Rotating Platform 3
       objectReference: {fileID: 0}
     - target: {fileID: 8270152409931943216, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_IsActive
