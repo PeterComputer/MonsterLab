@@ -9,7 +9,7 @@ using UnityEditor;
 #endif
 
 [ExecuteInEditMode]
-public class PlatformCustomizer : MonoBehaviour
+public class KeypadPlatformCustomizer : MonoBehaviour
 {
 
     [HideInInspector] public ColorEnum platformColor;
@@ -17,8 +17,16 @@ public class PlatformCustomizer : MonoBehaviour
     [HideInInspector] public bool hasWire;
     [HideInInspector] public bool wireStaysOn;
     [HideInInspector][SerializeField] private int colorIndex = -1;
-    [HideInInspector] public Obstacle interactsWith;
+
+    // The keypadArea component of this platform
+    public KeypadAreaController keypadController;
+
+    // The interactibleArea component of this platform
     [HideInInspector] public InteractibleArea interactibleArea;
+
+    [HideInInspector] public bool interactsWithOtherObstacles;
+
+    // The list of obstacles this object interacts with, if any
     [HideInInspector] public List<Obstacle> interactsWithList = new List<Obstacle>();
 
     // Colored Platform Materials, only touch if they need changing
@@ -53,6 +61,10 @@ public class PlatformCustomizer : MonoBehaviour
     // Gets called in an _onTriggerEnter event in the InteractibleArea inspector (hidden by default)
     public void doInteraction()
     {
+        // Interact with the keypad component
+        keypadController.interactWith();
+
+        // Interact with other objects
         foreach (var obstacle in interactsWithList)
         {
             if (obstacle != null)
@@ -117,11 +129,11 @@ public class PlatformCustomizer : MonoBehaviour
     {
         if (colorIndex == -1)
         {
-            // Find all PlatformCustomizers in the scene (including inactives)
-            PlatformCustomizer[] allPlatforms = FindObjectsByType<PlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            // Find all KeypadPlatformCustomizers in the scene (including inactives)
+            KeypadPlatformCustomizer[] allPlatforms = FindObjectsByType<KeypadPlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
             // Creates a list and populates it with all the platforms that already exist with that color
-            List<PlatformCustomizer> coloredPlatforms = new List<PlatformCustomizer>(50);
+            List<KeypadPlatformCustomizer> coloredPlatforms = new List<KeypadPlatformCustomizer>(50);
 
 
             // Fill newly created list with null entries
@@ -131,7 +143,7 @@ public class PlatformCustomizer : MonoBehaviour
             }
 
 
-            foreach (PlatformCustomizer platform in allPlatforms)
+            foreach (KeypadPlatformCustomizer platform in allPlatforms)
             {
                 if (platform.platformColor == newColor && platform.colorIndex != -1)
                 {
@@ -153,29 +165,17 @@ public class PlatformCustomizer : MonoBehaviour
         }
 
         // Sets object name according to platform color and amount of platforms already with that color
-        gameObject.name = platformColor.ToString() + " Interactive Platform " + (colorIndex + 1);
+        gameObject.name = platformColor.ToString() + " Keypad Platform " + (colorIndex + 1);
 
-    }
-
-    public void setObstacle(Obstacle obstacle)
-    {
-        //interactsWith = obstacle;
-
-        if (!interactsWithList.Contains(interactsWith) && interactsWith != null)
-        {
-            interactsWithList.Add(interactsWith);
-        }
-
-        interactsWith = null;
     }
 
     private bool isThereObjectInSceneWithSameName()
     {
         bool result = false;
 
-        PlatformCustomizer[] allPlatforms = FindObjectsByType<PlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        KeypadPlatformCustomizer[] allPlatforms = FindObjectsByType<KeypadPlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
-        foreach (PlatformCustomizer platform in allPlatforms)
+        foreach (KeypadPlatformCustomizer platform in allPlatforms)
         {
             if (platform.platformColor == platformColor && platform.gameObject.name.Equals(gameObject.name))
             {
@@ -202,8 +202,6 @@ public class PlatformCustomizer : MonoBehaviour
 
     public void Awake()
     {
-        // Needs to be here for updating reasons; updates object from the old "interactsWith" variable to the new "interactsWithList" variable
-        setObstacle(null);
         hasWire = interactibleArea.getHasWire();
     }
 
@@ -241,7 +239,12 @@ public class PlatformCustomizer : MonoBehaviour
         wireStaysOn = newWireStaysOn;
         interactibleArea.setWireStaysOn(wireStaysOn);
         EditorUtility.SetDirty(interactibleArea);
-    } 
+    }
+
+    public void setInteractsWithOtherObstacles(bool newInteractsWithOtherObstacles)
+    {
+        interactsWithOtherObstacles = newInteractsWithOtherObstacles;
+    }
 #endif
 }
 
@@ -251,13 +254,13 @@ public class PlatformCustomizer : MonoBehaviour
 *******************************************************************************/
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(PlatformCustomizer))]
-public class PlatformEditor : Editor
+[CustomEditor(typeof(KeypadPlatformCustomizer))]
+public class KeypadPlatformEditor : Editor
 {
 
     public override void OnInspectorGUI()
     {
-        var customizer = (PlatformCustomizer)target;
+        var customizer = (KeypadPlatformCustomizer)target;
 
         // Start Changes
         EditorGUI.BeginChangeCheck();
@@ -265,13 +268,18 @@ public class PlatformEditor : Editor
         // Platform Color
         ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Platform Color", customizer.platformColor);
 
-        // Interacted Obstacle List
-        SerializedObject so = new SerializedObject(customizer);
-        SerializedProperty obstacleList = so.FindProperty("interactsWithList");
+        bool interactsWithOtherObstacles = EditorGUILayout.Toggle("Interacts With Other Obstacles?", customizer.interactsWithOtherObstacles);
 
-        EditorGUILayout.PropertyField(obstacleList, new GUIContent("Interacts With Obstacles"), true);
+        if (interactsWithOtherObstacles)
+        {
+            // Interacted Obstacle List
+            SerializedObject so = new SerializedObject(customizer);
+            SerializedProperty obstacleList = so.FindProperty("interactsWithList");
 
-        so.ApplyModifiedProperties();
+            EditorGUILayout.PropertyField(obstacleList, new GUIContent("Interacts With Obstacles"), true);
+
+            so.ApplyModifiedProperties();            
+        }
 
         bool isWireEmissive;
         bool wireStaysOn;
@@ -297,11 +305,12 @@ public class PlatformEditor : Editor
             Undo.RecordObject(customizer, "Changed Platform Settings");
 
             customizer.setHasWire(hasWire);
+            customizer.setInteractsWithOtherObstacles(interactsWithOtherObstacles);  
 
             if (hasWire)
             {
                 customizer.setIsWireEmissive(isWireEmissive);
-                customizer.setWireStaysOn(wireStaysOn);               
+                customizer.setWireStaysOn(wireStaysOn);
             }
 
             customizer.changePlatformColor(newColor);
@@ -312,4 +321,3 @@ public class PlatformEditor : Editor
 }
 
 #endif
-

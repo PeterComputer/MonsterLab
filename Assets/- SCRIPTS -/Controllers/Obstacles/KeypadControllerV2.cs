@@ -6,7 +6,7 @@ public class KeypadControllerV2 : MonoBehaviour
 
     public KeypadAreaController[] keypadAreas = new KeypadAreaController[4];
     public Animator[] keypadIndicators = new Animator[4];
-    public FlatDoorController door;
+    private FlatDoorController door;
     private int nextKeypadNumber;
     private bool isKeypadSolved;
     [SerializeField] private AudioClip correctPressClip;
@@ -20,10 +20,12 @@ public class KeypadControllerV2 : MonoBehaviour
         keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        if (door == null)
+        {
+            door = GetComponent<FlatDoorController>();
+        }
     }
 
     public void doKeypadPress(KeypadAreaController areaPressed)

@@ -16,6 +16,7 @@ TagManager:
   - LevelButton
   - FPSCounter
   - Fence
+  - CodedDoor
   layers:
   - Default
   - TransparentFX
