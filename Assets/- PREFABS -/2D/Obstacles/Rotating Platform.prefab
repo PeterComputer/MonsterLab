@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 985957610984514472}
   - component: {fileID: 7711893006642314162}
   m_Layer: 0
-  m_Name: Pink Rotating Platform 2
+  m_Name: Pink Rotating Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   rotatingPlatformColor: 3
   rotationAmount: 90
   rotationSpeed: 5
-  colorIndex: 1
+  colorIndex: 2
   platformSpriteRenderer: {fileID: 985308610202047319}
   fenceGateSpriteRenderers:
   - {fileID: 4559673511155550413}
