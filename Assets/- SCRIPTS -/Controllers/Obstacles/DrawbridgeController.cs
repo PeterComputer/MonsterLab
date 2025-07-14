@@ -1,13 +1,19 @@
 using UnityEngine;
 
-public class RotatingPlatformController : Obstacle
+public class DrawbridgeController : Obstacle
 {
     private Vector3 targetAngle = new Vector3(0f, 0f, 0f);
-    [SerializeField] [HideInInspector] private float rotationAmount;
-    [SerializeField] [HideInInspector] private float rotationSpeed;
-
+    private bool isMoving;
+    [SerializeField] private float rotationAmount;
+    [SerializeField] private float rotationSpeed;
+    private Collider bridgeCollider;
+    private bool isLowered;
     private Vector3 currentAngle;
 
+    void Awake()
+    {
+        bridgeCollider = GetComponentInChildren<Collider>();
+    }
     public void Start()
     {
         currentAngle = transform.eulerAngles;
@@ -21,22 +27,23 @@ public class RotatingPlatformController : Obstacle
             Mathf.LerpAngle(currentAngle.y, targetAngle.y, Time.deltaTime * rotationSpeed),
             Mathf.LerpAngle(currentAngle.z, targetAngle.z, Time.deltaTime * rotationSpeed));
 
-        transform.eulerAngles = currentAngle;
+            transform.eulerAngles = currentAngle;
+
     }
 
-    public void rotateYDegrees()
+    public void rotateXDegrees()
     {
-        targetAngle.y += rotationAmount;
-
-        // Just here to ensure target angle stays between 0 and 360, for ease of reading during debugging
-        // Breaks if rotationAmount is bigger/smaller than 360/-360, so don't do that please
-        if (targetAngle.y >= 360f) targetAngle.y -= 360f;
-        if (targetAngle.y <= -360f) targetAngle.y += 360f;
+        targetAngle.z += rotationAmount;
     }
 
     public override void interactWith()
     {
-        rotateYDegrees();
+        rotateXDegrees();
+
+        // Return to previous state in the next interactWith()
+        rotationAmount = -rotationAmount;
+        isLowered = !isLowered;
+        bridgeCollider.isTrigger = isLowered;
     }
 
     /*

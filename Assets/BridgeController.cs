@@ -3,13 +3,13 @@ using UnityEngine;
 public class BridgeController : MonoBehaviour
 {
 
-    private Collider collider;
+    private Collider col;
 
     void Awake()
     {
-        if (collider == null)
+        if (col == null)
         {
-            collider = GetComponent<Collider>();
+            col = GetComponent<Collider>();
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,26 +30,6 @@ public class BridgeController : MonoBehaviour
         {
             other.gameObject.GetComponent<Collider>().layerOverridePriority = 5;
         }
-    }
-
-    // Not working great, fix on monday
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {   
-
-            // Checks if the player hitbox is fully inside the bridge collider
-            if (collider.bounds.Contains(other.bounds.max) && collider.bounds.Contains(other.bounds.min))
-            {
-                Debug.Log("Fully contained");
-                other.gameObject.GetComponent<Collider>().layerOverridePriority = 5;
-            }
-            else
-            {
-                Debug.Log("Partially contained");
-                other.gameObject.GetComponent<Collider>().layerOverridePriority = 0;
-            }
-        }        
     }
 
     void OnTriggerExit(Collider other)
