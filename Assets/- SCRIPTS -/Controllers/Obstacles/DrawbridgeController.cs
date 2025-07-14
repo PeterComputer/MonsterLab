@@ -3,12 +3,13 @@ using UnityEngine;
 public class DrawbridgeController : Obstacle
 {
     private Vector3 targetAngle = new Vector3(0f, 0f, 0f);
-    private bool isMoving;
-    [SerializeField] private float rotationAmount;
-    [SerializeField] private float rotationSpeed;
-    private Collider bridgeCollider;
+    [SerializeField][HideInInspector] private float rotationAmount;
+    [SerializeField][HideInInspector] private float rotationSpeed;
+    [SerializeField][HideInInspector] private Collider bridgeCollider;
     private bool isLowered;
     private Vector3 currentAngle;
+    [SerializeField][HideInInspector] private SpriteRenderer bridge;
+    [SerializeField][HideInInspector] private SpriteRenderer[] railings;
 
     void Awake()
     {
@@ -27,7 +28,7 @@ public class DrawbridgeController : Obstacle
             Mathf.LerpAngle(currentAngle.y, targetAngle.y, Time.deltaTime * rotationSpeed),
             Mathf.LerpAngle(currentAngle.z, targetAngle.z, Time.deltaTime * rotationSpeed));
 
-            transform.eulerAngles = currentAngle;
+        transform.eulerAngles = currentAngle;
 
     }
 
@@ -50,12 +51,23 @@ public class DrawbridgeController : Obstacle
     *   Set Functions
     */
     public void setRotationAmount(float amount)
-    {
-        rotationAmount = amount;
+    {   
+        // Keep the original rotationAmount's sign (needed if you're setting a new value during play mode)
+        rotationAmount = Mathf.Sign(rotationAmount) * amount;
     }
 
     public void setRotationSpeed(float newSpeed)
     {
         rotationSpeed = newSpeed;
+    }
+
+    public void changeDrawbridgeColor(Material newBridgeColor, Material newRailingColor)
+    {
+        bridge.material = newBridgeColor;
+
+        foreach (SpriteRenderer railing in railings)
+        {
+            railing.material = newRailingColor;
+        }
     }
 }
