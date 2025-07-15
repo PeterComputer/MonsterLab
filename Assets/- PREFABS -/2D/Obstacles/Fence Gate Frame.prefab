@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7485652146564747681}
   - component: {fileID: 7280571212342197468}
   m_Layer: 0
-  m_Name: Green Fence Gate Frame 4
+  m_Name: Green Fence Gate Frame 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   moveAmount: -5
   moveSpeed: 5
   fenceGateSpriteRenderer: {fileID: 2355951751015180941}
-  colorIndex: 3
+  colorIndex: 2
   wire: {fileID: 3578122323216017579}
   movingGateController: {fileID: 1434672984778032674}
   yellowFenceGateSprite: {fileID: 21300000, guid: 98381c36f56b5b24cbe19304c7329cac, type: 3}
@@ -483,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 3234592293168929696}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_Name
-      value: Green Fence Gate 4
+      value: Green Fence Gate 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
