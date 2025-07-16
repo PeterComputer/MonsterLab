@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 359557292247156833}
   - component: {fileID: 3697839001817422658}
   m_Layer: 0
-  m_Name: Drawbridge
+  m_Name: Yellow Drawbridge 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawbridgeColor: 0
-  colorIndex: 1
+  colorIndex: 0
   drawbridgeController: {fileID: 359557292247156833}
   rotationAmount: 90
   rotationSpeed: 5
