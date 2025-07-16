@@ -5855,6 +5855,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 158234361}
     m_Modifications:
+    - target: {fileID: 2901654409499839868, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89399987971e52f469f79173fcf41519, type: 3}
     - target: {fileID: 3884018618971603373, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
       propertyPath: 'keypadAreas.Array.data[0]'
       value: 
@@ -5871,6 +5875,14 @@ PrefabInstance:
       propertyPath: 'keypadAreas.Array.data[3]'
       value: 
       objectReference: {fileID: 349152188}
+    - target: {fileID: 4808169190768619790, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea3b39ec2e5272b4ea3edbd845800cc1, type: 3}
+    - target: {fileID: 5073234894375618838, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76756287e57d9d64abfa11abc92f1662, type: 3}
     - target: {fileID: 6726561118256940828, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
       propertyPath: m_Name
       value: Coded Exit Door
