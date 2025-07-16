@@ -4,15 +4,15 @@ using UnityEditor;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-
-public class DrawbridgeCustomizer : MonoBehaviour
+public class MovingPlatformCustomizer : MonoBehaviour
 {
 
-    public ColorEnum drawbridgeColor;
+    public ColorEnum movingPlatformColor;
     [HideInInspector][SerializeField] private int colorIndex = -1;
-    public DrawbridgeController drawbridgeController;
+    public MovingPlatformController movingPlatformController;
+    [SerializeField] public List<Transform> platformPositions;
     [HideInInspector] public float rotationAmount;
-    [HideInInspector] public float rotationSpeed;    
+    [HideInInspector] public float rotationSpeed;
 
     // Color variables, only touch if they need changing
 
@@ -28,38 +28,38 @@ public class DrawbridgeCustomizer : MonoBehaviour
 
 #if UNITY_EDITOR
 
-    public void changeDrawbridgeColor(ColorEnum newColor)
+    public void changeMovingPlatformColor(ColorEnum newColor)
     {
         switch (newColor)
         {
             case ColorEnum.Yellow:
-                drawbridgeController.changeDrawbridgeColor(yellowColor, yellowRailingColor);
+                movingPlatformController.changeMovingPlatformColor(yellowColor, yellowRailingColor);
                 break;
 
             case ColorEnum.Blue:
-                drawbridgeController.changeDrawbridgeColor(blueColor, blueRailingColor);
+                movingPlatformController.changeMovingPlatformColor(blueColor, blueRailingColor);
                 break;
 
             case ColorEnum.Green:
-                drawbridgeController.changeDrawbridgeColor(greenColor, greenRailingColor);
+                movingPlatformController.changeMovingPlatformColor(greenColor, greenRailingColor);
                 break;
 
             case ColorEnum.Pink:
-                drawbridgeController.changeDrawbridgeColor(pinkColor, pinkRailingColor);
+                movingPlatformController.changeMovingPlatformColor(pinkColor, pinkRailingColor);
                 break;
         }
 
-        drawbridgeColor = newColor;
+        movingPlatformColor = newColor;
 
         // Save new color
-        drawbridgeColor = newColor;
+        movingPlatformColor = newColor;
 
         // Set platform name
         colorIndex = -1;
         setName(newColor);
 
         // Needs to be here in order to save changes made in editor
-        EditorUtility.SetDirty(drawbridgeController);
+        EditorUtility.SetDirty(movingPlatformController);
     }
 
     private void setName(ColorEnum newColor)
@@ -67,33 +67,33 @@ public class DrawbridgeCustomizer : MonoBehaviour
         if (colorIndex == -1)
         {
             // Find all PlatformCustomizers in the scene (including inactives)
-            DrawbridgeCustomizer[] allDrawbridges = FindObjectsByType<DrawbridgeCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            MovingPlatformCustomizer[] allMovingPlatforms = FindObjectsByType<MovingPlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
             // Creates a list and populates it with all the platforms that already exist with that color
-            List<DrawbridgeCustomizer> coloredDrawbridges = new List<DrawbridgeCustomizer>(50);
+            List<MovingPlatformCustomizer> coloredMovingPlatforms = new List<MovingPlatformCustomizer>(50);
 
 
             // Fill newly created list with null entries
-            while (coloredDrawbridges.Count < coloredDrawbridges.Capacity)
+            while (coloredMovingPlatforms.Count < coloredMovingPlatforms.Capacity)
             {
-                coloredDrawbridges.Add(null);
+                coloredMovingPlatforms.Add(null);
             }
 
 
-            foreach (DrawbridgeCustomizer drawbridge in allDrawbridges)
+            foreach (MovingPlatformCustomizer movingPlatform in allMovingPlatforms)
             {
-                if (drawbridge.drawbridgeColor == newColor && drawbridge.colorIndex != -1)
+                if (movingPlatform.movingPlatformColor == newColor && movingPlatform.colorIndex != -1)
                 {
-                    coloredDrawbridges[drawbridge.colorIndex] = drawbridge;
+                    coloredMovingPlatforms[movingPlatform.colorIndex] = movingPlatform;
                 }
             }
 
             // Finds first null position in the list and inserts the new platform
-            int firstNullSpace = coloredDrawbridges.FindIndex(item => item == null);
+            int firstNullSpace = coloredMovingPlatforms.FindIndex(item => item == null);
 
             if (firstNullSpace == -1)
             {
-                firstNullSpace = coloredDrawbridges.Count;
+                firstNullSpace = coloredMovingPlatforms.Count;
             }
 
             // Assigns that value to colorIndex
@@ -101,8 +101,8 @@ public class DrawbridgeCustomizer : MonoBehaviour
 
         }
 
-        // Sets object name according to drawbridge color and amount of drawbridges already with that color
-        gameObject.name = drawbridgeColor.ToString() + " Drawbridge " + (colorIndex + 1);
+        // Sets object name according to movingPlatform color and amount of movingPlatforms already with that color
+        gameObject.name = movingPlatformColor.ToString() + " Moving Platform " + (colorIndex + 1);
 
     }
 
@@ -110,11 +110,11 @@ public class DrawbridgeCustomizer : MonoBehaviour
     {
         bool result = false;
 
-        DrawbridgeCustomizer[] allDrawbridges = FindObjectsByType<DrawbridgeCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        MovingPlatformCustomizer[] allMovingPlatforms = FindObjectsByType<MovingPlatformCustomizer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
-        foreach (DrawbridgeCustomizer drawbridge in allDrawbridges)
+        foreach (MovingPlatformCustomizer movingPlatform in allMovingPlatforms)
         {
-            if (drawbridge.drawbridgeColor == drawbridgeColor && drawbridge.gameObject.name.Equals(gameObject.name))
+            if (movingPlatform.movingPlatformColor == movingPlatformColor && movingPlatform.gameObject.name.Equals(gameObject.name))
             {
                 result = true;
             }
@@ -132,7 +132,7 @@ public class DrawbridgeCustomizer : MonoBehaviour
             if (!gameObject.name.Any(char.IsDigit) || Regex.IsMatch(gameObject.name, @"\(\d+\)") || isThereObjectInSceneWithSameName())
             {
                 colorIndex = -1;
-                setName(drawbridgeColor);
+                setName(movingPlatformColor);
             }
         }
     }
@@ -148,59 +148,54 @@ public class DrawbridgeCustomizer : MonoBehaviour
     }
     private void OnUndoRedo()
     {
-        if (drawbridgeController != null)
+        if (movingPlatformController != null)
         {
-            changeDrawbridgeColor(drawbridgeColor);
+            changeMovingPlatformColor(movingPlatformColor);
         }
     }
 
     /*
     *   Get / Set Functions
     */
-    public void setRotationAmount(float amount)
+    public void setPlatformPositions()
     {
-        rotationAmount = amount;
-        
-        drawbridgeController.setRotationAmount(rotationAmount);
-        EditorUtility.SetDirty(drawbridgeController);
-
+        movingPlatformController.setPlatformPositions(platformPositions);
+        EditorUtility.SetDirty(movingPlatformController);
     }
-    public void setRotationSpeed(float newSpeed)
-    {
-        rotationSpeed = newSpeed;
-        drawbridgeController.setRotationSpeed(rotationSpeed);
-        EditorUtility.SetDirty(drawbridgeController);
-    }  
 
 #endif
 }
-
 
 /******************************************************************************
 *       EDITOR SUPPORT CLASS FOR DRAWBRIDGE CUSTOMIZER
 *******************************************************************************/
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(DrawbridgeCustomizer))]
-public class DrawbridgeEditor : Editor
+[CustomEditor(typeof(MovingPlatformCustomizer))]
+public class MovingPlatformEditor : Editor
 {
 
     public override void OnInspectorGUI()
     {
-        var customizer = (DrawbridgeCustomizer)target;
+        var customizer = (MovingPlatformCustomizer)target;
 
         EditorGUI.BeginChangeCheck();
-        ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Drawbridge Color", customizer.drawbridgeColor);
-        float newRotationAmount = EditorGUILayout.FloatField("Rotation Amount", customizer.rotationAmount);
-        float newRotationSpeed = EditorGUILayout.FloatField("Rotation Speed", customizer.rotationSpeed);        
+        ColorEnum newColor = (ColorEnum)EditorGUILayout.EnumPopup("Moving Platform Color", customizer.movingPlatformColor);
+
+        // Interacted Obstacle List
+        SerializedObject so = new SerializedObject(customizer);
+        SerializedProperty obstacleList = so.FindProperty("platformPositions");
+
+        EditorGUILayout.PropertyField(obstacleList, new GUIContent("Platform Positions"), true);
+
+        so.ApplyModifiedProperties();          
 
         if (EditorGUI.EndChangeCheck())
         {
-            Undo.RecordObject(customizer, "Changed Drawbridge Parameters");
+            Undo.RecordObject(customizer, "Changed Moving Platform Parameters");
 
-            customizer.changeDrawbridgeColor(newColor);
-            customizer.setRotationAmount(newRotationAmount);
-            customizer.setRotationSpeed(newRotationSpeed);            
+            customizer.changeMovingPlatformColor(newColor);
+            customizer.setPlatformPositions();
 
             EditorUtility.SetDirty(customizer); // Make sure changes are saved
         }
