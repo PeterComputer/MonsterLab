@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -430,6 +430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8019917074909915494, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f284ae9a7f9608e4da825bdcf45aae7b, type: 3}
     - target: {fileID: 8378881697345215780, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
       propertyPath: m_Name
       value: W.Small Bush B
@@ -499,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -562,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: W.Small Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 3284321252237606557, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97f01b7d28f462a478bec5046b94b4fa, type: 3}
     - target: {fileID: 5927215416492790638, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.687035
@@ -729,6 +737,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 236099864}
     m_Modifications:
+    - target: {fileID: 1255976061135667815, guid: 68cc1c1db69ca6f40a6d7dac89b6471e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0a0b3d3001b9ae449f258cdef92c640, type: 3}
     - target: {fileID: 2050803268856473648, guid: 68cc1c1db69ca6f40a6d7dac89b6471e, type: 3}
       propertyPath: m_Name
       value: W.Tall Tree
@@ -1504,7 +1516,7 @@ PrefabInstance:
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3bec07c9855ee4743b2ab1674718f26e, type: 3}
+      objectReference: {fileID: 21300000, guid: 369de26f72ddbfb4b8d30aa5249369d2, type: 3}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1700,7 +1712,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7490196, g: 0.627451, b: 0.49803922, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -1745,7 +1757,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 11150
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -2486,7 +2498,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2540,6 +2552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: W.Small Tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3284321252237606557, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97f01b7d28f462a478bec5046b94b4fa, type: 3}
     - target: {fileID: 5927215416492790638, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.187035
@@ -2830,7 +2846,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3553,6 +3569,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 9.968604
       objectReference: {fileID: 0}
+    - target: {fileID: 5358454175588916648, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 81336f74a18efc847a9f3d320f76e00a, type: 3}
     - target: {fileID: 5802995104982573915, guid: 2413c0792814a30408e4ad87ce4a7413, type: 3}
       propertyPath: m_Name
       value: Level Ground
@@ -3622,7 +3642,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3754,7 +3774,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3825,6 +3845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8019917074909915494, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f284ae9a7f9608e4da825bdcf45aae7b, type: 3}
     - target: {fileID: 8378881697345215780, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
       propertyPath: m_Name
       value: W.Small Bush B (2)
@@ -4361,7 +4385,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4427,7 +4451,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4493,7 +4517,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4678,6 +4702,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 236099864}
     m_Modifications:
+    - target: {fileID: 3809980526813713699, guid: 7cb3e9c24d2d076449785fe7b1a12cb1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cb4995dcc99d4a4db4ce33d12ef9364, type: 3}
     - target: {fileID: 5471590646568225569, guid: 7cb3e9c24d2d076449785fe7b1a12cb1, type: 3}
       propertyPath: m_Name
       value: W.Small Bush A
@@ -4752,6 +4780,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 236099864}
     m_Modifications:
+    - target: {fileID: 1255976061135667815, guid: 68cc1c1db69ca6f40a6d7dac89b6471e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0a0b3d3001b9ae449f258cdef92c640, type: 3}
     - target: {fileID: 2050803268856473648, guid: 68cc1c1db69ca6f40a6d7dac89b6471e, type: 3}
       propertyPath: m_Name
       value: W.Tall Tree (1)
@@ -4861,7 +4893,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4884,6 +4916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: W.Small Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3284321252237606557, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97f01b7d28f462a478bec5046b94b4fa, type: 3}
     - target: {fileID: 5927215416492790638, guid: 21f422945d6912748aab38cb53e7cbf4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.687035
@@ -4989,7 +5025,7 @@ PrefabInstance:
     - target: {fileID: 6900988047398343906, guid: c41eb233b3592a541b775c702d0d8c03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b71a39b763e4d9842b4857aa42c3c544, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5060,6 +5096,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8019917074909915494, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86fd99055694aa74b8caa2694e09ff4a, type: 3}
     - target: {fileID: 8378881697345215780, guid: 11516ff515071e0479d92e6fac47a26c, type: 3}
       propertyPath: m_Name
       value: W.Small Bush B (1)
