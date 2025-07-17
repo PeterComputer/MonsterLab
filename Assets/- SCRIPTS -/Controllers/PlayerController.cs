@@ -21,12 +21,13 @@ public class PlayerController : MonoBehaviour
 
 
     private PlayerInput _playerInput;
-    
-    //private float collisionRadius;
     private Rigidbody _rb;
     private InputAction _move;
     private Vector2 _moveVector;
     private Animator _animator;
+    private Collider _playerCollider;
+
+    private bool isOnBridge;
 
     [Header("Player Sprites")]
     [SerializeField]
@@ -36,15 +37,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private SpriteRenderer legsRenderer;
 
-    //public bool usingRBVelocity;
+    void OnEnable()
+    {
 
-    void OnEnable() {
-        
         _move = playerInputActions.Player.Move;
         _move.Enable();
     }
 
-    void OnDisable() {
+    void OnDisable()
+    {
         _move.Disable();
     }
 
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
         _playerInput = GetComponent<PlayerInput>();
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
+        _playerCollider = GetComponent<Collider>();
 
         if (movingRelativeToCamera)
         {
@@ -76,7 +78,8 @@ public class PlayerController : MonoBehaviour
     }
 
     // FixedUpdate is called once every 0.02 seconds
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
 
         Vector3 movement = new Vector3(_moveVector.x, 0f, _moveVector.y) * moveSpeed * Time.fixedDeltaTime;
         _rb.MovePosition(_rb.position + movement);
@@ -113,18 +116,22 @@ public class PlayerController : MonoBehaviour
         {
             _moveVector = new Vector2(0f, 0f);
         }
-        
+
         //Player animations
-        if (_moveVector.x != 0f || _moveVector.y != 0f) {
+        if (_moveVector.x != 0f || _moveVector.y != 0f)
+        {
             _animator.SetBool("Moving", true);
         }
-        else {
+        else
+        {
             _animator.SetBool("Moving", false);
         }
     }
 
-    public void updatePlayerSprite(PickupType type, Sprite partSprite) {
-        switch (type) {
+    public void updatePlayerSprite(PickupType type, Sprite partSprite)
+    {
+        switch (type)
+        {
             case PickupType.head:
                 headRenderer.sprite = partSprite;
                 break;
@@ -135,6 +142,27 @@ public class PlayerController : MonoBehaviour
                 legsRenderer.sprite = partSprite;
                 break;
         }
+    }
+
+    public void setIsOnBridge(bool newIsOnBridge)
+    {
+        isOnBridge = newIsOnBridge;
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (isOnBridge && LayerMask.LayerToName(col.gameObject.layer) == "Gap")
+        {
+            _playerCollider.includeLayers += col.gameObject.layer;
+        }
+    }
+
+    void OnCollisionExit(Collision col)
+    {
+        if (isOnBridge && LayerMask.LayerToName(col.gameObject.layer) == "Gap")
+        {
+            _playerCollider.includeLayers -= col.gameObject.layer;
+        }        
     }
 }
 

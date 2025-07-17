@@ -2,15 +2,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class MovingPlatformController : Obstacle
 {
 
     [SerializeField] public float moveAmount = 5f;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private List<Transform> platformPositionsList;
-    [SerializeField] private LinkedList<Transform> platformPositionsLinkedList;
-    private LinkedListNode<Transform> currentTransformNode;
+    private int positionIndex;
     private Vector3 currentPosition;
     [SerializeField] private Transform endPosition;
     [SerializeField] private SpriteRenderer bridge;
@@ -19,9 +17,8 @@ public class MovingPlatformController : Obstacle
 
     public void Awake()
     {
-        platformPositionsLinkedList = new LinkedList<Transform>(platformPositionsList);
-        currentTransformNode = platformPositionsLinkedList.First;
-        endPosition = currentTransformNode.Value;
+        positionIndex = 0;
+        endPosition = platformPositionsList[0];
         goingForward = true;
     }
 
@@ -45,16 +42,10 @@ public class MovingPlatformController : Obstacle
         // If the platform is traversing the positions forward
         if (goingForward)
         {
-            // Assign the next node on the LinkedList to currentTransformNode
-            if (currentTransformNode.Next != platformPositionsLinkedList.Last)
-            {
-                currentTransformNode = currentTransformNode.Next;
-            }
+            positionIndex++;
 
-            // Else assign the last value and reverse traversal direction
-            else
+            if (positionIndex == platformPositionsList.Count - 1)
             {
-                currentTransformNode = platformPositionsLinkedList.Last;
                 goingForward = false;
             }
         }
@@ -62,23 +53,16 @@ public class MovingPlatformController : Obstacle
         // If the platform is traversing the positions backwards
         else
         {
-            // Assign the previous node on the LinkedList to currentTransformNode
-            if (currentTransformNode.Previous != platformPositionsLinkedList.First)
+            positionIndex--;
+            
+            if (positionIndex == 0)
             {
-                currentTransformNode = currentTransformNode.Previous;
-            }
-
-            // Else assign the first value and reverse traversal direction
-            else
-            {
-                currentTransformNode = platformPositionsLinkedList.First;
                 goingForward = true;
-            }
+            }            
         }
 
-        // Finally, set current node's value to endPosition
-        endPosition = currentTransformNode.Value;
-
+        // Finally, set current position's value to endPosition
+        endPosition = platformPositionsList[positionIndex];
     }
 
     public override void interactWith()

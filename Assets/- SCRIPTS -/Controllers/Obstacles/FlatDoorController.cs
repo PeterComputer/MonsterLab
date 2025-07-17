@@ -5,7 +5,7 @@ public class FlatDoorController : Obstacle
 {
     [HideInInspector][SerializeField] bool startsOpen;
     [HideInInspector][SerializeField] private int pickupsLeft;
-    [HideInInspector] public Sprite openDoorSprite;
+    public Sprite openDoorSprite;
     [HideInInspector] private Sprite closedSprite;
     [HideInInspector] public AudioClip openDoorAudioClip;
     [HideInInspector] public GameObject fx;

@@ -28,6 +28,7 @@ public class BridgeController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<PlayerController>().setIsOnBridge(true);
             other.gameObject.GetComponent<Collider>().layerOverridePriority = 5;
         }
     }
@@ -36,6 +37,7 @@ public class BridgeController : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<PlayerController>().setIsOnBridge(false);
             other.gameObject.GetComponent<Collider>().layerOverridePriority = 0;
         }
     }    
