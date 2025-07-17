@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 3124301941900367311}
   - component: {fileID: 4406529607048783771}
   m_Layer: 0
-  m_Name: Blue Interactive Platform 4
+  m_Name: Blue Interactive Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   isWireEmissive: 0
   hasWire: 1
   wireStaysOn: 0
-  colorIndex: 3
+  colorIndex: 1
   interactsWith: {fileID: 0}
   interactibleArea: {fileID: 3328785755393619602}
   interactsWithList: []
