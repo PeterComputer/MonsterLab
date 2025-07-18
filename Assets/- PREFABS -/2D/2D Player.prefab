@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   movingRelativeToCamera: 1
+  isOnBridge: 0
   headRenderer: {fileID: 7019310307896341545}
   torsoRenderer: {fileID: 6462482630481946895}
   legsRenderer: {fileID: 4086342395898593586}
@@ -362,7 +363,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!114 &392476458901664311
 MonoBehaviour:

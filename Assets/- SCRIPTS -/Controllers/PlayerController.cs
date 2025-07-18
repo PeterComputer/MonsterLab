@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
-    //public Transform movePoint;
-    //public LayerMask stopsPlayerMovement;
     public PlayerInputActions playerInputActions;
 
     [Header("Camera Relative Movement")]
@@ -27,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private Collider _playerCollider;
 
-    private bool isOnBridge;
+    [SerializeField] private bool isOnBridge;
 
     [Header("Player Sprites")]
     [SerializeField]
@@ -144,7 +142,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void setIsOnBridge(bool newIsOnBridge)
+/*     public void setIsOnBridge(bool newIsOnBridge)
     {
         isOnBridge = newIsOnBridge;
     }
@@ -152,8 +150,11 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         if (isOnBridge && LayerMask.LayerToName(col.gameObject.layer) == "Gap")
-        {
-            _playerCollider.includeLayers += col.gameObject.layer;
+        {   
+            Debug.Log("OnCollisionEnter: " + LayerMask.LayerToName(col.gameObject.layer));
+            int layerMask = 1 << col.gameObject.layer;
+            _playerCollider.includeLayers |= layerMask;
+            _playerCollider.excludeLayers &= ~layerMask;
         }
     }
 
@@ -161,8 +162,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isOnBridge && LayerMask.LayerToName(col.gameObject.layer) == "Gap")
         {
-            _playerCollider.includeLayers -= col.gameObject.layer;
+            Debug.Log("OnCollisionExit: " + LayerMask.LayerToName(col.gameObject.layer));
+            int layerMask = 1 << col.gameObject.layer;
+            _playerCollider.includeLayers &= ~layerMask;
+            _playerCollider.excludeLayers |= layerMask;
         }        
-    }
+    } */
 }
 
