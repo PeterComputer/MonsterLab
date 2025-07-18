@@ -682,8 +682,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1106780215}
     m_Modifications:
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1327019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1327019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1327019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3946
+      value: -14.5602
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -691,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3695
+      value: 2.4633
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -731,16 +743,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Size.x
-      value: 72.22595
+      value: 32.0484
       objectReference: {fileID: 0}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Size.y
-      value: 77.32947
+      value: 32.911377
       objectReference: {fileID: 0}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d4560c4434c2bda46aa99a2e19f83c5e, type: 3}
+      objectReference: {fileID: 21300000, guid: 1f9f4849745434349b2d5d9d3b3a4c86, type: 3}
     - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_SortingOrder
       value: -6
@@ -6894,6 +6906,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 76756287e57d9d64abfa11abc92f1662, type: 3}
+    - target: {fileID: 5092480675307819381, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
+      propertyPath: openDoorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fad2674805a26dc40aa1a56ab19db2aa, type: 3}
     - target: {fileID: 6726561118256940828, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
       propertyPath: m_Name
       value: Coded Exit Door

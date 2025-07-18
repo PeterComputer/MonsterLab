@@ -4621,6 +4621,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 76756287e57d9d64abfa11abc92f1662, type: 3}
+    - target: {fileID: 5092480675307819381, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
+      propertyPath: openDoorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fad2674805a26dc40aa1a56ab19db2aa, type: 3}
     - target: {fileID: 6726561118256940828, guid: 6cb6abe5d84907943bce1a3e984c1432, type: 3}
       propertyPath: m_Name
       value: Coded Exit Door
