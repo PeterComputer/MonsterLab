@@ -3,44 +3,42 @@ using UnityEngine;
 public class SetActiveOnGapCollision : MonoBehaviour
 {
 
-    private Collider col;
-    [SerializeField] private bool isEnteringAnotherGap;
+    [SerializeField] private Collider col;
+    [SerializeField] private int touchingGapsCount;
 
     void Awake()
     {
-        col = GetComponent<Collider>();
-        isEnteringAnotherGap = false;
     }
 
+    // If a pass-through barrier enters a gap, make it solid (aka !isTrigger)
     void OnTriggerEnter(Collider other)
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "Gap")
         {
-            col.isTrigger = false;
+            touchingGapsCount++;
+            setState();
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    // If a solid barrier exits a gap, make it pass-through (aka isTrigger)
+    void OnTriggerExit(Collider other)
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "Gap")
         {
-            isEnteringAnotherGap = true;
+            if (--touchingGapsCount < 0) touchingGapsCount = 0;
+            setState();
+        }
+    }
+
+    private void setState()
+    {
+        if (touchingGapsCount > 0)
+        {
+            col.isTrigger = false;
         }
         else
         {
-            isEnteringAnotherGap = false;
-        }
-
-        Debug.Log("isEnteringAnotherGap = " + isEnteringAnotherGap + " for collision between " + this.gameObject.name + " and " + other.gameObject.name);
-
-    }
-
-    void OnCollisionExit(Collision other)
-    {
-        if (LayerMask.LayerToName(other.gameObject.layer) == "Gap" && !isEnteringAnotherGap)
-        {
             col.isTrigger = true;
         }
-    }    
-
+    }
 }
