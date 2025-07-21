@@ -5,14 +5,14 @@ using UnityEngine;
 public class MovingPlatformController : Obstacle
 {
 
-    [SerializeField] public float moveAmount = 5f;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private List<Transform> platformPositionsList;
+    [SerializeField][HideInInspector] public float moveAmount = 5f;
+    [SerializeField][HideInInspector] private float moveSpeed = 5f;
+    [SerializeField][HideInInspector] private List<Transform> platformPositionsList;
     private int positionIndex;
     private Vector3 currentPosition;
-    [SerializeField] private Transform endPosition;
-    [SerializeField] private SpriteRenderer bridge;
-    [SerializeField] private SpriteRenderer[] railings;
+    [SerializeField][HideInInspector] private Transform endPosition;
+    [SerializeField][HideInInspector] private SpriteRenderer bridge;
+    [SerializeField][HideInInspector] private SpriteRenderer[] railings;
     private bool goingForward;
 
     public void Awake()

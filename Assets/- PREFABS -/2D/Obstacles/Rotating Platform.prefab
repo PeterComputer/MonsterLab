@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 985957610984514472}
   - component: {fileID: 7711893006642314162}
   m_Layer: 0
-  m_Name: Pink Rotating Platform 4
+  m_Name: Pink Rotating Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7204094546204359854}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.907326, y: 0, z: -3.2478046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51,7 +51,7 @@ MonoBehaviour:
   rotatingPlatformColor: 3
   rotationAmount: 90
   rotationSpeed: 5
-  colorIndex: 3
+  colorIndex: 1
   platformSpriteRenderer: {fileID: 985308610202047319}
   fenceGateSpriteRenderers:
   - {fileID: 4559673511155550413}
