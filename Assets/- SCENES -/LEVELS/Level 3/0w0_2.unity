@@ -4646,6 +4646,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2682321169887084711, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
+      propertyPath: openDoorSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91b6d28dd1c8b25419d36a7f41e3b68c, type: 3}
+    - target: {fileID: 3386749451769949933, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92442857f5060c84a8036693eae2ed39, type: 3}
     - target: {fileID: 6682148778037574225, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
       propertyPath: m_Name
       value: Exit Door
@@ -11427,6 +11435,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4645429290752513621, guid: df3d0f4fa4084a24c96a6eec07da03c5, type: 3}
   m_PrefabInstance: {fileID: 1980910725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1981867119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2131201638}
+    m_Modifications:
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+      propertyPath: m_Name
+      value: Path Object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+--- !u!4 &1981867120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+  m_PrefabInstance: {fileID: 1981867119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1994938072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11989,6 +12059,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 203692525}
+    - targetCorrespondingSourceObject: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1981867120}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
 --- !u!4 &2131201638 stripped
