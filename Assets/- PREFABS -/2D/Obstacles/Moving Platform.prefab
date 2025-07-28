@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3353431171212829605}
   - component: {fileID: 2596998732925740909}
   m_Layer: 0
-  m_Name: Green Moving Platform 2
+  m_Name: Green Moving Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingPlatformColor: 1
-  colorIndex: 1
+  colorIndex: 2
   movingPlatformController: {fileID: 3353431171212829605}
   platformPositions:
   - {fileID: 0}
