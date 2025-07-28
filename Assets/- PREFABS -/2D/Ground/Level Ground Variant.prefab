@@ -13,6 +13,10 @@ PrefabInstance:
       value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 6757579264636901699, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757579264636901699, guid: 5b7d2d13ae065f34b9082ef34d375552, type: 3}
       propertyPath: saturationValue
       value: 0.22
       objectReference: {fileID: 0}

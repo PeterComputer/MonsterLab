@@ -17,6 +17,7 @@ TagManager:
   - FPSCounter
   - Fence
   - CodedDoor
+  - Wire
   layers:
   - Default
   - TransparentFX

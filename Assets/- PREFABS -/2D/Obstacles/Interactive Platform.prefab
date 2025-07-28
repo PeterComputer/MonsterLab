@@ -144,8 +144,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 21300000, guid: 2f6cdcd47e92b584c9fbc526bc34c9ae, type: 3}
   defaultWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
-  wireObject: {fileID: 9147504081639213402}
-  wireScript: {fileID: 2194990078945860472}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
 --- !u!1 &8244968237612922246
 GameObject:
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 3124301941900367311}
   - component: {fileID: 4406529607048783771}
   m_Layer: 0
-  m_Name: Blue Interactive Platform 2
+  m_Name: Blue Interactive Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   isWireEmissive: 0
   hasWire: 1
   wireStaysOn: 0
-  colorIndex: 1
+  colorIndex: 2
   interactsWith: {fileID: 0}
   interactibleArea: {fileID: 3328785755393619602}
   interactsWithList: []
@@ -416,24 +416,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
---- !u!114 &2194990078945860472 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
-  m_PrefabInstance: {fileID: 6495398743814864351}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9147504081639213402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b275c3b78f8717c4cbc60f74a3247f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &6483086473888059310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
-  m_PrefabInstance: {fileID: 6495398743814864351}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &9147504081639213402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
   m_PrefabInstance: {fileID: 6495398743814864351}
   m_PrefabAsset: {fileID: 0}

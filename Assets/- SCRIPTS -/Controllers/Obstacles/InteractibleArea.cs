@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using PathCreation.Examples;
 using UnityEditor;
 using UnityEngine;
@@ -14,8 +15,10 @@ public class InteractibleArea : MonoBehaviour
     [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
-    [SerializeField][HideInInspector] private GameObject wireObject;
-    [SerializeField][HideInInspector] private RoadMeshCreator wireScript;
+    [SerializeField]private List<GameObject> wireObjects;
+    [SerializeField]private List<RoadMeshCreator> wireScripts;
+    //[SerializeField][HideInInspector] private GameObject wireObject;
+    //[SerializeField][HideInInspector] private RoadMeshCreator wireScript;
     [SerializeField][HideInInspector] private GameObject wirePrefab;
     private void OnTriggerEnter()
     {
@@ -24,14 +27,19 @@ public class InteractibleArea : MonoBehaviour
 
         spriteRenderer.sprite = pressedSprite;
 
-        if (wireObject.activeSelf)
+        // Change the wire materials to their pressed state
+        foreach (GameObject wireObject in wireObjects)
         {
-            wireScript.roadMaterial = pressedWireMaterial;
-            wireScript.TriggerUpdate();
+            if (wireObject.activeSelf)
+            {
+                RoadMeshCreator wireScript = wireObject.GetComponent<RoadMeshCreator>();
+                wireScript.roadMaterial = pressedWireMaterial;
+                wireScript.TriggerUpdate();
+            }
         }
 
-
-        //pressedAudioClip can be null if multiple platforms are stacked on top of another (in order to reduce repeated noise)
+        // Play an audioClip when the platform is pressed
+        // pressedAudioClip can be null if multiple platforms are stacked on top of another (in order to reduce repeated noise)
         if (pressedAudioClip != null)
         {
             SoundFXManager.instance.PlaySoundFXClip(pressedAudioClip, transform, 1f);
@@ -41,10 +49,15 @@ public class InteractibleArea : MonoBehaviour
     private void OnTriggerExit()
     {
         spriteRenderer.sprite = defaultSprite;
-        if (wireObject.activeSelf && !wireStaysOn)
+
+        foreach (GameObject wireObject in wireObjects)
         {
-            wireScript.roadMaterial = defaultWireMaterial;
-            wireScript.TriggerUpdate();
+            if (wireObject.activeSelf && !wireStaysOn)
+            {
+                RoadMeshCreator wireScript = wireObject.GetComponent<RoadMeshCreator>();
+                wireScript.roadMaterial = defaultWireMaterial;
+                wireScript.TriggerUpdate();
+            }
         }
     }
 
@@ -53,73 +66,114 @@ public class InteractibleArea : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
 
-        if (wireObject == null || !wireObject.activeSelf)
+        // Get the InteractibleArea's wire brothers 
+        for (int currentChildI = 0; currentChildI < transform.parent.childCount; currentChildI++)
         {
-            setHasWire(false);
-        }
-        else if (wireScript.enabled)
-        {
-            setHasWire(true);
+            GameObject currentChild = transform.parent.GetChild(currentChildI).gameObject;
+
+            if (currentChild.tag == "Wire")
+            {
+                wireObjects.Add(currentChild);
+                wireScripts.Add(currentChild.GetComponent<RoadMeshCreator>());
+            }
         }
 
-        wireScript = wireObject.GetComponent<RoadMeshCreator>();
-        
-        // If wire's material does not correspond to the default wire material
-        if (wireScript.roadMaterial != defaultWireMaterial)
+
+        // Check whether wires should be active or not
+        bool hasWire = false;
+
+        foreach (GameObject wire in wireObjects)
         {
-            // Update it
-            wireScript.roadMaterial = defaultWireMaterial;
+            if (wire.activeSelf && wire.GetComponent<RoadMeshCreator>().enabled)
+            {
+                hasWire = true;
+            }
         }
-        
+
+        setHasWire(hasWire);
+
+
+        // If wire's material does not correspond to the default wire material
+        foreach (RoadMeshCreator wireScript in wireScripts)
+        {
+            if (wireScript.roadMaterial != defaultWireMaterial)
+            {
+                // Update it
+                wireScript.roadMaterial = defaultWireMaterial;
+            }
+        }
     }
 
     public void setHasWire(bool hasWire)
     {
-        if (wireObject == null)
+        // Remove empty entries from wires that might have been deleted by the player
+        removeEmptyEntries();
+
+        // If no wires exist, create one at the start of wireObjects and disable it
+        if (wireObjects.Count == 0)
         {
             createNewWire();
-            wireObject.SetActive(false);
         }
 
-        // if the platform should have a wire but currently doesn't
-        if (hasWire && !wireObject.activeSelf)
+        // Set all wires to the hasWire value passed in the parameter
+        foreach (GameObject wireObject in wireObjects)
         {
-            // if there was a wire object already before deletion, enable it again
-            if (wireObject != null)
-            {
-                wireObject.SetActive(true);
-            }
-            // if there wasn't a wire object before deletion, create a new one
-            else
-            {
-                createNewWire();
-            }
-        }
-        //if the platform should not have a wire but does, save it in a variable for later, then delete it
-        else if (!hasWire && wireObject.activeSelf)
-        {
-            wireObject.SetActive(false);
+            wireObject.SetActive(hasWire);
         }
     }
 
     private void createNewWire()
     {
-        wireObject = (GameObject)PrefabUtility.InstantiatePrefab(wirePrefab, gameObject.transform.parent);
+        GameObject newWireObject = (GameObject)PrefabUtility.InstantiatePrefab(wirePrefab, gameObject.transform.parent);
 
         // The wire transform position needs a 5 at the z coordinate for reasons that I can't fully explain
-        wireObject.transform.localPosition = new Vector3(0, 0, 5);
+        newWireObject.transform.localPosition = new Vector3(0, 0, 5);
 
-        wireScript = wireObject.GetComponent<RoadMeshCreator>();        
+        wireObjects[0] = newWireObject;
+        wireScripts[0] = newWireObject.GetComponent<RoadMeshCreator>();
+    }
+
+    private void removeEmptyEntries()
+    {
+        foreach (GameObject wireObject in wireObjects)
+        {
+            if (wireObject == null)
+            {
+                wireObjects.Remove(wireObject);
+                wireScripts.Remove(wireObject.GetComponent<RoadMeshCreator>());
+            }
+        }
+    }
+
+    private void checkForExistingWires()
+    {
+        // Get the InteractibleArea's wire brothers 
+        for (int currentChildI = 0; currentChildI < transform.parent.childCount; currentChildI++)
+        {
+            GameObject currentChild = transform.parent.GetChild(currentChildI).gameObject;
+
+            if (currentChild.tag == "Wire") //and there isnt a repeat object
+            {
+                //wireObjects.Find();
+                wireObjects.Add(currentChild);
+                wireScripts.Add(currentChild.GetComponent<RoadMeshCreator>());
+            }
+        }        
     }
 
     public bool getHasWire()
     {
-        if (wireObject == null)
+        // Remove empty entries from wires that might have been deleted by the player
+        removeEmptyEntries();
+
+        // If no wires exist, create one at the start of wireObjects and disable it
+        if (wireObjects.Count == 0)
         {
             createNewWire();
+            setHasWire(false);
         }
 
-        bool result = wireObject.activeSelf;
+        bool result = wireObjects[0].activeSelf;
 
         return result;
     }
@@ -133,10 +187,18 @@ public class InteractibleArea : MonoBehaviour
     {
         spriteRenderer.sprite = newPlatformSprite;
 
-        if (wireObject != null && wireObject.activeSelf)
-        {   
-            wireScript.roadMaterial = newWireMat;
-            wireScript.TriggerUpdate();
+        // Remove empty entries from wires that might have been deleted by the player
+        removeEmptyEntries();
+
+        // If the wires are active (they are either ALL active or ALL inactive)
+        if (wireObjects[0].activeSelf)
+        {
+            // Change the road material for each of them and update the script
+            foreach (RoadMeshCreator wireScript in wireScripts)
+            {
+                wireScript.roadMaterial = newWireMat;
+                wireScript.TriggerUpdate();
+            }
         }
 
         defaultSprite = newPlatformSprite;
@@ -149,9 +211,17 @@ public class InteractibleArea : MonoBehaviour
         {
             UnityEditor.SceneView.RepaintAll(); // Force editor to redraw with the new material
             UnityEditor.EditorUtility.SetDirty(this);
-            if (wireObject != null && wireObject.activeSelf) UnityEditor.EditorUtility.SetDirty(wireScript); // Save wire material change
-        }
-#endif
 
+            // If the wires are active (they are either ALL active or ALL inactive)
+            if (wireObjects[0].activeSelf)
+            {
+                // Save the wire material change in each wireScript
+                foreach (RoadMeshCreator wireScript in wireScripts)
+                {
+                    UnityEditor.EditorUtility.SetDirty(wireScript);
+                }
+            }
+#endif
+        }
     }
 }

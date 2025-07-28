@@ -4243,6 +4243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pink Rotating Platform 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8693977387579934785, guid: 5991cdd2011363d4db9ffe1e31111e02, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
