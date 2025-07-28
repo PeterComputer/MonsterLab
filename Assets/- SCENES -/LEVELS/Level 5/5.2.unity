@@ -477,9 +477,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1ca097f72b16aaf439660e2bb8409560, type: 3}
+    - target: {fileID: 3888593953271878331, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.010001
+      objectReference: {fileID: 0}
     - target: {fileID: 6682148778037574225, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
       propertyPath: m_Name
       value: Exit Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252843932152540166, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 9082332526278253463, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
       propertyPath: m_Size.x
@@ -1073,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 1798162618}
     - target: {fileID: 4406529607048783771, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: colorIndex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4406529607048783771, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: colorAmount
@@ -1101,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6b8779df6b31939479b8f735eb1a1456, type: 3}
     - target: {fileID: 8244968237612922246, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_Name
-      value: Pink Interactive Platform 2
+      value: Pink Interactive Platform 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
