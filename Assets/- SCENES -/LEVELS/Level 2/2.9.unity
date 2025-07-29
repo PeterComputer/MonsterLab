@@ -673,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -893,6 +893,10 @@ PrefabInstance:
       propertyPath: fenceGateSpriteRenderers.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: 'fenceGateSpriteRenderers.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1388218268773410874, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6952829
@@ -1061,7 +1065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2062,7 +2066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3124301941900367311, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2169,6 +2173,10 @@ PrefabInstance:
     - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: fenceGateSpriteRenderers.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: 'fenceGateSpriteRenderers.Array.data[1]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1388218268773410874, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2643,6 +2651,10 @@ PrefabInstance:
     - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: fenceGateSpriteRenderers.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 985957610984514472, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: 'fenceGateSpriteRenderers.Array.data[1]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1388218268773410874, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3651,7 +3663,7 @@ Transform:
   m_GameObject: {fileID: 1637977816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.866249, y: 0, z: 3.6163502}
+  m_LocalPosition: {x: 3.866249, y: -0.1, z: 3.6163502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

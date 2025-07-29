@@ -5724,7 +5724,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 699962ac5cd9e2e4ead4e047878e8fda, type: 3}
     - target: {fileID: 2996481025871667190, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.02
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3578122323216017579, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: roadMaterial
@@ -5744,7 +5744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4425498906980361894, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.019999504
+      value: -0.039999723
       objectReference: {fileID: 0}
     - target: {fileID: 7280571212342197468, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: colorIndex
@@ -5764,7 +5764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7485652146564747681, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6163511
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 7485652146564747681, guid: 9b60538e9f70d6a4f9eb92c51bf8fcaa, type: 3}
       propertyPath: m_LocalRotation.w
