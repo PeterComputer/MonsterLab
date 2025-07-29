@@ -3075,8 +3075,8 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 12790
-  m_UseColorTemperature: 0
+  m_ColorTemperature: 9426
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -10704,8 +10704,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944941461132841
 MonoBehaviour:
@@ -10741,8 +10741,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944941780266367
 MonoBehaviour:
@@ -10778,8 +10778,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944942196570401
 MonoBehaviour:
@@ -10827,8 +10827,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!65 &9051007520334953356
 BoxCollider:
