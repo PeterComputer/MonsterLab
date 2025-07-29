@@ -4121,7 +4121,7 @@ PrefabInstance:
     - target: {fileID: 1697142528478417802, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     - target: {fileID: 2771184206547894360, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Name
       value: Fence
@@ -4561,7 +4561,7 @@ PrefabInstance:
     - target: {fileID: 1697142528478417802, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     - target: {fileID: 2771184206547894360, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Name
       value: Fence
@@ -10227,7 +10227,7 @@ PrefabInstance:
     - target: {fileID: 1697142528478417802, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1469802a7f85ab64c92af42e4b028c29, type: 3}
+      objectReference: {fileID: 21300000, guid: 3eb5efc89ddeaba48866eec4b4af315d, type: 3}
     - target: {fileID: 2771184206547894360, guid: 5287531963350fd47b854eb9b930a3b2, type: 3}
       propertyPath: m_Name
       value: Fence
