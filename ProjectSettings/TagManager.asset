@@ -18,6 +18,7 @@ TagManager:
   - Fence
   - CodedDoor
   - Wire
+  - LevelMenu
   layers:
   - Default
   - TransparentFX

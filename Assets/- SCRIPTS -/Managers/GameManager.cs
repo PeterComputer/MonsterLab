@@ -89,11 +89,22 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        //if it is a level scene, find these
+        // if it is a level scene, find these
         if(!isMenuScene) {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
             fadeScreenEffect = GameObject.FindGameObjectWithTag("FadeEffect");
-            door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
+
+            // Find Door object or CodedDoor object
+            if (GameObject.FindGameObjectWithTag("Door") != null)
+            {
+                door = GameObject.FindGameObjectWithTag("Door").GetComponent<FlatDoorController>();
+            }
+
+            else
+            {
+                door = GameObject.FindGameObjectWithTag("CodedDoor").GetComponent<FlatDoorController>();
+            }
+
             fpsCounter = GameObject.FindGameObjectWithTag("FPSCounter");
         }
         sceneName = SceneManager.GetActiveScene().name;

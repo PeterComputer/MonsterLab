@@ -66,18 +66,7 @@ public class InteractibleArea : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
 
-        // Get the InteractibleArea's wire brothers 
-        for (int currentChildI = 0; currentChildI < transform.parent.childCount; currentChildI++)
-        {
-            GameObject currentChild = transform.parent.GetChild(currentChildI).gameObject;
-
-            if (currentChild.tag == "Wire")
-            {
-                wireObjects.Add(currentChild);
-                wireScripts.Add(currentChild.GetComponent<RoadMeshCreator>());
-            }
-        }
-
+        checkForExistingWires();
 
         // Check whether wires should be active or not
         bool hasWire = false;
@@ -108,6 +97,9 @@ public class InteractibleArea : MonoBehaviour
     {
         // Remove empty entries from wires that might have been deleted by the player
         removeEmptyEntries();
+
+        // Check and add any new wires that might have been placed by the developer
+        checkForExistingWires();        
 
         // If no wires exist, create one at the start of wireObjects and disable it
         if (wireObjects.Count == 0)
@@ -152,19 +144,21 @@ public class InteractibleArea : MonoBehaviour
         {
             GameObject currentChild = transform.parent.GetChild(currentChildI).gameObject;
 
-            if (currentChild.tag == "Wire") //and there isnt a repeat object
+            if (currentChild.tag == "Wire" && !wireObjects.Contains(currentChild)) //and there isnt a repeat object
             {
-                //wireObjects.Find();
                 wireObjects.Add(currentChild);
                 wireScripts.Add(currentChild.GetComponent<RoadMeshCreator>());
             }
-        }        
+        }    
     }
 
     public bool getHasWire()
     {
-        // Remove empty entries from wires that might have been deleted by the player
+        // Remove empty entries from wires that might have been deleted by the developer
         removeEmptyEntries();
+
+        // Check and add any new wires that might have been placed by the developer
+        checkForExistingWires();
 
         // If no wires exist, create one at the start of wireObjects and disable it
         if (wireObjects.Count == 0)

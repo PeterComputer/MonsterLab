@@ -50,6 +50,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/- SCENES -/Ending Menu.unity
     guid: 4ef98f9badd92e3459be1757cb3336b8
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 1/1.6.unity
+    guid: 6a14da8b74cdc9e418091efd9139d86e
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 1/1.7.unity
+    guid: 78a725c1ff2463442aa0e02af7db074e
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 1/1.8.unity
+    guid: 5cb379c927606e64d8370656097af30a
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 1/1.9.unity
+    guid: 22d82c754b11e26498a18e4e500a1772
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 1/1.10.unity
+    guid: e96c9cc53ff9b69498918d32e9c5a697
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
