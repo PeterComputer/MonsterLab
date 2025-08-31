@@ -195,8 +195,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void loadLevelSelectMenuScene() {
+    // Called when player finishes a level, sets the level to complete
+    public void loadLevelSelectMenuScene()
+    {
         updateWasPreviousSceneMenu();
+        setNextLevelSelectPageToLoad();
         PlayerPrefs.SetInt(sceneName, 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene("Level Select Menu");
@@ -204,6 +207,7 @@ public class GameManager : MonoBehaviour
 
     public void loadLevelSelectMenuSceneNoSave() {
         updateWasPreviousSceneMenu();
+        setNextLevelSelectPageToLoad();
         SceneManager.LoadScene("Level Select Menu");
     }
 
@@ -259,17 +263,35 @@ public class GameManager : MonoBehaviour
         doFadeInOnLoad.previousSceneName = SceneManager.GetActiveScene().name;
     }
 
-    public void openSelectionUI(PickupType type) {
-        switch (type) {
+    private void setNextLevelSelectPageToLoad()
+    {
+        int number = 0;
+
+        // If the first character exists and is a digit
+        if (!string.IsNullOrEmpty(sceneName) && char.IsDigit(sceneName[0]))
+        {
+
+            int.TryParse(sceneName[0].ToString(), out number);
+        }
+
+        // Save the value
+        PlayerPrefs.SetInt("LevelSelectPageToLoad", number);
+        PlayerPrefs.Save();
+    }
+
+    public void openSelectionUI(PickupType type)
+    {
+        switch (type)
+        {
             case PickupType.head:
-            headSelectionUI.SetActive(true);
-            break;
+                headSelectionUI.SetActive(true);
+                break;
             case PickupType.torso:
-            torsoSelectionUI.SetActive(true);
-            break;
+                torsoSelectionUI.SetActive(true);
+                break;
             case PickupType.legs:
-            legsSelectionUI.SetActive(true);
-            break;                        
+                legsSelectionUI.SetActive(true);
+                break;
         }
     }
 

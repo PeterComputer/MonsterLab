@@ -40,6 +40,5 @@ public class loadLevel : MonoBehaviour
 
     public void setAsNextLevel() {
         animator.SetTrigger("isNextLevel");
-        Debug.Log("Next level: " + levelID);
     }
 }
