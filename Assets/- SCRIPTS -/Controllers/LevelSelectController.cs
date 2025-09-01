@@ -10,11 +10,12 @@ public class LevelSelectController : MonoBehaviour
 
     private SaveStateController saveStateController;
 
-    private int currentMenuIndex;
+    [SerializeField] private int currentMenuIndex;
     private GameObject currentMenu;
 
     void Awake()
     {
+        Debug.Log("Loading page: " + PlayerPrefs.GetInt("LevelSelectPageToLoad"));
         currentMenuIndex = PlayerPrefs.GetInt("LevelSelectPageToLoad");
         currentMenu = levelMenus[currentMenuIndex];
 
@@ -30,6 +31,13 @@ public class LevelSelectController : MonoBehaviour
         }
 
         saveStateController = GetComponent<SaveStateController>();
+    }
+
+    // Called when player switches scenes, saves the last page loaded
+    void OnDestroy()
+    {
+        PlayerPrefs.SetInt("LevelSelectPageToLoad", currentMenuIndex);
+        PlayerPrefs.Save();
     }
 
     public void goToNextLevelMenu()
@@ -52,8 +60,10 @@ public class LevelSelectController : MonoBehaviour
 
         currentMenu = levelMenus[currentMenuIndex];
         currentMenu.SetActive(true);
-        saveStateController.setLevelStates();        
-        
+        saveStateController.setLevelStates();
+
+        PlayerPrefs.SetInt("LevelSelectPageToLoad", currentMenuIndex);
+        PlayerPrefs.Save();
     }
 
     public void goToPreviousLevelMenu()
@@ -76,6 +86,9 @@ public class LevelSelectController : MonoBehaviour
 
         currentMenu = levelMenus[currentMenuIndex];
         currentMenu.SetActive(true);
-        saveStateController.setLevelStates(); 
+        saveStateController.setLevelStates();
+
+        PlayerPrefs.SetInt("LevelSelectPageToLoad", currentMenuIndex);
+        PlayerPrefs.Save();
     }
 }

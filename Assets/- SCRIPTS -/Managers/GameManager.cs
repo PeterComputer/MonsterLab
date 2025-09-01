@@ -199,19 +199,21 @@ public class GameManager : MonoBehaviour
     public void loadLevelSelectMenuScene()
     {
         updateWasPreviousSceneMenu();
-        setNextLevelSelectPageToLoad();
         PlayerPrefs.SetInt(sceneName, 1);
         PlayerPrefs.Save();
         SceneManager.LoadScene("Level Select Menu");
     }
-
-    public void loadLevelSelectMenuSceneNoSave() {
+    
+    // Called when player returns to menu from pause menu, inside a level
+    public void loadLevelSelectMenuSceneNoSave()
+    {
         updateWasPreviousSceneMenu();
-        setNextLevelSelectPageToLoad();
         SceneManager.LoadScene("Level Select Menu");
     }
 
-    public void loadEndingMenuScene() {
+    // Called when player finishes the final level
+    public void loadEndingMenuScene()
+    {
         updateWasPreviousSceneMenu();
         PlayerPrefs.SetInt(sceneName, 1);
         PlayerPrefs.Save();
@@ -261,28 +263,6 @@ public class GameManager : MonoBehaviour
 
     private void updateWasPreviousSceneMenu() {
         doFadeInOnLoad.previousSceneName = SceneManager.GetActiveScene().name;
-    }
-
-    private void setNextLevelSelectPageToLoad()
-    {   
-        // If exiting from the tutorial scene, keep the previous page loaded
-        if (sceneName == "Tutorial")
-        {
-            return;
-        }
-
-        int number = 0;
-        
-        // If the first character exists and is a digit
-        if (!string.IsNullOrEmpty(sceneName) && char.IsDigit(sceneName[0]))
-        {
-
-            int.TryParse(sceneName[0].ToString(), out number);
-        }
-
-        // Save the value
-        PlayerPrefs.SetInt("LevelSelectPageToLoad", number);
-        PlayerPrefs.Save();
     }
 
     public void openSelectionUI(PickupType type)

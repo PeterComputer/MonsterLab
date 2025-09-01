@@ -59,6 +59,10 @@ public class SplashScreenController : MonoBehaviour
             StartCoroutine(displaySplashImage());
         }
         else {
+            // Sets it so the game always loads the first page of the level select, on startup
+            PlayerPrefs.SetInt("LevelSelectPageToLoad", 0);
+            PlayerPrefs.Save();
+
             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().loadMainMenuScene();
         }
         yield return null;
