@@ -264,9 +264,15 @@ public class GameManager : MonoBehaviour
     }
 
     private void setNextLevelSelectPageToLoad()
-    {
-        int number = 0;
+    {   
+        // If exiting from the tutorial scene, keep the previous page loaded
+        if (sceneName == "Tutorial")
+        {
+            return;
+        }
 
+        int number = 0;
+        
         // If the first character exists and is a digit
         if (!string.IsNullOrEmpty(sceneName) && char.IsDigit(sceneName[0]))
         {
