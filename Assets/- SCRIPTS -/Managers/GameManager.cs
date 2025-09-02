@@ -9,6 +9,7 @@ using System;
 using UnityEngine.UI;
 using System.Data.Common;
 using UnityEngine.Rendering.Universal;
+using System.Runtime.CompilerServices;
 
 public class GameManager : MonoBehaviour
 {
@@ -83,7 +84,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public static bool wasPreviousSceneMenu;
     private string sceneName;
-    [SerializeField]
     private string[] sceneList;
     private GameObject fpsCounter;
 
@@ -195,13 +195,32 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    // Called when player finishes a level, sets the level to complete
+    // Called when player finishes a level, sets the level to complete. Also called from the main menu
     public void loadLevelSelectMenuScene()
     {
         updateWasPreviousSceneMenu();
-        PlayerPrefs.SetInt(sceneName, 1);
-        PlayerPrefs.Save();
-        SceneManager.LoadScene("Level Select Menu");
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        // If scene isn't a menu, tutorial or wardrobe level, save this level as complete and increment the amount of completed levels
+        if (!sceneName.Contains("Menu") && !sceneName.Contains("Tutorial") && !sceneName.Contains("Wardrobe"))
+        {
+            PlayerPrefs.SetInt(sceneName, 1);
+            PlayerPrefs.SetInt("CompletedLevelCount", PlayerPrefs.GetInt("CompletedLevelCount") + 1);
+            PlayerPrefs.Save();
+        }
+
+        // If this is the first time the player is loading into the game, open the tutorial level instead of level select
+        if (!Convert.ToBoolean(PlayerPrefs.GetInt("AlreadyRanGameOnce")))
+        {
+            PlayerPrefs.SetInt("AlreadyRanGameOnce", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("Tutorial");
+        }
+        else
+        {
+            SceneManager.LoadScene("Level Select Menu");
+        }
     }
     
     // Called when player returns to menu from pause menu, inside a level
@@ -240,15 +259,6 @@ public class GameManager : MonoBehaviour
         else {
             reloadCurrentScene();
         }
-
-       /*  if (Application.CanStreamedLevelBeLoaded(nextScene)) {
-            Debug.Log("got here");
-            SceneManager.LoadScene(nextScene);
-        }
-        else {
-            reloadCurrentScene();
-        } */
-
     }
 
     public void loadSceneAt(int sceneID) {

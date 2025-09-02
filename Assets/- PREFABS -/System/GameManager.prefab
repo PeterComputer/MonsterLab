@@ -68,18 +68,7 @@ MonoBehaviour:
   isMenuScene: 0
   playerPartsFilePath: 
   fadeScreenEffect: {fileID: 0}
-  sceneList:
-  - Tutorial
-  - 1.1
-  - 1.2
-  - 1.3
-  - 1.4
-  - 1.5
-  - 2.1
-  - 2.2
-  - 2.3
-  - 2.4
-  - 3.1
+  sceneList: []
 --- !u!114 &844066591731429339
 MonoBehaviour:
   m_ObjectHideFlags: 0

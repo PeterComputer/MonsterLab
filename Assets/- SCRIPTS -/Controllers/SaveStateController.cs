@@ -4,8 +4,7 @@ using UnityEngine;
 // This class sets the save state for each individual level button, depending on the information saved in PlayerPrefs
 public class SaveStateController : MonoBehaviour
 {
-    [SerializeField]
-    private loadLevel[] levelButtons;
+    [SerializeField] private loadLevel[] levelButtons;
 
     void Awake()
     {
@@ -19,7 +18,7 @@ public class SaveStateController : MonoBehaviour
     }
 
     public void setLevelStates()
-    {   
+    {
         bool foundNextLevel = false;
 
         foreach (loadLevel button in levelButtons)

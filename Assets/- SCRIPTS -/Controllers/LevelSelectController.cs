@@ -1,33 +1,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class LevelSelectController : MonoBehaviour
 {
     public List<GameObject> levelMenus;
-    [SerializeField] GameObject previousLevelButton;
-    [SerializeField] GameObject nextLevelButton;
+    public List<Image> pageIndicators;
+    public List<string> wardrobeLevels;
+    [SerializeField] GameObject previousPageButton;
+    [SerializeField] GameObject nextPageButton;
+    [SerializeField] loadLevel wardrobeButton;
 
     private SaveStateController saveStateController;
 
     [SerializeField] private int currentMenuIndex;
     private GameObject currentMenu;
 
-    void Awake()
+    public Color selectedColor;
+    public Color idleColor;
+
+    [SerializeField] private int completedLevelCount;
+
+    [SerializeField] private int completionCheck1;
+    [SerializeField] private int completionCheck2;
+    [SerializeField] private int completionCheck3;
+
+
+    void Start()
     {
-        Debug.Log("Loading page: " + PlayerPrefs.GetInt("LevelSelectPageToLoad"));
+        completedLevelCount = PlayerPrefs.GetInt("CompletedLevelCount");
+        Debug.Log("completed levels: " + completedLevelCount);
         currentMenuIndex = PlayerPrefs.GetInt("LevelSelectPageToLoad");
         currentMenu = levelMenus[currentMenuIndex];
 
-        for (int i = 0; i <= levelMenus.Count-1; i++)
+        for (int i = 0; i <= levelMenus.Count - 1; i++)
         {
             if (levelMenus[i] == currentMenu)
             {
                 levelMenus[i].SetActive(true);
-                if (i == 0) previousLevelButton.SetActive(false);
-                else if (i == levelMenus.Count - 1) nextLevelButton.SetActive(false);
+                wardrobeButton.setLevelID(wardrobeLevels[i]);
+                pageIndicators[i].color = selectedColor;
+
+                if (i == 0) previousPageButton.SetActive(false);
+                else if (i == levelMenus.Count - 1) nextPageButton.SetActive(false);
+                checkRequiredProgression();
             }
-            else levelMenus[i].SetActive(false);
+            else
+            {
+                levelMenus[i].SetActive(false);
+                pageIndicators[i].color = idleColor;
+            }
+
         }
 
         saveStateController = GetComponent<SaveStateController>();
@@ -40,55 +64,102 @@ public class LevelSelectController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void goToNextLevelMenu()
+    public void goToNextPageMenu()
     {
+        pageIndicators[currentMenuIndex].color = idleColor;
+
         if (++currentMenuIndex > levelMenus.Count - 1) currentMenuIndex = levelMenus.Count - 1;
 
         currentMenu.SetActive(false);
 
+
         if (currentMenuIndex < levelMenus.Count - 1)
         {
-            nextLevelButton.SetActive(true);
-            previousLevelButton.SetActive(true);
+            nextPageButton.SetActive(true);
+            previousPageButton.SetActive(true);
         }
 
         if (currentMenuIndex == levelMenus.Count - 1)
         {
-            nextLevelButton.SetActive(false);
-            previousLevelButton.SetActive(true);
+            nextPageButton.SetActive(false);
+            previousPageButton.SetActive(true);
         }
 
         currentMenu = levelMenus[currentMenuIndex];
+        wardrobeButton.setLevelID(wardrobeLevels[currentMenuIndex]);
+        pageIndicators[currentMenuIndex].color = selectedColor;
         currentMenu.SetActive(true);
         saveStateController.setLevelStates();
 
         PlayerPrefs.SetInt("LevelSelectPageToLoad", currentMenuIndex);
         PlayerPrefs.Save();
+
+        checkRequiredProgression();
     }
 
-    public void goToPreviousLevelMenu()
+    public void goToPreviousPageMenu()
     {
+        pageIndicators[currentMenuIndex].color = idleColor;
+
         if (--currentMenuIndex < 0) currentMenuIndex = 0;
 
         currentMenu.SetActive(false);
 
+
         if (currentMenuIndex > 0)
         {
-            nextLevelButton.SetActive(true);
-            previousLevelButton.SetActive(true);
+            nextPageButton.SetActive(true);
+            previousPageButton.SetActive(true);
         }
 
         if (currentMenuIndex == 0)
         {
-            nextLevelButton.SetActive(true);
-            previousLevelButton.SetActive(false);
+            nextPageButton.SetActive(true);
+            previousPageButton.SetActive(false);
         }
 
         currentMenu = levelMenus[currentMenuIndex];
+        wardrobeButton.setLevelID(wardrobeLevels[currentMenuIndex]);
+        pageIndicators[currentMenuIndex].color = selectedColor;
         currentMenu.SetActive(true);
         saveStateController.setLevelStates();
 
         PlayerPrefs.SetInt("LevelSelectPageToLoad", currentMenuIndex);
         PlayerPrefs.Save();
+
+        checkRequiredProgression();
+    }
+
+    private void checkRequiredProgression()
+    {
+        int completionCheckToUse;
+
+        switch (currentMenuIndex)
+        {
+            case 0:
+                completionCheckToUse = completionCheck1;
+                break;
+            case 1:
+                completionCheckToUse = completionCheck2;
+                break;
+            case 2:
+                completionCheckToUse = completionCheck3;
+                break;
+            default:
+                completionCheckToUse = 0;
+                break;
+        }
+
+        // If player doesn't meet the progression requirement, disable the next page button
+        if (completedLevelCount < completionCheckToUse)
+        {
+            nextPageButton.GetComponent<Image>().color = Color.red;
+            nextPageButton.GetComponent<Button>().enabled = false;
+        }
+        else
+        {
+            nextPageButton.GetComponent<Image>().color = Color.white;
+            nextPageButton.GetComponent<Button>().enabled = true;
+        }
     }
 }
