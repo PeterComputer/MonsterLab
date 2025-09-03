@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -25,6 +26,8 @@ public class LevelSelectController : MonoBehaviour
     [SerializeField] private int completionCheck1;
     [SerializeField] private int completionCheck2;
     [SerializeField] private int completionCheck3;
+
+    [SerializeField] private TextMeshProUGUI progressionDisplay;
 
 
     void Start()
@@ -150,16 +153,21 @@ public class LevelSelectController : MonoBehaviour
                 break;
         }
 
-        // If player doesn't meet the progression requirement, disable the next page button
+        // If player doesn't meet the progression requirement, disable the next page button and update the progression display
         if (completedLevelCount < completionCheckToUse)
         {
             nextPageButton.GetComponent<Image>().color = Color.red;
             nextPageButton.GetComponent<Button>().enabled = false;
+
+            progressionDisplay.enabled = true;
+            progressionDisplay.text = completedLevelCount + "/" + completionCheckToUse;
         }
         else
         {
             nextPageButton.GetComponent<Image>().color = Color.white;
             nextPageButton.GetComponent<Button>().enabled = true;
+
+            progressionDisplay.enabled = false;
         }
     }
 }

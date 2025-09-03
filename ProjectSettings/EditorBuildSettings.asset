@@ -165,8 +165,32 @@ EditorBuildSettings:
     path: Assets/- SCENES -/LEVELS/Level 6/6.3.unity
     guid: ceba1790f7c0c3141b79bae116d2a7e1
   - enabled: 1
-    path: Assets/- SCENES -/LEVELS/Level 6/6.Wardrobe.unity
+    path: Assets/- SCENES -/LEVELS/Level 6/6.4.unity
     guid: dc3a0e20786b2c14090015ab4e4dbab1
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 6/6.5.unity
+    guid: f8b0680f7e72f8a40b15d24af79d5c2b
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 6/6.6.unity
+    guid: 69e1e8f255e44524092999e382aae0de
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 6/6.7.unity
+    guid: fcfd2cd9c79576d4ab36110d861a74dc
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 7/7.1.unity
+    guid: 7b6b9593831b0514f86b7d8d5d4bc551
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 7/7.2.unity
+    guid: a7e8dad66c19eb54ca2be76f719683f4
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 7/7.3.unity
+    guid: 17985d5a731c8da408ec3f5ecf2b844c
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 7/7.4.unity
+    guid: d56f12865f03ff94baadeb1692a21ac8
+  - enabled: 1
+    path: Assets/- SCENES -/LEVELS/Level 7/7.5.unity
+    guid: 16ff8612ea3ff6b46b0fc4a63b4c0273
   - enabled: 1
     path: Assets/- SCENES -/LEVELS/Level 2/2.Wardrobe.unity
     guid: 81a48dd19b3c65a4a852a524a3aadd6c
@@ -180,7 +204,7 @@ EditorBuildSettings:
     path: Assets/- SCENES -/LEVELS/Level 5/5.Wardrobe.unity
     guid: 583ebd0cb6b15ea449e05c1273a50409
   - enabled: 1
-    path: Assets/- SCENES -/LEVELS/Level 6/6.W.unity
+    path: Assets/- SCENES -/LEVELS/Level 6/6.Wardrobe.unity
     guid: a4285296e1280c34b94a294adc8f8057
   - enabled: 1
     path: Assets/- SCENES -/LEVELS/Level 7/7.Wardrobe.unity
