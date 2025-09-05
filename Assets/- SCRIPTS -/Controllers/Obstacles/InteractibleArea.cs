@@ -101,12 +101,13 @@ public class InteractibleArea : MonoBehaviour
         // Check and add any new wires that might have been placed by the developer
         checkForExistingWires();        
 
+#if UNITY_EDITOR
         // If no wires exist, create one at the start of wireObjects and disable it
         if (wireObjects.Count == 0)
         {
             createNewWire();
         }
-
+#endif
         // Set all wires to the hasWire value passed in the parameter
         foreach (GameObject wireObject in wireObjects)
         {
@@ -114,6 +115,7 @@ public class InteractibleArea : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     private void createNewWire()
     {
         GameObject newWireObject = (GameObject)PrefabUtility.InstantiatePrefab(wirePrefab, gameObject.transform.parent);
@@ -124,6 +126,7 @@ public class InteractibleArea : MonoBehaviour
         wireObjects[0] = newWireObject;
         wireScripts[0] = newWireObject.GetComponent<RoadMeshCreator>();
     }
+#endif
 
     private void removeEmptyEntries()
     {
@@ -160,13 +163,14 @@ public class InteractibleArea : MonoBehaviour
         // Check and add any new wires that might have been placed by the developer
         checkForExistingWires();
 
+#if UNITY_EDITOR
         // If no wires exist, create one at the start of wireObjects and disable it
         if (wireObjects.Count == 0)
         {
             createNewWire();
             setHasWire(false);
         }
-
+#endif
         bool result = wireObjects[0].activeSelf;
 
         return result;
@@ -215,7 +219,8 @@ public class InteractibleArea : MonoBehaviour
                     UnityEditor.EditorUtility.SetDirty(wireScript);
                 }
             }
-#endif
+
         }
+#endif
     }
 }
