@@ -1,3 +1,4 @@
+using System;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +28,7 @@ public class FadeEffect : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (doFadeInOnLoad.previousSceneName == "Main Menu") {
+        if (doFadeInOnLoad.previousSceneName == "Main Menu" && !Convert.ToBoolean(PlayerPrefs.GetInt("AlreadyRanGameOnce"))) {
             gameObject.SetActive(false);
         }
     }
