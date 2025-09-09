@@ -25,17 +25,26 @@ public class PickupController : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        if (type != PickupType.other) {
-            gameManager.switchPlayerInputMap();
-            gameManager.openSelectionUI(type);
-            
-            if(imageToDisable != null) {
-                imageToDisable.enabled = false;
-            }
-            
+        
+        if (other.gameObject.tag != "Player")
+        {
+            return;
         }
 
-        else {
+        if (type != PickupType.other)
+        {
+            gameManager.switchPlayerInputMap();
+            gameManager.openSelectionUI(type);
+
+            if (imageToDisable != null)
+            {
+                imageToDisable.enabled = false;
+            }
+
+        }
+
+        else
+        {
             GameObject.FindWithTag("Door").GetComponent<FlatDoorController>().decreasePickupsLeft();
             Destroy(this.gameObject);
         }
