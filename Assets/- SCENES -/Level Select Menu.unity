@@ -3638,6 +3638,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1004539325}
     - target: {fileID: 6716333365340288745, guid: b57f9620ab1a12749b1cd0275671ae1b, type: 3}
+      propertyPath: completedLevelCount
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716333365340288745, guid: b57f9620ab1a12749b1cd0275671ae1b, type: 3}
       propertyPath: previousLevelButton
       value: 
       objectReference: {fileID: 1098778962}
