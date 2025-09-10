@@ -4697,6 +4697,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6716333365340288745, guid: b57f9620ab1a12749b1cd0275671ae1b, type: 3}
+      propertyPath: lockedButtonSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3faad4efb66103743bf04bdff6d77c91, type: 3}
+    - target: {fileID: 6716333365340288745, guid: b57f9620ab1a12749b1cd0275671ae1b, type: 3}
       propertyPath: previousPageButton
       value: 
       objectReference: {fileID: 1098778962}

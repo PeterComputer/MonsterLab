@@ -179,3 +179,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   imageToDisable: {fileID: 0}
+  pickupSoundFX: {fileID: 8300000, guid: f8d61ac7be7658f4c8d577b5cbd4040b, type: 3}
