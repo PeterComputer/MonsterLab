@@ -10,6 +10,7 @@ public class DrawbridgeController : Obstacle
     private Vector3 currentAngle;
     [SerializeField][HideInInspector] private SpriteRenderer bridge;
     [SerializeField][HideInInspector] private SpriteRenderer[] railings;
+    [SerializeField] private AudioClip activationAudioClip;   
 
     void Awake()
     {
@@ -45,6 +46,11 @@ public class DrawbridgeController : Obstacle
         rotationAmount = -rotationAmount;
         isLowered = !isLowered;
         bridgeCollider.isTrigger = isLowered;
+
+        if (activationAudioClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(activationAudioClip, transform, 1f);
+        }
     }
 
     /*

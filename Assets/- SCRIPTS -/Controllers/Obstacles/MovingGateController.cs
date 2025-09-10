@@ -6,9 +6,9 @@ public class MovingGateController : Obstacle
     [SerializeField][HideInInspector] private float moveSpeed = 5f;
     [SerializeField][HideInInspector] private Transform startPosition;
     [SerializeField][HideInInspector] private Transform endPosition;
+    [SerializeField] private AudioClip activationAudioClip;
+
     private bool movingToEnd;
-
-
     private Vector3 currentPosition;
 
     public void Awake()
@@ -52,6 +52,11 @@ public class MovingGateController : Obstacle
     public override void interactWith()
     {
         movePosition();
+
+        if (activationAudioClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(activationAudioClip, transform, 1f);
+        }  
     }
 
     // Moving only on the local x axis makes the door move left and right

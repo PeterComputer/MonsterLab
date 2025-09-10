@@ -7,7 +7,7 @@ public class FlatDoorController : Obstacle
     [HideInInspector][SerializeField] private int pickupsLeft;
     public Sprite openDoorSprite;
     [HideInInspector] private Sprite closedSprite;
-    [HideInInspector] public AudioClip openDoorAudioClip;
+    public AudioClip openDoorAudioClip;
     [HideInInspector] public GameObject fx;
 
     private GameManager gameManager;

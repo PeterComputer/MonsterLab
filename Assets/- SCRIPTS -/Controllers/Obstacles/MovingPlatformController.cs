@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatformController : Obstacle
@@ -13,6 +12,7 @@ public class MovingPlatformController : Obstacle
     [SerializeField][HideInInspector] private Transform endPosition;
     [SerializeField][HideInInspector] private SpriteRenderer bridge;
     [SerializeField][HideInInspector] private SpriteRenderer[] railings;
+    [SerializeField] private AudioClip activationAudioClip;
     private bool goingForward;
 
     public void Awake()
@@ -68,6 +68,11 @@ public class MovingPlatformController : Obstacle
     public override void interactWith()
     {
         movePosition();
+
+        if (activationAudioClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(activationAudioClip, transform, 1f);
+        }        
     }
 
     // Moving only on the local x axis makes the door move left and right

@@ -5,6 +5,7 @@ public class RotatingPlatformController : Obstacle
     private Vector3 targetAngle = new Vector3(0f, 0f, 0f);
     [SerializeField] [HideInInspector] private float rotationAmount;
     [SerializeField] [HideInInspector] private float rotationSpeed;
+    [SerializeField] private AudioClip activationAudioClip;    
 
     private Vector3 currentAngle;
 
@@ -37,6 +38,11 @@ public class RotatingPlatformController : Obstacle
     public override void interactWith()
     {
         rotateYDegrees();
+
+        if (activationAudioClip != null)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(activationAudioClip, transform, 1f);
+        }          
     }
 
     /*
