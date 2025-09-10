@@ -12,6 +12,8 @@ public class LevelSelectController : MonoBehaviour
     [SerializeField] GameObject previousPageButton;
     [SerializeField] GameObject nextPageButton;
     [SerializeField] loadLevel wardrobeButton;
+    [SerializeField] Sprite lockedButtonSprite;
+    private Sprite defaultButtonSprite;
 
     private SaveStateController saveStateController;
 
@@ -28,6 +30,11 @@ public class LevelSelectController : MonoBehaviour
     [SerializeField] private int completionCheck3;
 
     [SerializeField] private TextMeshProUGUI progressionDisplay;
+
+    void Awake()
+    {
+        defaultButtonSprite = nextPageButton.GetComponent<Image>().sprite;
+    }
 
 
     void Start()
@@ -156,7 +163,7 @@ public class LevelSelectController : MonoBehaviour
         // If player doesn't meet the progression requirement, disable the next page button and update the progression display
         if (completedLevelCount < completionCheckToUse)
         {
-            nextPageButton.GetComponent<Image>().color = Color.red;
+            nextPageButton.GetComponent<Image>().sprite = lockedButtonSprite;
             nextPageButton.GetComponent<Button>().enabled = false;
 
             progressionDisplay.enabled = true;
@@ -164,7 +171,7 @@ public class LevelSelectController : MonoBehaviour
         }
         else
         {
-            nextPageButton.GetComponent<Image>().color = Color.white;
+            nextPageButton.GetComponent<Image>().sprite = defaultButtonSprite;
             nextPageButton.GetComponent<Button>().enabled = true;
 
             progressionDisplay.enabled = false;

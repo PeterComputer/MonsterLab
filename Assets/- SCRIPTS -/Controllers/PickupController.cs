@@ -5,11 +5,11 @@ using UnityEngine.UI;
 public class PickupController : MonoBehaviour
 {
 
-    [SerializeField]
-    private PickupType type;
+    [SerializeField] private PickupType type;
+    [SerializeField] private Image imageToDisable;
+    [SerializeField] private AudioClip pickupSoundFX;
     private GameManager gameManager;
-    [SerializeField]
-    private Image imageToDisable;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +39,11 @@ public class PickupController : MonoBehaviour
             if (imageToDisable != null)
             {
                 imageToDisable.enabled = false;
+            }
+
+            if (pickupSoundFX != null)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(pickupSoundFX, transform, 1f);
             }
 
         }
