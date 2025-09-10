@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 7024431669104102259}
   - component: {fileID: 2102348716191468959}
   - component: {fileID: 9053995740428947056}
+  - component: {fileID: 8057285354625543611}
   m_Layer: 5
   m_Name: Small Play Button
   m_TagString: Untagged
@@ -366,6 +367,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8057285354625543611}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &8057285354625543611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437759606737572638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 0
 --- !u!1 &670589444418606916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1071,7 @@ GameObject:
   - component: {fileID: 5132947000846701219}
   - component: {fileID: 5768501665422758687}
   - component: {fileID: 7256915903020666047}
+  - component: {fileID: 4190167932192161496}
   m_Layer: 5
   m_Name: Directional Toggle
   m_TagString: Untagged
@@ -1131,6 +1159,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4190167932192161496}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &7256915903020666047
 MonoBehaviour:
@@ -1145,6 +1185,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleType: 1
+--- !u!114 &4190167932192161496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236289577058947335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 53d3c5a9f5cc25445b1faf4f35bcfabb, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &2525628120257939625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1636,7 @@ GameObject:
   - component: {fileID: 6218881363999750547}
   - component: {fileID: 1075204978614641210}
   - component: {fileID: 462162093181742085}
+  - component: {fileID: 6208093354101334517}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -1715,6 +1770,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6208093354101334517}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6208093354101334517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3173455671221767737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &3480328736842164589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2929,7 @@ GameObject:
   - component: {fileID: 9074358729058712575}
   - component: {fileID: 2534526071592375017}
   - component: {fileID: 4003934773692829904}
+  - component: {fileID: 6723395250266383842}
   m_Layer: 5
   m_Name: Right-Handed Toggle
   m_TagString: Untagged
@@ -2935,6 +3017,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6723395250266383842}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &4003934773692829904
 MonoBehaviour:
@@ -2949,6 +3043,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleType: 0
+--- !u!114 &6723395250266383842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7709581005316829725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 53d3c5a9f5cc25445b1faf4f35bcfabb, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &7724979457284858438
 GameObject:
   m_ObjectHideFlags: 0

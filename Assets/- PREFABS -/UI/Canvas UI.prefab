@@ -1908,6 +1908,7 @@ GameObject:
   - component: {fileID: 5308007738169337446}
   - component: {fileID: 1655380383468017123}
   - component: {fileID: 3119686214266679692}
+  - component: {fileID: 4773311246098014698}
   m_Layer: 5
   m_Name: Exit Button
   m_TagString: Untagged
@@ -2029,6 +2030,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4773311246098014698}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4773311246098014698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928250114084272667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &2255864930839900901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2068,7 @@ GameObject:
   - component: {fileID: 2182742879225171491}
   - component: {fileID: 7776331369742345665}
   - component: {fileID: 6841289383294575193}
+  - component: {fileID: 930223518275766051}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -2174,6 +2202,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 930223518275766051}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &930223518275766051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255864930839900901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &2411667080095524585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,6 +4349,7 @@ GameObject:
   - component: {fileID: 4767979184970670506}
   - component: {fileID: 4470823430053782797}
   - component: {fileID: 8751760489909497406}
+  - component: {fileID: 3210505657836874457}
   m_Layer: 5
   m_Name: Restart Button
   m_TagString: Untagged
@@ -4416,6 +4471,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3210505657836874457}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3210505657836874457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257481710227661184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 53d3c5a9f5cc25445b1faf4f35bcfabb, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1 &4443136578318128746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,6 +5863,7 @@ GameObject:
   - component: {fileID: 2115781404734677675}
   - component: {fileID: 1922730508828491520}
   - component: {fileID: 774462839678359839}
+  - component: {fileID: 1347188192416676996}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -5903,6 +5985,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1347188192416676996}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1347188192416676996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903469711201275476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 0
 --- !u!1 &5975741619462605592
 GameObject:
   m_ObjectHideFlags: 0
@@ -5915,6 +6023,7 @@ GameObject:
   - component: {fileID: 2790547937901745556}
   - component: {fileID: 5643421527593600728}
   - component: {fileID: 6407013739924299312}
+  - component: {fileID: 2377984210041962650}
   m_Layer: 5
   m_Name: Small Play Button
   m_TagString: Untagged
@@ -6035,6 +6144,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2377984210041962650}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2377984210041962650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975741619462605592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 0
 --- !u!1 &6019681597172273854
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,6 +7716,7 @@ GameObject:
   - component: {fileID: 9083166588268906831}
   - component: {fileID: 6488587378692217635}
   - component: {fileID: 6380381428632775733}
+  - component: {fileID: 5329927161291243720}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -7701,6 +7837,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5329927161291243720}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &5329927161291243720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206130262967906357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!1001 &881378242476511188
 PrefabInstance:
   m_ObjectHideFlags: 0

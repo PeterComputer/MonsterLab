@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3408177942170853183}
   - component: {fileID: 3499742923756313704}
   - component: {fileID: 4796755976250633455}
+  - component: {fileID: 6373150626665287372}
   - component: {fileID: 6495915947299220435}
   - component: {fileID: 2209818824620926194}
   m_Layer: 5
@@ -136,6 +137,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6373150626665287372}
+        m_TargetAssemblyTypeName: PlaySoundEffect, Assembly-CSharp
+        m_MethodName: playSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6373150626665287372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263579169129528051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 53d3c5a9f5cc25445b1faf4f35bcfabb, type: 3}
+  dontDestroyOnLoad: 1
 --- !u!114 &6495915947299220435
 MonoBehaviour:
   m_ObjectHideFlags: 0
