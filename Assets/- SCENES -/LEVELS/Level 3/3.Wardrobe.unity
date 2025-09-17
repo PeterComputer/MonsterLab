@@ -435,7 +435,7 @@ SpriteRenderer:
   m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &147431762 stripped
@@ -2163,7 +2163,7 @@ SpriteRenderer:
   m_Size: {x: 8, y: 5.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &767039271
@@ -2550,6 +2550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1784948173}
     m_Modifications:
+    - target: {fileID: 776241466818795658, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db9d919b2736f2f438380f8d07d7f409, type: 3}
     - target: {fileID: 1616837507176380076, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2574,6 +2578,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -168.91284
       objectReference: {fileID: 0}
+    - target: {fileID: 2303409833852368685, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 28f78dfb005ad4447b07ec13900aadd3, type: 3}
     - target: {fileID: 2453976127619133893, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2810,6 +2818,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.8999939
       objectReference: {fileID: 0}
+    - target: {fileID: 6487916635743243687, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db9d919b2736f2f438380f8d07d7f409, type: 3}
+    - target: {fileID: 6978575133488554549, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 28f78dfb005ad4447b07ec13900aadd3, type: 3}
     - target: {fileID: 7351991369928751366, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3546,7 +3562,7 @@ SpriteRenderer:
   m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1072436065
@@ -3897,7 +3913,7 @@ SpriteRenderer:
   m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1213127555
@@ -4077,7 +4093,7 @@ SpriteRenderer:
   m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1269842771
@@ -9942,7 +9958,7 @@ SpriteRenderer:
   m_Size: {x: 5.3, y: 5.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2120269702 stripped

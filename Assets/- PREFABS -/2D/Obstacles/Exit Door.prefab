@@ -363,7 +363,7 @@ MonoBehaviour:
   startsOpen: 0
   pickupsLeft: 0
   openDoorSprite: {fileID: 21300000, guid: 94a719d519dc55546b35c8ee5d770342, type: 3}
-  openDoorAudioClip: {fileID: 8300000, guid: 2b9fac2e56bf884408602b42565b0db3, type: 3}
+  openDoorAudioClip: {fileID: 8300000, guid: ffd49c1b88c9cb346bd0473719c4305b, type: 3}
   fx: {fileID: 8934524826465039992}
   rightDoorFrame: {fileID: 4718132928389358537}
   leftDoorFrame: {fileID: 9180967391289839202}

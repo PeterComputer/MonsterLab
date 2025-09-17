@@ -139,13 +139,15 @@ MonoBehaviour:
         m_CallState: 2
   pressedSprite: {fileID: 21300000, guid: b85f80a87ecbbb44ab175c4e0b5f71da, type: 3}
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
-  pressedAudioClip: {fileID: 8300000, guid: 32e7182e874062e47a2c303f25ac4afa, type: 3}
+  pressedAudioClip: {fileID: 8300000, guid: 4e0b71019d210e44bb15f3fee44a5f6e, type: 3}
   spriteRenderer: {fileID: 6014899126859380766}
   wireStaysOn: 0
   defaultSprite: {fileID: 21300000, guid: 2f6cdcd47e92b584c9fbc526bc34c9ae, type: 3}
   defaultWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
-  wireObjects: []
-  wireScripts: []
+  wireObjects:
+  - {fileID: 9147504081639213402}
+  wireScripts:
+  - {fileID: 2194990078945860472}
   wirePrefab: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
 --- !u!1 &8244968237612922246
 GameObject:
@@ -416,8 +418,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+--- !u!114 &2194990078945860472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4923104436245063335, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+  m_PrefabInstance: {fileID: 6495398743814864351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147504081639213402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b275c3b78f8717c4cbc60f74a3247f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6483086473888059310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 278315473603834481, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
+  m_PrefabInstance: {fileID: 6495398743814864351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9147504081639213402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2654375831753782405, guid: e5b6e9e91ff087241ac2d283f2fad6e4, type: 3}
   m_PrefabInstance: {fileID: 6495398743814864351}
   m_PrefabAsset: {fileID: 0}
