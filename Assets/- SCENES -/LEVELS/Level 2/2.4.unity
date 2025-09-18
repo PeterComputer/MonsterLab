@@ -1020,6 +1020,10 @@ PrefabInstance:
       propertyPath: targetAngle.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b5c78c82e5bac524ab2d6ad21497cec8, type: 3}
     - target: {fileID: 8623510243410390611, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: hueOffset
       value: 0.6
@@ -5353,6 +5357,10 @@ PrefabInstance:
       propertyPath: targetAngle.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bff6d170a256a5409b978d9348036e4, type: 3}
     - target: {fileID: 8623510243410390611, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: hueOffset
       value: 0.25
@@ -8353,8 +8361,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944941461132841
 MonoBehaviour:
@@ -8390,8 +8398,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944941780266367
 MonoBehaviour:
@@ -8427,8 +8435,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!114 &5850944942196570401
 MonoBehaviour:
@@ -8476,8 +8484,8 @@ MonoBehaviour:
   wireStaysOn: 0
   defaultSprite: {fileID: 0}
   defaultWireMaterial: {fileID: 0}
-  wireObject: {fileID: 0}
-  wireScript: {fileID: 0}
+  wireObjects: []
+  wireScripts: []
   wirePrefab: {fileID: 0}
 --- !u!65 &9051007520334953356
 BoxCollider:

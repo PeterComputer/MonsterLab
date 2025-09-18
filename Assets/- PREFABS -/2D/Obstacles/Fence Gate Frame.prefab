@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: startPosition
       value: 
       objectReference: {fileID: 3234592293168929696}
+    - target: {fileID: 8333286426886965201, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd79e616dc17ba9458763b166bf2579b, type: 3}
     - target: {fileID: 8469427486046453756, guid: 92b1882512aad5f4e9d18339f9820fca, type: 3}
       propertyPath: m_Name
       value: Green Fence Gate 2

@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAmount: 90
   rotationSpeed: 5
-  activationAudioClip: {fileID: 0}
+  activationAudioClip: {fileID: 8300000, guid: baaf892705ff6db4bbdc3b83dea36115, type: 3}
 --- !u!1001 &7010770982496416465
 PrefabInstance:
   m_ObjectHideFlags: 0
