@@ -2882,6 +2882,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -546.91394
       objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8054285053024359377, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_Name
       value: Head Selector Grid Menu
@@ -8377,6 +8393,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -171.54306
       objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7217483745489832976, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_SizeDelta.x
       value: 262.1867
@@ -9016,6 +9048,22 @@ PrefabInstance:
     - target: {fileID: 5950511928981781636, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418526334766314675, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7217483745489832976, guid: 5a1d627685400de4d84918b105c14fc7, type: 3}
       propertyPath: m_SizeDelta.x
