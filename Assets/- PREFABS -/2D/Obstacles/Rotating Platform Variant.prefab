@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Rotating Platform 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: baaf892705ff6db4bbdc3b83dea36115, type: 3}
     - target: {fileID: 8270152409931943216, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
       propertyPath: m_IsActive
       value: 0

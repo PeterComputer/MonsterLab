@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6221316895344770475, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bff6d170a256a5409b978d9348036e4, type: 3}
     - target: {fileID: 6344301657808060442, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.23
@@ -2742,6 +2746,10 @@ PrefabInstance:
       propertyPath: colorIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6221316895344770475, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2aa20062cef1424d81992603d4f350f, type: 3}
     - target: {fileID: 6344301657808060442, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0000021
@@ -4181,6 +4189,10 @@ PrefabInstance:
       propertyPath: colorIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6221316895344770475, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 047651234cc115e4abe3e56301705b22, type: 3}
     - target: {fileID: 6344301657808060442, guid: 03fda56df7fb04941808d5a6cae516d9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.23

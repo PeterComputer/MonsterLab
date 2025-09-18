@@ -6982,6 +6982,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 231a9ed508123b44cb05f1675b98bec0, type: 3}
+    - target: {fileID: 6221316895344770475, guid: 5991cdd2011363d4db9ffe1e31111e02, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 047651234cc115e4abe3e56301705b22, type: 3}
     - target: {fileID: 6821474350638840503, guid: 5991cdd2011363d4db9ffe1e31111e02, type: 3}
       propertyPath: m_Name
       value: Pink Rotating Platform 1

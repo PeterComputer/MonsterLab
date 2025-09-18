@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Rotating Platform 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2aa20062cef1424d81992603d4f350f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 734505141671615567, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
@@ -317,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Rotating Platform 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 047651234cc115e4abe3e56301705b22, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2422,6 +2430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Rotating Platform 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bff6d170a256a5409b978d9348036e4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1495811338225241389, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
@@ -2540,6 +2552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Rotating Platform 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 047651234cc115e4abe3e56301705b22, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2715,6 +2731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Rotating Platform 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2aa20062cef1424d81992603d4f350f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1495811338225241389, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
@@ -2965,6 +2985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Rotating Platform 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7711893006642314162, guid: 2cb9c625797d6ad4ca3bc358dfdd4199, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bff6d170a256a5409b978d9348036e4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
