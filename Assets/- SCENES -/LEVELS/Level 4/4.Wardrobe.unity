@@ -8830,14 +8830,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 89399987971e52f469f79173fcf41519, type: 3}
-    - target: {fileID: 4718132928389358537, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
-      propertyPath: targetAngle.y
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 6041153497539288503, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 76756287e57d9d64abfa11abc92f1662, type: 3}
+      objectReference: {fileID: 21300000, guid: ea3b39ec2e5272b4ea3edbd845800cc1, type: 3}
     - target: {fileID: 6213327338977163303, guid: 5ea0e9ea156ef2d44945073919f9aed7, type: 3}
       propertyPath: m_Size.x
       value: 2.14
