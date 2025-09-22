@@ -15,8 +15,8 @@ public class InteractibleArea : MonoBehaviour
     [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
-    [SerializeField]private List<GameObject> wireObjects;
-    [SerializeField]private List<RoadMeshCreator> wireScripts;
+    [SerializeField][HideInInspector] private List<GameObject> wireObjects = new List<GameObject>();
+    [SerializeField, HideInInspector] private List<RoadMeshCreator> wireScripts = new List<RoadMeshCreator>();
     //[SerializeField][HideInInspector] private GameObject wireObject;
     //[SerializeField][HideInInspector] private RoadMeshCreator wireScript;
     [SerializeField][HideInInspector] private GameObject wirePrefab;
@@ -73,9 +73,13 @@ public class InteractibleArea : MonoBehaviour
 
         foreach (GameObject wire in wireObjects)
         {
-            if (wire.activeSelf && wire.GetComponent<RoadMeshCreator>().enabled)
+            if (wire != null && wire.activeSelf)
             {
-                hasWire = true;
+                RoadMeshCreator wireScript = wire.GetComponent<RoadMeshCreator>();
+                if (wireScript != null && wireScript.enabled)
+                {
+                    hasWire = true;
+                }
             }
         }
 
@@ -130,12 +134,12 @@ public class InteractibleArea : MonoBehaviour
 
     private void removeEmptyEntries()
     {
-        foreach (GameObject wireObject in wireObjects)
+        for (int i = wireObjects.Count - 1; i >= 0; i--)
         {
-            if (wireObject == null)
+            if (wireObjects[i] == null)
             {
-                wireObjects.Remove(wireObject);
-                wireScripts.Remove(wireObject.GetComponent<RoadMeshCreator>());
+                wireObjects.RemoveAt(i);
+                wireScripts.RemoveAt(i);
             }
         }
     }
@@ -148,7 +152,7 @@ public class InteractibleArea : MonoBehaviour
             GameObject currentChild = transform.parent.GetChild(currentChildI).gameObject;
 
             if (currentChild.tag == "Wire" && !wireObjects.Contains(currentChild)) //and there isnt a repeat object
-            {
+            {   
                 wireObjects.Add(currentChild);
                 wireScripts.Add(currentChild.GetComponent<RoadMeshCreator>());
             }
