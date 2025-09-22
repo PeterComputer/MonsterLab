@@ -2326,7 +2326,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5535600065016180190, guid: 0a2dfea53a9638a42a902b5016d8b7cc, type: 3}
       propertyPath: orthographic size
-      value: 8.47
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 7085008244694958632, guid: 0a2dfea53a9638a42a902b5016d8b7cc, type: 3}
       propertyPath: m_Name
@@ -3657,7 +3657,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5846
+      value: 3.592
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3665,7 +3665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2571
+      value: -0.6257
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3698,6 +3698,14 @@ PrefabInstance:
     - target: {fileID: 1791896473682040658, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_Name
       value: Background Ground V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_Size.x
+      value: 73.79554
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622865339634564239, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
+      propertyPath: m_Size.y
+      value: 73.51195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
