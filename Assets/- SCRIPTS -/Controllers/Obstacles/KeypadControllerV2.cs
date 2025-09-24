@@ -5,19 +5,19 @@ public class KeypadControllerV2 : MonoBehaviour
     public const int MAX_INCORRECT_ANSWERS = 2;
 
     public KeypadAreaController[] keypadAreas = new KeypadAreaController[4];
-    public Animator[] keypadIndicators = new Animator[4];
+    public CodedDoorIndicatorController[] keypadIndicators = new CodedDoorIndicatorController[4];
     private FlatDoorController door;
     private int nextKeypadNumber;
     private bool isKeypadSolved;
     [SerializeField] private AudioClip correctPressClip;
     [SerializeField] private AudioClip wrongPressClip;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    { 
+    {
         isKeypadSolved = false;
         nextKeypadNumber = 0;
-        keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
+        keypadIndicators[nextKeypadNumber].enableIndicator();
     }
 
     void Awake()
@@ -39,7 +39,7 @@ public class KeypadControllerV2 : MonoBehaviour
         if (areaPressed == keypadAreas[nextKeypadNumber])
         {
             // Disable the current indicator
-            keypadIndicators[nextKeypadNumber].SetTrigger("TrIdle");
+            keypadIndicators[nextKeypadNumber].disableIndicator();
 
             // Play the "correct answer" sound effect, if it exists
             if (correctPressClip != null)
@@ -55,7 +55,7 @@ public class KeypadControllerV2 : MonoBehaviour
             }
             else
             {
-                keypadIndicators[nextKeypadNumber].SetTrigger("TrFlash");
+                keypadIndicators[nextKeypadNumber].enableIndicator();
             }
         }
 
@@ -73,10 +73,11 @@ public class KeypadControllerV2 : MonoBehaviour
         isKeypadSolved = true;
     }
 
-    private void disableAllIndicators() {
-        foreach (Animator indicator in keypadIndicators)
+    private void disableAllIndicators()
+    {
+        foreach (CodedDoorIndicatorController indicator in keypadIndicators)
         {
-            indicator.SetTrigger("TrIdle");
-        }  
+            indicator.disableIndicator();
+        }
     }
 }
