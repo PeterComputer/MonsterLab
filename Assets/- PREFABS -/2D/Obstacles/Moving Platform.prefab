@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 1605988078390370265}
   - {fileID: 6317327924962171931}
   - {fileID: 2714512727281871815}
+  activationAudioClip: {fileID: 8300000, guid: 27033d4d6c71568468b0113945fe19ed, type: 3}
 --- !u!114 &2596998732925740909
 MonoBehaviour:
   m_ObjectHideFlags: 0

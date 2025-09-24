@@ -851,7 +851,7 @@ MonoBehaviour:
   - {fileID: 6138688703528367070}
   - {fileID: 3455247290657603045}
   correctPressClip: {fileID: 8300000, guid: be8f66d369ad99046afad917bd3a36ea, type: 3}
-  wrongPressClip: {fileID: 8300000, guid: f769af4f0dca4244494042528a0f7697, type: 3}
+  wrongPressClip: {fileID: 8300000, guid: 8ce4df487c91f6d44bbf5fedb6d852ce, type: 3}
 --- !u!1 &7105882990619443178
 GameObject:
   m_ObjectHideFlags: 0

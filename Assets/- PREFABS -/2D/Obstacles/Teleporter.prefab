@@ -186,8 +186,8 @@ MonoBehaviour:
   pairedTeleporter: {fileID: 0}
   teleporterCollider: {fileID: 1242977555201092942}
   isDoorOpen: 1
-  teleportAudioClip: {fileID: 8300000, guid: ea665fb0976cfc942a1b0803078f9155, type: 3}
-  openDoorAudioClip: {fileID: 8300000, guid: 372dc38b346d0ba44b5d224ff03fcfed, type: 3}
+  teleportAudioClip: {fileID: 8300000, guid: 77404c820e78505479e2dd9e9cde5ff6, type: 3}
+  openDoorAudioClip: {fileID: 8300000, guid: 77404c820e78505479e2dd9e9cde5ff6, type: 3}
   teleportPortal: {fileID: 3813073833468217691}
   teleportDoor: {fileID: 3740438249430349754}
   teleportFrame: {fileID: 808757311360707649}

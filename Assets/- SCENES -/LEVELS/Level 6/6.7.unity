@@ -5543,6 +5543,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1966174227}
     - target: {fileID: 3353431171212829605, guid: 9850fe2613d8b48459e583e24a0d4889, type: 3}
+      propertyPath: activationAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: baa2985421f24254f88e05e343883732, type: 3}
+    - target: {fileID: 3353431171212829605, guid: 9850fe2613d8b48459e583e24a0d4889, type: 3}
       propertyPath: 'platformPositionsList.Array.data[0]'
       value: 
       objectReference: {fileID: 1966174227}
