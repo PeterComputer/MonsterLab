@@ -177,4 +177,14 @@ public class LevelSelectController : MonoBehaviour
             progressionDisplay.enabled = false;
         }
     }
+
+    // Dev function, unlocks all levels
+    public void cheatPlayerProgression()
+    {
+        completedLevelCount = 99;
+        PlayerPrefs.SetInt("CompletedLevelCount", completedLevelCount);
+        PlayerPrefs.Save();
+
+        checkRequiredProgression();
+    }
 }

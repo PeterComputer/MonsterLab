@@ -5,6 +5,7 @@ public class TeleporterController : Obstacle
     // Teleporter Variables
     [SerializeField][HideInInspector] private TeleporterController pairedTeleporter;
     [SerializeField][HideInInspector] private Collider teleporterCollider;
+    [SerializeField][HideInInspector] private float zTeleportOffset;
     private bool canTeleport = true;
     [SerializeField][HideInInspector] private bool isDoorOpen = true;
     [SerializeField] private AudioClip teleportAudioClip;
@@ -22,7 +23,6 @@ public class TeleporterController : Obstacle
         {
             pairedTeleporter.TeleportTo(other);
         }
-
     }
 
     private void OnTriggerExit()
@@ -35,11 +35,12 @@ public class TeleporterController : Obstacle
         openTeleporterDoor();
     }
 
+    // Teleports a colliding gameObject to this teleporter's position
     public void TeleportTo(Collider other)
     {
         if (isDoorOpen)
         {
-            other.gameObject.transform.position = new Vector3(transform.position.x, other.gameObject.transform.position.y, transform.position.z);
+            other.gameObject.transform.position = new Vector3(transform.position.x, other.gameObject.transform.position.y, transform.position.z + zTeleportOffset);
             canTeleport = false;
 
             if (teleportAudioClip != null)

@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedTeleporter: {fileID: 0}
   teleporterCollider: {fileID: 1242977555201092942}
+  zTeleportOffset: -1
   isDoorOpen: 1
   teleportAudioClip: {fileID: 8300000, guid: 77404c820e78505479e2dd9e9cde5ff6, type: 3}
   openDoorAudioClip: {fileID: 8300000, guid: 77404c820e78505479e2dd9e9cde5ff6, type: 3}
