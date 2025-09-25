@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c2e088c904587ae4b85f131f51132241, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: ec3032ab6d127444f8bcea650a3f8680, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 039d77f95b513524cb7ce631caf1c911, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1751,7 +1751,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3635
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6.94e-43, y: NaN, z: 4.5914e-41, w: -1.7714142e-33}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -3891,11 +3891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07000066
+      value: 0.07000068
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.8699903
+      value: 7.6199903
       objectReference: {fileID: 0}
     - target: {fileID: 1127294877889795869, guid: 6288098f1bb13c147bddc83dd8f9f8a7, type: 3}
       propertyPath: m_LocalRotation.w
