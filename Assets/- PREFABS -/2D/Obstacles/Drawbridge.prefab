@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 359557292247156833}
   - component: {fileID: 3697839001817422658}
   m_Layer: 0
-  m_Name: Yellow Drawbridge 1
+  m_Name: Yellow Drawbridge 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
   - {fileID: 223838180243848535}
   - {fileID: 3324816661985770610}
   - {fileID: 5756719539548225669}
-  activationAudioClip: {fileID: 0}
+  activationAudioClip: {fileID: 8300000, guid: 937854097fa34ad4ab405305102cb66c, type: 3}
 --- !u!114 &3697839001817422658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawbridgeColor: 0
-  colorIndex: 0
+  colorIndex: 1
   drawbridgeController: {fileID: 359557292247156833}
   rotationAmount: 90
   rotationSpeed: 5
