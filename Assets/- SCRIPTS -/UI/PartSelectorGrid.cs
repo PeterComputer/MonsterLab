@@ -8,14 +8,13 @@ public class PartSelectorGrid : MonoBehaviour
 
     [SerializeField] private PickupType pickupType;
     private GameManager gameManager;
-    [SerializeField] private List<Animator> partButtons;
+    [SerializeField] private List<PartButton> partButtonScripts;
     public GameObject selectButton;
     private bool hasBeenActivatedOnce;
 
     void Awake()
     {
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
-        partButtons = gameObject.GetComponentsInChildren<Animator>().ToList();
         selectButton.SetActive(false);
     }
 
@@ -26,9 +25,9 @@ public class PartSelectorGrid : MonoBehaviour
 
     public void resetSelectedButton()
     {
-        foreach (Animator button in partButtons)
+        foreach (PartButton button in partButtonScripts)
         {
-            button.SetTrigger("TrIdle");
+            button.setIsSelected(false);
         }
 
         if (!hasBeenActivatedOnce)

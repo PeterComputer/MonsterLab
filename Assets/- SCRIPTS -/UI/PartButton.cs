@@ -10,12 +10,27 @@ public class PartButton : MonoBehaviour
     [SerializeField] private PickupType pickupType;
     private GameManager gameManager;
     private PartSelectorGrid partSelectorGrid;
+    [SerializeField] private Transform parentTransform;
+    private bool isSelected;
+
+    // === Scale logic ===
+    private Vector3 originalScale;
+    private Vector3 scaledUpScale;
+
+    [SerializeField] private float scaleMultiplier = 1.2f;
+    [SerializeField] private float scaleSpeed = 2f; // How fast the pulsing happens
+
+    private float pulseTimer = 0f;
 
     void Awake()
     {
         buttonImage = GetComponent<Image>();
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
         partSelectorGrid = gameObject.GetComponentInParent<PartSelectorGrid>();
+        parentTransform = transform.parent;
+
+        originalScale = parentTransform.localScale;
+        scaledUpScale = originalScale * scaleMultiplier;
 
         switch (pickupType)
         {
@@ -29,24 +44,34 @@ public class PartButton : MonoBehaviour
                 displays = GameObject.FindGameObjectsWithTag("LegsDisplay");
                 break;
         }
-
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (isSelected)
+        {
+            // Increase pulse timer
+            pulseTimer += Time.deltaTime * scaleSpeed;
 
+            // Use Mathf.PingPong to create smooth looping effect
+            float t = Mathf.PingPong(pulseTimer, 1f);
+
+            parentTransform.localScale = Vector3.Lerp(originalScale, scaledUpScale, t);
+        }
+        else
+        {
+            // Smoothly return to original scale when not selected
+            parentTransform.localScale = Vector3.Lerp(parentTransform.localScale, originalScale, Time.deltaTime * scaleSpeed);
+
+            // Reset pulse timer
+            pulseTimer = 0f;
+        }
     }
 
     public void doInteraction()
     {
         partSelectorGrid.resetSelectedButton();
-        transform.parent.GetComponent<Animator>().SetTrigger("TrSelected");
+        isSelected = true;
         updateDisplayImages();
     }
 
@@ -58,5 +83,10 @@ public class PartButton : MonoBehaviour
         }
 
         gameManager.updatePlayerSprite(pickupType, buttonImage.sprite, playerSprite);
+    }
+
+    public void setIsSelected(bool newIsSelected)
+    {
+        isSelected = newIsSelected;
     }
 }
