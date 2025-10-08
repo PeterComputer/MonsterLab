@@ -1,0 +1,1 @@
+C:\Users\X530\Documents\GitHub\MonsterLab\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\t81a3y17\obj\arm64-v8a

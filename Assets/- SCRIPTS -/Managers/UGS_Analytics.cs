@@ -19,6 +19,8 @@ public class UGS_Analytics : MonoBehaviour
         {
             Debug.Log($"UnityServices initialization failed: {e.Message}");
         }
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void GiveConsent()
