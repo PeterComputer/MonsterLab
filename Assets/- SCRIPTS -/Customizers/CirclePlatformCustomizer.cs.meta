@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: f2a5f36fb3dfde740aa630c3bf41ce6d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - interactsWith: {instanceID: 0}
+  - interactibleArea: {instanceID: 0}
+  - redWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
+  - redPlatformSprite: {fileID: 21300000, guid: 497a9de7f28a9be45bc4b67fb235a84a, type: 3}
+  - yellowPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  - yellowWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
+  - yellowEmissiveWireMaterial: {fileID: 2100000, guid: d0ed3a16d2c61cd4c9e6d230da69e739, type: 2}
+  - greenPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  - greenWireMaterial: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
+  - greenEmissiveWireMaterial: {fileID: 2100000, guid: 1c9059ff4c1107f468e3d75d1ad8e7da, type: 2}
+  - bluePlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  - blueWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
+  - blueEmissiveWireMaterial: {fileID: 2100000, guid: b7878d64445264e46a72988e56c71b4f, type: 2}
+  - pinkPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  - pinkWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
+  - pinkEmissiveWireMaterial: {fileID: 2100000, guid: 5dd81a2cb7a34f547974a9ab18e4b345, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,11 +9,13 @@ public class InteractibleArea : MonoBehaviour
 {
     [SerializeField][HideInInspector] private UnityEvent _onTriggerEnter;
     [HideInInspector] public Sprite pressedSprite;
+    [HideInInspector] public Material pressedMaterial;
     [HideInInspector] public Material pressedWireMaterial;
     public AudioClip pressedAudioClip;
     [SerializeField][HideInInspector] private SpriteRenderer spriteRenderer;
     [HideInInspector] public bool wireStaysOn;
     [SerializeField][HideInInspector] private Sprite defaultSprite;
+    [SerializeField][HideInInspector] private Material defaultMaterial;
     [SerializeField][HideInInspector] private Material defaultWireMaterial;
     [SerializeField][HideInInspector] private List<GameObject> wireObjects = new List<GameObject>();
     [SerializeField, HideInInspector] private List<RoadMeshCreator> wireScripts = new List<RoadMeshCreator>();
@@ -22,9 +24,8 @@ public class InteractibleArea : MonoBehaviour
     [SerializeField][HideInInspector] private GameObject wirePrefab;
     private void OnTriggerEnter()
     {
-
+        
         _onTriggerEnter.Invoke();
-
         spriteRenderer.sprite = pressedSprite;
 
         // Change the wire materials to their pressed state
@@ -36,6 +37,12 @@ public class InteractibleArea : MonoBehaviour
                 wireScript.roadMaterial = pressedWireMaterial;
                 wireScript.TriggerUpdate();
             }
+        }
+        
+        // If this area has a pressed material, change to it
+        if (pressedMaterial != null)
+        {
+            spriteRenderer.material = pressedMaterial;
         }
 
         // Play an audioClip when the platform is pressed
@@ -59,6 +66,12 @@ public class InteractibleArea : MonoBehaviour
                 wireScript.TriggerUpdate();
             }
         }
+
+        // If this area has a pressed material, change back to the default
+        if (pressedMaterial != null)
+        {
+            spriteRenderer.material = defaultMaterial;
+        }        
     }
 
     void Awake()
@@ -183,6 +196,14 @@ public class InteractibleArea : MonoBehaviour
     public void setWireStaysOn(bool newWireStaysOn)
     {
         wireStaysOn = newWireStaysOn;
+    }
+
+    public void setPlatformMaterials(Material newDefaultMaterial, Material newPressedMaterial)
+    {
+        defaultMaterial = newDefaultMaterial;
+        pressedMaterial = newPressedMaterial;
+
+        spriteRenderer.material = defaultMaterial;
     }
 
     public void changePlatformColor(Sprite newPlatformSprite, Sprite newPressedSprite, Material newWireMat, Material newPressedWireMaterial)
