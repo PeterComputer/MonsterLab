@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Design\n\n\n\nLead Programmer\n\n\nGame Art\n\n\nGame Design\nConsultants\n\n\nMonster\nCharacter
-    \nDesign"
+  m_text: "Game Design\n\n\n\nLead Programmer\n\n\nUnity Programmer\n\n\nGame Art\n\n\nGame
+    Design\nConsultants\n\n\nMonster\nCharacter \nDesign"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7424e9e809d8efb4b8bbfee30ff73682, type: 2}
   m_sharedMaterial: {fileID: 4360133536128903379, guid: 7424e9e809d8efb4b8bbfee30ff73682, type: 2}
@@ -202,10 +202,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pedro Gouveia\nHenrique Monteiro\nPedro Fernandes\n\n\nPedro Gouveia\nBruno
+  m_text: "Pedro Gouveia\nHenrique Monteiro\nPedro Fernandes\n\n\nPedro Gouveia\n\n\n\nBruno
     Carbonell\n\n\nFilipe Luz\nJo\xE3o Freire\n\n\nC\xE1tia Casimiro\nCarla Sousa\nMicaela
-    Fonseca\n\n\nFuzz Ink\nNi. Tsor\nAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\nKok\nChoko\nJulee
-    Vee\nAdi. K\nFive Eight\nPaulyn\nRevenge\nAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+    Fonseca\n\n\nFuzz Ink\nNi. Tsor\n\u03A6\u03C9\u03C4\u03B5\u03B9\u03BD\u03AE\nKok\nChoko\nJulee
+    Vee\nAdi. K\nFive Eight\nPaulyn\nRevenge\n\u03A6. \u03A6\u03C9\u03C4\u03B9\u03AC\u03B4\u03B7\u03C2\n\n\n\n\n\nFuzz
+    Ink\nNi. Tsor\n\u03A6\u03C9\u03C4\u03B5\u03B9\u03BD\u03AE\nKok\nChoko\nJulee
+    Vee\nAdi. K\nFive Eight\nPaulyn\nRevenge\n\u03A6. \u03A6\u03C9\u03C4\u03B9\u03AC\u03B4\u03B7\u03C2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -442,7 +444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -438, y: 382}
+  m_AnchoredPosition: {x: -438, y: -2481.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2683211375690302344
@@ -514,7 +516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 269, y: 382}
+  m_AnchoredPosition: {x: 269, y: -2481.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7065938755860346020
@@ -587,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.52699, y: 694.3644}
+  m_AnchoredPosition: {x: -106.52699, y: 692}
   m_SizeDelta: {x: 161.8176, y: 135.9755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5245008128546678543
@@ -795,12 +797,12 @@ MonoBehaviour:
 
 
 
-
     Direction
 
 
 
     Supported By
+
 
 
 
@@ -943,11 +945,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Universidade Lus\xF3fona\nUniversidade Nova de Lisboa\n\n\n\nGames Inclusion
+  m_text: "Universidade Lus\xF3fona\nUniversidade Nova de Lisboa\n\n\nGames Inclusion
     Lab: Paticipatory Media Creation Processes for Accessibility (REF: 2022.07939.PTDC)\n\n\nFCT-
     Funda\xE7\xE3o para a Ci\xEAncia e Tecnologia\nHei-LLAB (Human Envionrment Interaction
     Labs)\nCICANT (Centre for Research in Applied Communication, Culture and New
-    Technologies)\n\nThe creators of this game would like to extend a special thanks
+    Technologies)\n\n\nThe creators of this game would like to extend a special thanks
     to the fantasitc game testers from APPACDM and CECD associations, as also to
     Cl\xE1udia Quaresma for the constant support to GameIn\n\nWe would also like
     to give a special thanks to the amazing artists at FUZZInk (http://www.fuzzink.com/)
@@ -1131,7 +1133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -84}
+  m_AnchoredPosition: {x: 0, y: -187}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &596923583256027595
@@ -1304,7 +1306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104, y: 382}
+  m_AnchoredPosition: {x: -104, y: -2481.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6018708019869141751
