@@ -3271,20 +3271,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1653038020}
     m_Modifications:
     - target: {fileID: 358822221655186023, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d47504995ef0ca499ea607a71e62e5a, type: 3}
+    - target: {fileID: 358822221655186023, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: defaultMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 87bc8b4cb8545104e8dd0bb74eb746c8, type: 2}
     - target: {fileID: 358822221655186023, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: defaultWireMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
+      objectReference: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
     - target: {fileID: 554908174703166326, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: colorIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 554908174703166326, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: platformColor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554908174703166326, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: 'interactsWithList.Array.data[0]'
@@ -3332,12 +3336,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1955034035493552410, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: m_Name
-      value: Yellow Circular Interactive Platform 1
+      value: Green Circular Interactive Platform 1
       objectReference: {fileID: 0}
     - target: {fileID: 9169186314455016363, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: 87bc8b4cb8545104e8dd0bb74eb746c8, type: 2}
+      objectReference: {fileID: 21300000, guid: 1d47504995ef0ca499ea607a71e62e5a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3351,6 +3355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1586942814}
     m_Modifications:
+    - target: {fileID: 358822221655186023, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c026d38494f13a24ab49432f62b28417, type: 3}
     - target: {fileID: 358822221655186023, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
       propertyPath: defaultMaterial
       value: 
@@ -3416,9 +3424,9 @@ PrefabInstance:
       value: Blue Circular Interactive Platform 1
       objectReference: {fileID: 0}
     - target: {fileID: 9169186314455016363, guid: 425c3aa37bb61704fb78f52ed139e615, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2100000, guid: 235612b043fe9d24db5403e6541d577b, type: 2}
+      objectReference: {fileID: 21300000, guid: c026d38494f13a24ab49432f62b28417, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

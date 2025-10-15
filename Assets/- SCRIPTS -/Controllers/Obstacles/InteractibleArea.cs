@@ -40,10 +40,11 @@ public class InteractibleArea : MonoBehaviour
         }
         
         // If this area has a pressed material, change to it
-        if (pressedMaterial != null)
+        /*if (pressedMaterial != null)
         {
             spriteRenderer.material = pressedMaterial;
         }
+        */
 
         // Play an audioClip when the platform is pressed
         // pressedAudioClip can be null if multiple platforms are stacked on top of another (in order to reduce repeated noise)
@@ -68,10 +69,11 @@ public class InteractibleArea : MonoBehaviour
         }
 
         // If this area has a pressed material, change back to the default
-        if (pressedMaterial != null)
+        /*if (pressedMaterial != null)
         {
             spriteRenderer.material = defaultMaterial;
-        }        
+        } 
+        */       
     }
 
     void Awake()

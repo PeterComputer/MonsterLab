@@ -30,30 +30,30 @@ public class CirclePlatformCustomizer : MonoBehaviour
     public Sprite redPlatformSprite;
 
     // Default Pressed Platform Material
-    public Material redPlatformMaterial;
+    //public Material redPlatformMaterial;
 
 
     // Yellow Platform
     public Sprite yellowPlatformSprite;
-    public Material yellowPlatformMaterial;
+    //public Material yellowPlatformMaterial;
     public Material yellowWireMaterial;
     public Material yellowEmissiveWireMaterial;
 
     // Green Platform
     public Sprite greenPlatformSprite;
-    public Material greenPlatformMaterial;
+    //public Material greenPlatformMaterial;
     public Material greenWireMaterial;
     public Material greenEmissiveWireMaterial;
 
     // Blue Platform
     public Sprite bluePlatformSprite;
-    public Material bluePlatformMaterial;
+    //public Material bluePlatformMaterial;
     public Material blueWireMaterial;
     public Material blueEmissiveWireMaterial;
 
     // Pink Platform
     public Sprite pinkPlatformSprite;
-    public Material pinkPlatformMaterial;
+    //public Material pinkPlatformMaterial;
     public Material pinkWireMaterial;
     public Material pinkEmissiveWireMaterial;
 
@@ -83,7 +83,7 @@ public class CirclePlatformCustomizer : MonoBehaviour
                 }
                 else interactibleArea.changePlatformColor(yellowPlatformSprite, redPlatformSprite, yellowWireMaterial, redWireMaterial);
 
-                interactibleArea.setPlatformMaterials(yellowPlatformMaterial, redPlatformMaterial);
+                //interactibleArea.setPlatformMaterials(yellowPlatformMaterial, redPlatformMaterial);
                 break;
 
             case ColorEnum.Blue:
@@ -93,7 +93,7 @@ public class CirclePlatformCustomizer : MonoBehaviour
                 }
                 else interactibleArea.changePlatformColor(bluePlatformSprite, redPlatformSprite, blueWireMaterial, redWireMaterial);
 
-                interactibleArea.setPlatformMaterials(bluePlatformMaterial, redPlatformMaterial);
+                //interactibleArea.setPlatformMaterials(bluePlatformMaterial, redPlatformMaterial);
                 break;
 
             case ColorEnum.Green:
@@ -103,7 +103,7 @@ public class CirclePlatformCustomizer : MonoBehaviour
                 }
                 else interactibleArea.changePlatformColor(greenPlatformSprite, redPlatformSprite, greenWireMaterial, redWireMaterial);
 
-                interactibleArea.setPlatformMaterials(greenPlatformMaterial, redPlatformMaterial);
+                //interactibleArea.setPlatformMaterials(greenPlatformMaterial, redPlatformMaterial);
                 break;
 
 
@@ -114,7 +114,7 @@ public class CirclePlatformCustomizer : MonoBehaviour
                 }
                 else interactibleArea.changePlatformColor(pinkPlatformSprite, redPlatformSprite, pinkWireMaterial, redWireMaterial);
 
-                interactibleArea.setPlatformMaterials(pinkPlatformMaterial, redPlatformMaterial);
+                //interactibleArea.setPlatformMaterials(pinkPlatformMaterial, redPlatformMaterial);
                 break;
         }
 

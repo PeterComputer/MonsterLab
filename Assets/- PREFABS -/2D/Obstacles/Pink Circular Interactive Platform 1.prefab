@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 880446247766087747}
   - component: {fileID: 554908174703166326}
   m_Layer: 0
-  m_Name: Pink Circular Interactive Platform 2
+  m_Name: Pink Circular Interactive Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,32 +46,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a5f36fb3dfde740aa630c3bf41ce6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformColor: 3
+  platformColor: 0
   isWireEmissive: 0
   hasWire: 0
   wireStaysOn: 0
-  colorIndex: 1
+  colorIndex: 0
   interactsWith: {fileID: 0}
   interactibleArea: {fileID: 358822221655186023}
   interactsWithList:
   - {fileID: 0}
   redWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
-  redPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
-  redPlatformMaterial: {fileID: 2100000, guid: 11b4f8a94c0ffa94fb1914cea29f706f, type: 2}
-  yellowPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
-  yellowPlatformMaterial: {fileID: 2100000, guid: 87bc8b4cb8545104e8dd0bb74eb746c8, type: 2}
+  redPlatformSprite: {fileID: 21300000, guid: b5aa97dd5900234499dd15c3a4e5643e, type: 3}
+  yellowPlatformSprite: {fileID: 21300000, guid: 89d52322529baab4fb72400b5d019383, type: 3}
   yellowWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
   yellowEmissiveWireMaterial: {fileID: 2100000, guid: d0ed3a16d2c61cd4c9e6d230da69e739, type: 2}
-  greenPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
-  greenPlatformMaterial: {fileID: 2100000, guid: a5259b0714b214f4abe9d1d23b75b836, type: 2}
+  greenPlatformSprite: {fileID: 21300000, guid: 1d47504995ef0ca499ea607a71e62e5a, type: 3}
   greenWireMaterial: {fileID: 2100000, guid: d99fc6eb2605e954cbba84e5fda976c2, type: 2}
   greenEmissiveWireMaterial: {fileID: 2100000, guid: 1c9059ff4c1107f468e3d75d1ad8e7da, type: 2}
-  bluePlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
-  bluePlatformMaterial: {fileID: 2100000, guid: 235612b043fe9d24db5403e6541d577b, type: 2}
+  bluePlatformSprite: {fileID: 21300000, guid: c026d38494f13a24ab49432f62b28417, type: 3}
   blueWireMaterial: {fileID: 2100000, guid: b38fce2ebdc85f0459743254a78876c5, type: 2}
   blueEmissiveWireMaterial: {fileID: 2100000, guid: b7878d64445264e46a72988e56c71b4f, type: 2}
-  pinkPlatformSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
-  pinkPlatformMaterial: {fileID: 2100000, guid: 7464de45f5d3b5e45a791476262e7927, type: 2}
+  pinkPlatformSprite: {fileID: 21300000, guid: 8b3b853a84190804986fab1514e32124, type: 3}
   pinkWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
   pinkEmissiveWireMaterial: {fileID: 2100000, guid: 5dd81a2cb7a34f547974a9ab18e4b345, type: 2}
 --- !u!1 &5722135215232805959
@@ -131,7 +126,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7464de45f5d3b5e45a791476262e7927, type: 2}
+  - {fileID: 2100000, guid: 395e21d5f45b68d4cb18e8a6b94755e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: -2136545941
   m_SortingLayer: -2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89d52322529baab4fb72400b5d019383, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -211,15 +206,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pressedSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  pressedSprite: {fileID: 21300000, guid: b5aa97dd5900234499dd15c3a4e5643e, type: 3}
   pressedMaterial: {fileID: 2100000, guid: 11b4f8a94c0ffa94fb1914cea29f706f, type: 2}
   pressedWireMaterial: {fileID: 2100000, guid: 04a92456278e6f94784d311f83c578d3, type: 2}
   pressedAudioClip: {fileID: 8300000, guid: 4e0b71019d210e44bb15f3fee44a5f6e, type: 3}
   spriteRenderer: {fileID: 9169186314455016363}
   wireStaysOn: 0
-  defaultSprite: {fileID: 21300000, guid: 834bcd54e11c689418d6440c8bb2d707, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 89d52322529baab4fb72400b5d019383, type: 3}
   defaultMaterial: {fileID: 2100000, guid: 7464de45f5d3b5e45a791476262e7927, type: 2}
-  defaultWireMaterial: {fileID: 2100000, guid: 707152e8680e9454fa4ec0f46f44bbbb, type: 2}
+  defaultWireMaterial: {fileID: 2100000, guid: 64fa737583f61de438271fb0f09c9dbc, type: 2}
   wireObjects:
   - {fileID: 16578359541389439}
   wireScripts:
