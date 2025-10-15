@@ -1,2 +1,21 @@
 fileFormatVersion: 2
 guid: 60e7cccdc05428e49a76147f24181436
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - platformSpriteRenderer: {instanceID: 0}
+  - rotatingPlatformController: {instanceID: 0}
+  - yellowPlatformSprite: {instanceID: 0}
+  - yellowFenceSprite: {instanceID: 0}
+  - greenPlatformSprite: {instanceID: 0}
+  - greenFenceSprite: {instanceID: 0}
+  - bluePlatformSprite: {instanceID: 0}
+  - blueFenceSprite: {instanceID: 0}
+  - pinkPlatformSprite: {fileID: 21300000, guid: 8b3b853a84190804986fab1514e32124, type: 3}
+  - pinkFenceSprite: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
