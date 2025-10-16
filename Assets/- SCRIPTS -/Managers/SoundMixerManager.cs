@@ -3,13 +3,20 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SoundMixerManager : MonoBehaviour
-{
+{   
+    public static SoundMixerManager instance;
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private float savedMasterVolume;
     [SerializeField] private float savedSoundFXVolume;
     [SerializeField] private float savedMusicVolume;
 
     void Awake() {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+
         savedMasterVolume = PlayerPrefs.GetFloat("masterVolume");
 
         //Sets the volume to 100% during very first execution
@@ -40,17 +47,20 @@ public class SoundMixerManager : MonoBehaviour
 
     public void SetMasterVolume(float level) {
         audioMixer.SetFloat("masterVolume", Mathf.Log10(level) * 20f);
-        PlayerPrefs.SetFloat("masterVolume", level);
+        savedMasterVolume = level;
+        PlayerPrefs.SetFloat("masterVolume", savedMasterVolume);
         PlayerPrefs.Save();
     }
     public void SetSoundFXVolume(float level) {
         audioMixer.SetFloat("soundFXVolume", Mathf.Log10(level) * 20f);
-        PlayerPrefs.SetFloat("soundFXVolume", level);
+        savedSoundFXVolume = level;
+        PlayerPrefs.SetFloat("soundFXVolume", savedSoundFXVolume);
         PlayerPrefs.Save();
     }
     public void SetMusicVolume(float level) {
         audioMixer.SetFloat("musicVolume", Mathf.Log10(level) * 20f);
-        PlayerPrefs.SetFloat("musicVolume", level);
+        savedMusicVolume = level;
+        PlayerPrefs.SetFloat("musicVolume", savedMusicVolume);
         PlayerPrefs.Save();
     }
     public float GetSavedMasterVolume() {

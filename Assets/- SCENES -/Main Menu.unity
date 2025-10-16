@@ -3373,18 +3373,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -170
       objectReference: {fileID: 0}
-    - target: {fileID: 4866209447384099864, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4866209447384099864, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1599034577}
-    - target: {fileID: 4866209447384099864, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMasterVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 5132947000846701219, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3441,18 +3429,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onDirectionalChange
       objectReference: {fileID: 0}
-    - target: {fileID: 6430780554072212387, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6430780554072212387, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1599034577}
-    - target: {fileID: 6430780554072212387, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetMusicVolume
-      objectReference: {fileID: 0}
     - target: {fileID: 6570597977704563323, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -3468,18 +3444,6 @@ PrefabInstance:
     - target: {fileID: 6570597977704563323, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6837262715936897426, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6837262715936897426, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1599034577}
-    - target: {fileID: 6837262715936897426, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSoundFXVolume
       objectReference: {fileID: 0}
     - target: {fileID: 7567269741363574631, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -4066,17 +4030,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 2cda0d3bfdac127438372b90e7de9a16, type: 3}
   dontDestroyOnLoad: 1
---- !u!114 &1599034577 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8678909991470422345, guid: 2f022fac8a26fdb48a22a8cc46fe0735, type: 3}
-  m_PrefabInstance: {fileID: 1820009806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f89c30f17570c074fb55d49a1dba91d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1799461645
 GameObject:
   m_ObjectHideFlags: 0

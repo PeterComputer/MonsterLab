@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -36,18 +38,14 @@ public class MusicManager : MonoBehaviour
     }
 
     void Update()
-    {   
-        // If there currently isn't a clip playing, the intro clip hasn't been played and the playlist isn't empty
+    {
         if (!musicSource.isPlaying && !playedIntro && musicPlaylist.Length != 0)
-        {   
-            // If there are still songs in the playlist, advance to the next one
+        {
             if (playlistIndex < musicPlaylist.Length - 1) playlistIndex++;
 
-            // Play the next clip
             musicSource.clip = musicPlaylist[playlistIndex];
             musicSource.Play();
 
-            // If the intro hasn't been played yet (aka it was just selected to play), set it to loop the next track
             if (!playedIntro)
             {
                 musicSource.loop = true;

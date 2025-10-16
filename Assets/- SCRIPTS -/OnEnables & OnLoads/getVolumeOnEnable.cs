@@ -40,6 +40,6 @@ public class getVolumeOnEnable : MonoBehaviour
 
     void Awake() {
         volumeSlider = GetComponent<Slider>();
-        soundMixerManager = GameObject.FindGameObjectWithTag("SoundMixerManager").GetComponent<SoundMixerManager>();
+        soundMixerManager = SoundMixerManager.instance;
     }
 }
