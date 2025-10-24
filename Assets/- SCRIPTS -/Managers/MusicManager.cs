@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
 
-    public AudioClip[] musicPlaylist;
+    public List<AudioClip> musicPlaylist;
     private int playlistIndex;
     private AudioSource musicSource;
     private bool playedIntro;
@@ -30,7 +31,7 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-        if (musicPlaylist.Length != 0)
+        if (musicPlaylist.Count != 0)
         {
             musicSource.clip = musicPlaylist[playlistIndex];
             musicSource.Play();            
@@ -39,9 +40,9 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
-        if (!musicSource.isPlaying && !playedIntro && musicPlaylist.Length != 0)
+        if (!musicSource.isPlaying && !playedIntro && musicPlaylist.Count != 0)
         {
-            if (playlistIndex < musicPlaylist.Length - 1) playlistIndex++;
+            if (playlistIndex < musicPlaylist.Count - 1) playlistIndex++;
 
             musicSource.clip = musicPlaylist[playlistIndex];
             musicSource.Play();
@@ -54,4 +55,25 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void stopClip()
+    {   
+        if(musicPlaylist.Count > 0)
+        {
+            musicPlaylist.Remove(musicPlaylist[playlistIndex]);
+            musicSource.Stop();
+        }
+    }
+
+    public void playClip(AudioClip clip)
+    {
+        musicPlaylist.Add(clip);
+        playlistIndex = 0;
+        musicSource.clip = musicPlaylist[playlistIndex];
+        musicSource.Play();
+    }
+
+    public AudioClip getCurrentClip()
+    {
+        return musicPlaylist[playlistIndex];
+    } 
 }

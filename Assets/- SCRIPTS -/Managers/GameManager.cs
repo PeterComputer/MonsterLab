@@ -65,30 +65,33 @@ public class GameManager : MonoBehaviour
 
     [Header("Android Support")]
     
-    [SerializeField]
-    private GameObject androidUI;
+    [SerializeField] private GameObject androidUI;
+
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip musicClip;
+    [SerializeField] private AudioClip ambianceClip;
+
+
 
 
     [Header("Misc")]
+    [SerializeField] private PlayerInput playerInput;
     private PlayerController player;
-    [SerializeField]
-    private PlayerInput playerInput;
     private RuntimePlatform gamePlatform;
     public bool isTutorial;
     public bool showScreenshotScreen;
     public bool isMenuScene;
     public string playerPartsFilePath;
     private FlatDoorController door;
-    [SerializeField]
-    private GameObject fadeScreenEffect;
-    [SerializeField]
-    public static bool wasPreviousSceneMenu;
+    [SerializeField] private GameObject fadeScreenEffect;
+    [SerializeField] public static bool wasPreviousSceneMenu;
     private string sceneName;
     private string[] sceneList;
     private GameObject fpsCounter;
 
     void Awake()
-    {
+    {   
         // if it is a level scene, find these
         if(!isMenuScene) {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -109,6 +112,19 @@ public class GameManager : MonoBehaviour
         }
         sceneName = SceneManager.GetActiveScene().name;
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
+
+        if (musicClip != null)
+        {
+            MusicManager.instance.stopClip();
+            MusicManager.instance.playClip(musicClip);
+        }
+
+        AmbianceManager.instance.stopClip();
+        
+        if (ambianceClip != null)
+        {
+            AmbianceManager.instance.playClip(ambianceClip);
+        }        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
