@@ -65,7 +65,7 @@ public class MusicManager : MonoBehaviour
     }
 
     public void playClip(AudioClip clip)
-    {
+    {   
         musicPlaylist.Add(clip);
         playlistIndex = 0;
         musicSource.clip = musicPlaylist[playlistIndex];

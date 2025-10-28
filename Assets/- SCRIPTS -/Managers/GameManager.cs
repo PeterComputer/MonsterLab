@@ -114,9 +114,12 @@ public class GameManager : MonoBehaviour
         androidUI = GameObject.FindGameObjectWithTag("AndroidUI");
 
         if (musicClip != null)
-        {
-            MusicManager.instance.stopClip();
-            MusicManager.instance.playClip(musicClip);
+        {   
+            if(musicClip != MusicManager.instance.getCurrentClip())
+            {
+                MusicManager.instance.stopClip();
+                MusicManager.instance.playClip(musicClip);
+            }
         }
 
         AmbianceManager.instance.stopClip();
