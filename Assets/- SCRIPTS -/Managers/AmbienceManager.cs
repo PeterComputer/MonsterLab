@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmbianceManager : MonoBehaviour
+public class AmbienceManager : MonoBehaviour
 {
-    public static AmbianceManager instance;
+    public static AmbienceManager instance;
 
     public List<AudioClip> ambiancePlaylist;
     private int playlistIndex;

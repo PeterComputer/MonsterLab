@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioClip musicClip;
-    [SerializeField] private AudioClip ambianceClip;
+    [SerializeField] private AudioClip ambienceClip;
 
 
 
@@ -122,11 +122,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        AmbianceManager.instance.stopClip();
+        AmbienceManager.instance.stopClip();
         
-        if (ambianceClip != null)
+        if (ambienceClip != null)
         {
-            AmbianceManager.instance.playClip(ambianceClip);
+            AmbienceManager.instance.playClip(ambienceClip);
         }        
     }
 

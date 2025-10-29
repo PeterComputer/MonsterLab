@@ -1159,6 +1159,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 765084fc9c540b04f8ae997d328f2f2c, type: 3}
     - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
+      propertyPath: ambienceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 765084fc9c540b04f8ae997d328f2f2c, type: 3}
+    - target: {fileID: 7515566247293336335, guid: f579ae7b9576dbd47b79614541021c87, type: 3}
       propertyPath: settingsMenu
       value: 
       objectReference: {fileID: 1714336171}
