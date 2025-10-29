@@ -2429,7 +2429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.189941, y: 232.6405}
+  m_AnchoredPosition: {x: -19.190063, y: 232.6405}
   m_SizeDelta: {x: 38.379955, y: -1516.1191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726562977
@@ -3252,7 +3252,7 @@ PrefabInstance:
     - target: {fileID: 462162093181742085, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1164980236}
+      objectReference: {fileID: 0}
     - target: {fileID: 462162093181742085, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: playSoundEffect
@@ -3792,17 +3792,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1164980236 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6208093354101334517, guid: 6f6470ac6507a2841afe8c625fdee777, type: 3}
-  m_PrefabInstance: {fileID: 1077820238}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd670f975985db547895ecf1cdce1449, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1253403715
 GameObject:
   m_ObjectHideFlags: 0
