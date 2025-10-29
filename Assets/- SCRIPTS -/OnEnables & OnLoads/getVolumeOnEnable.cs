@@ -23,6 +23,9 @@ public class getVolumeOnEnable : MonoBehaviour
                 case 2:
                     volumeSlider.value = soundMixerManager.GetSavedMusicVolume();
                     break;
+                case 3:
+                    volumeSlider.value = soundMixerManager.GetSavedAmbienceVolume();
+                    break;
             }
 
             firstActivation = false;

@@ -15,6 +15,9 @@ public class VolumeSlider : MonoBehaviour
             case 2:
                 SoundMixerManager.instance.SetMusicVolume(level);
                 break;
+            case 3:
+                SoundMixerManager.instance.SetAmbienceVolume(level);
+                break;
         }
     }
 }

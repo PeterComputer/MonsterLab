@@ -9,6 +9,7 @@ public class SoundMixerManager : MonoBehaviour
     [SerializeField] private float savedMasterVolume;
     [SerializeField] private float savedSoundFXVolume;
     [SerializeField] private float savedMusicVolume;
+    [SerializeField] private float savedAmbienceVolume;
 
     void Awake() {
 
@@ -25,10 +26,12 @@ public class SoundMixerManager : MonoBehaviour
             savedMasterVolume = 1f;
             savedSoundFXVolume = 1f;
             savedMusicVolume = 1f;
+            savedAmbienceVolume = 1f;
         }
         else {
-        savedSoundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
-        savedMusicVolume = PlayerPrefs.GetFloat("musicVolume");
+            savedSoundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
+            savedMusicVolume = PlayerPrefs.GetFloat("musicVolume");
+            savedAmbienceVolume = PlayerPrefs.GetFloat("ambienceVolume");
         }
     }
 
@@ -37,12 +40,7 @@ public class SoundMixerManager : MonoBehaviour
         SetMasterVolume(savedMasterVolume);
         SetSoundFXVolume(savedSoundFXVolume);
         SetMusicVolume(savedMusicVolume);
-        
-        /* 
-        Debug.Log("Saved Master Volume: " + savedMasterVolume);
-        Debug.Log("Saved FX Volume: " + savedSoundFXVolume);
-        Debug.Log("Saved Music Volume: " + savedMusicVolume);
-         */
+        SetAmbienceVolume(savedAmbienceVolume);
     }
 
     public void SetMasterVolume(float level) {
@@ -57,19 +55,31 @@ public class SoundMixerManager : MonoBehaviour
         PlayerPrefs.SetFloat("soundFXVolume", savedSoundFXVolume);
         PlayerPrefs.Save();
     }
-    public void SetMusicVolume(float level) {
+    public void SetMusicVolume(float level)
+    {
         audioMixer.SetFloat("musicVolume", Mathf.Log10(level) * 20f);
         savedMusicVolume = level;
         PlayerPrefs.SetFloat("musicVolume", savedMusicVolume);
         PlayerPrefs.Save();
     }
+    public void SetAmbienceVolume(float level) {
+        audioMixer.SetFloat("ambienceVolume", Mathf.Log10(level) * 20f);
+        savedAmbienceVolume = level;
+        PlayerPrefs.SetFloat("ambienceVolume", savedAmbienceVolume);
+        PlayerPrefs.Save();
+    }    
+
     public float GetSavedMasterVolume() {
         return savedMasterVolume;
     }
     public float GetSavedSoundFXVolume() {
         return savedSoundFXVolume;
     }
-    public float GetSavedMusicVolume() {
+    public float GetSavedMusicVolume()
+    {
         return savedMusicVolume;
     }
+    public float GetSavedAmbienceVolume() {
+        return savedAmbienceVolume;
+    }    
 }
