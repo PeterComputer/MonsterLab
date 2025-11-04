@@ -391,10 +391,12 @@ public class GameManager : MonoBehaviour
         switchPlayerInputMap();
     }
 
-    public void saveMonsterImage() {
-        StartCoroutine(saveMonsterCoroutine());
+    public void saveMonsterImage()
+    {
+        //StartCoroutine(saveMonsterCoroutine());
     }
 
+    /*
     private IEnumerator saveMonsterCoroutine() {
         yield return new WaitForEndOfFrame();
 
@@ -447,6 +449,7 @@ public class GameManager : MonoBehaviour
         monsterImageSavedUI.SetActive(true);
         
     }
+    */
 
     public void switchPlayerInputMap()
     {
