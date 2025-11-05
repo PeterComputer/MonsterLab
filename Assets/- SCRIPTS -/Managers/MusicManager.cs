@@ -74,6 +74,11 @@ public class MusicManager : MonoBehaviour
 
     public AudioClip getCurrentClip()
     {
+        if (musicPlaylist.Count == 0)
+        {
+            return null;
+        }
+        
         return musicPlaylist[playlistIndex];
     } 
 }
