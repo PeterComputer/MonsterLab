@@ -3640,7 +3640,7 @@ PrefabInstance:
     - target: {fileID: 6014899126859380766, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 879fda2875690c2498304c8e60b37897, type: 3}
+      objectReference: {fileID: 21300000, guid: 0f5c930db41fedd48903925a96c5dcff, type: 3}
     - target: {fileID: 8244968237612922246, guid: e0578f5e92a98ae478bf25f3eaa6ff90, type: 3}
       propertyPath: m_Name
       value: Yellow Interactive Platform 1
